@@ -18,6 +18,7 @@ import subprocess
 import sys
 import zipfile
 import time
+import yaml
 from dataclasses import dataclass
 
 POLLING_INTERVAL_SECONDS = 5
@@ -53,6 +54,7 @@ def fetchCrowdinAuthToken() -> str:
 class CrowdinContext:
 	client: crowdin.CrowdinClient | None = None
 	projectId: int = 0
+	configFile: str | None = None
 
 _crowdinContext = CrowdinContext()
 
@@ -894,8 +896,13 @@ def main():
 		help="The path to save the local file. If not provided, the Crowdin file path will be used.",
 	)
 	downloadTranslationFileCommand.add_argument(
+		"-c", "--config", help="Path to the configuration file", default=None
+	)
+	
+	downloadTranslationFileCommand.add_argument(
 		"-i", "--id", help="Crowdin project ID", type=int, default=None
 	)
+
 	uploadTranslationFileCommand = commands.add_parser(
 		"uploadTranslationFile",
 		help="Upload a translation file to Crowdin.",
@@ -921,6 +928,9 @@ def main():
 		help="The path to the local file to be uploaded. If not provided, the Crowdin file path will be used.",
 	)
 	uploadTranslationFileCommand.add_argument("-i", "--id", help="Crowdin project ID", type=int, default=None)
+	uploadTranslationFileCommand.add_argument(
+		"-c", "--config", help="Path to the configuration file", default=None
+	)
 	uploadSourceFileCommand = commands.add_parser(
 		"uploadSourceFile",
 		help="Upload a source file to Crowdin.",
@@ -930,6 +940,9 @@ def main():
 		help="The local path to the file.",
 	)
 	uploadSourceFileCommand.add_argument("-i", "--id", help="Crowdin project ID", type=int, default=None)
+	uploadSourceFileCommand.add_argument(
+		"-c", "--config", help="Path to the configuration file", default=None
+	)
 	exportTranslationsCommand = commands.add_parser(
 		"exportTranslations",
 		help="Export translation files from Crowdin as a bundle. If no language is specified, exports all languages.",
@@ -947,8 +960,12 @@ def main():
 		default=None,
 	)
 	exportTranslationsCommand.add_argument("-i", "--id", help="Crowdin project ID", type=int, default=None)
-
+	exportTranslationsCommand.add_argument(
+		"-c", "--config", help="Path to the configuration file", default=None
+	)
 	args = args.parse_args()
+	if args.config:
+		loadConfig(args.config)
 	_crowdinContext.projectId = args.id or _crowdinContext.projectId
 	match args.command:
 		case "xliff2md":
