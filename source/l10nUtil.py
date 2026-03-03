@@ -19,7 +19,7 @@ import sys
 import zipfile
 import time
 import yaml
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 
 POLLING_INTERVAL_SECONDS = 5
 EXPORT_TIMEOUT_SECONDS = 60 * 10  # 10 minutes
@@ -242,7 +242,9 @@ def downloadTranslationFile(crowdinFilePath: str, localFilePath: str, language: 
 	:param language: The language code to download the translation for
 	"""
 	filename = os.path.basename(crowdinFilePath)
-	files = getFiles(filter=filename)
+	files = _crowdinContext.files if _crowdinContext.files is not None else {}
+	if filename not in files:
+		files = getFiles(filter=filename)
 	fileId = files.get(crowdinFilePath)
 	if fileId is None:
 		raise ValueError(f"File not found in Crowdin: {crowdinFilePath}")
@@ -281,7 +283,9 @@ def uploadSourceFile(localFilePath: str | None) -> None:
 	if localFilePath is None:
 		raise ValueError("localFilePath must not be None")
 	filename = os.path.basename(localFilePath)
-	files = getFiles(filter=filename)
+	files = _crowdinContext.files if _crowdinContext.files is not None else {}
+	if filename not in files:
+		files = getFiles(filter=filename)
 	client = getCrowdinClient()
 	try:
 		with open(localFilePath, "rb") as f:
@@ -359,8 +363,10 @@ def uploadTranslationFile(crowdinFilePath: str, localFilePath: str, language: st
 	:param localFilePath: The path to the local file to be uploaded
 	:param language: The language code to upload the translation for
 	"""
-	filename = os.path.basename(crowdinFilePath)
-	files = getFiles(filter=filename)
+	filename = os.path.basename(localFilePath)
+	files = _crowdinContext.files if _crowdinContext.files is not None else {}
+	if filename not in files:
+		files = getFiles(filter=filename)
 	fileId = files.get(crowdinFilePath)
 	if fileId is None:
 		raise ValueError(f"File not found in Crowdin: {crowdinFilePath}")
@@ -494,10 +500,7 @@ def writeConfig(configFile: str) -> None:
 	Write the current configuration to a YAML file.
 	:param configFile: The path to the YAML configuration file. If None, uses the path from the current context.
 	"""
-	config = {
-		"projectId": _crowdinContext.projectId,
-		"files": _crowdinContext.files,
-	}
+	config = asdict(_crowdinContext)
 	with open(configFile, "w") as f:
 		yaml.safe_dump(config, f)
 
