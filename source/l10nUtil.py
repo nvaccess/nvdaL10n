@@ -1015,7 +1015,7 @@ def main():
 		"-f", "--filter", help="Filter files to include in the configuration", default=None
 	)
 	args = args.parse_args()
-	if getattr(args, 'config', None) and args.command != "writeConfig":
+	if getattr(args, 'config', None): 
 		loadConfig(args.config)
 	_crowdinContext.projectId = getattr(args, 'id', None) or _crowdinContext.projectId
 	match args.command:
