@@ -504,12 +504,13 @@ def writeConfig(configFile: str | None, projectId: int | None, filterFiles: str 
 	:param filterFiles: A string to filter files in Crowdin. If None, the list of files will not be filtered when fetched, and all files will be saved in the configuration.
 	"""
 	config = asdict(_crowdinContext)
-	if configFile is not None:
-		config["configFile"] = configFile
+	if configFile is None:
+		configFile = _crowdinContext.configFile or "l10nConfig.yaml"
+	config["configFile"] = configFile
 	if projectId is not None:
 		config["projectId"] = projectId
 	config["files"] = getFiles(filter=filterFiles)
-	with open(config["configFile"], "w") as f:
+	with open(configFile, "w") as f:
 		yaml.safe_dump(config, f)
 
 
@@ -1005,10 +1006,7 @@ def main():
 		help="Write the current configuration to a YAML file. This includes the project ID and the list of files in Crowdin (optionally filtered).",
 	)
 	writeConfigCommand.add_argument(
-		"configFile",
-		help="The path to the YAML configuration file to write. If not provided, uses the path from the current context or 'l10nConfig.yaml' if not set.",
-		nargs="?",
-		default=None,
+		"-c", "--config", help="The path to the YAML configuration file to write. If not provided, uses the path from the current context or 'l10nConfig.yaml' if not set.", default=None
 	)
 	writeConfigCommand.add_argument(
 		"-i", "--id", help="Crowdin project ID", type=int, default=None
@@ -1017,9 +1015,9 @@ def main():
 		"-f", "--filter", help="Filter files to include in the configuration", default=None
 	)
 	args = args.parse_args()
-	if args.config:
+	if getattr(args, 'config', None) and args.command != "writeConfig":
 		loadConfig(args.config)
-	_crowdinContext.projectId = args.id or _crowdinContext.projectId
+	_crowdinContext.projectId = getattr(args, 'id', None) or _crowdinContext.projectId
 	match args.command:
 		case "xliff2md":
 			markdownTranslate.generateMarkdown(
@@ -1116,7 +1114,7 @@ def main():
 				raise ValueError("You must specify localFilePath for uploadSourceFile")
 			uploadSourceFile(args.localFilePath)
 		case "writeConfig":
-			writeConfig(args.configFile, args.id, args.filter)
+			writeConfig(args.config, args.id, args.filter)
 		case _:
 			raise ValueError(f"Unknown command {args.command}")
 
