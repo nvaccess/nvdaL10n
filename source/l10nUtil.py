@@ -1014,7 +1014,7 @@ def main():
 		help="Write the current configuration to a YAML file. This includes the project ID and the list of files in Crowdin (optionally filtered).",
 	)
 	writeConfigCommand.add_argument(
-		"-c", "--config", help="The path to the YAML configuration file to write. If not provided, uses the default path 'l10nConfig.yaml'.", default=None
+		"-c", "--configFile", help="The path to the YAML configuration file to write. If not provided, uses the default path 'l10nConfig.yaml'.", default=None
 	)
 	writeConfigCommand.add_argument(
 		"-i", "--id", help="Crowdin project ID", type=int, default=None
@@ -1120,7 +1120,7 @@ def main():
 				raise ValueError("You must specify localFilePath for uploadSourceFile")
 			uploadSourceFile(args.localFilePath)
 		case "writeConfig":
-			writeConfig(args.config, args.id)
+			writeConfig(args.configFile, args.id)
 		case _:
 			raise ValueError(f"Unknown command {args.command}")
 
