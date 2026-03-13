@@ -2,6 +2,24 @@
 
 This repository is intended to be used as a submodule for [NVDA](https://github.com/nvaccess/nvda) and the [add-on template](https://github.com/nvaccess/addonTemplate).
 
+## Installation and Building an Executable
+
+To install all dependencies (including PyInstaller) and build a standalone executable using [uv](https://github.com/astral-sh/uv):
+
+1. Install all dependencies:
+
+	```sh
+	uv pip install .
+	```
+
+2. Build the executable:
+
+	```sh
+	uv run pyinstaller --onefile source/l10nUtil.py
+	```
+
+The resulting executable will be located in the `dist` directory.
+
 ## Available Commands
 
 - `checkPo` - Check one or more PO files for errors.
@@ -38,20 +56,21 @@ This repository is intended to be used as a submodule for [NVDA](https://github.
 - `writeConfig` - Write the current Crowdin configuration (project ID and file list) to a YAML file.
   - Optional: `-c`/`--configFile` — path for the YAML configuration file to write (defaults to `l10nConfig.yaml`); `-i`/`--id` — Crowdin project ID.
 
-## Installation and Building an Executable
+## Recommended workflow
 
-To install all dependencies (including PyInstaller) and build a standalone executable using [uv](https://github.com/astral-sh/uv):
+- If new files are added to Crowdin, store the file IDs and the project ID running the `writeConfig` command.
+Example:
 
-1. Install all dependencies:
+```sh
+l10nUtil writeConfig - myConfigFile.yaml -i myProjectId`
+```
 
-	```sh
-	uv pip install .
-	```
+- If new files haven't been added, run commands with the `-c` or `--config` flag, so that project ID and file IDs can be retrieved from the config file, and yo don't consume resources from your Crowdin API key.
 
-2. Build the executable:
+Example:
 
-	```sh
-	uv run pyinstaller --onefile source/l10nUtil.py
-	```
+```sh
+l10nUtil exportTranslations -o myFolder -c myConfigFile.yaml
+```
 
-The resulting executable will be located in the `dist` directory.
+
