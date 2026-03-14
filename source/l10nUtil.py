@@ -506,6 +506,7 @@ def writeConfig(configFile: str | None, projectId: int | None) -> None:
 	try:
 		with open(configFile, "w") as f:
 			yaml.safe_dump(config, f)
+			print(f"Configuration saved to {configFile}")
 	except OSError as e:
 		raise RuntimeError(f"Failed to write config to {configFile}: {e}")
 
