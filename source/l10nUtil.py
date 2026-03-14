@@ -339,6 +339,9 @@ def getFiles() -> dict[str, int]:
 		name = fileInfo["name"]
 		fileId = fileInfo["id"]
 		dictionary[name] = fileId
+		if os.path.splitext(name)[1] == ".pot":
+			alias = os.path.splitext(name)[0] + ".po"
+			dictionary[alias] = fileId
 	return dictionary
 
 
