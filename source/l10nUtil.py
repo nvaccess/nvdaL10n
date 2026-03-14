@@ -236,44 +236,29 @@ def stripXliff(xliffPath: str, outputPath: str, oldXliffPath: str | None = None)
 	print(f"Added or changed {keptTranslations} translations.")
 
 
-def downloadTranslationFile(crowdinFilePath: str, localFilePath: str, language: str) -> None:
+def downloadTranslationFile(crowdinFilePath: str, localFilePath: str, language: str):
 	"""
 	Download a translation file from Crowdin.
 	:param crowdinFilePath: The Crowdin file path
 	:param localFilePath: The path to save the local file
 	:param language: The language code to download the translation for
 	"""
-	filename = os.path.basename(crowdinFilePath)
-	files = _crowdinContext.files
-	if filename not in files:
+	crowdinFileIDs = _crowdinContext.files
+	if crowdinFilePath not in crowdinFileIDs:
 		_crowdinContext.files = {**getFiles()}
-		files = _crowdinContext.files
-	fileId = files.get(crowdinFilePath)
-	if fileId is None:
-		raise ValueError(f"File not found in Crowdin: {crowdinFilePath}")
+		crowdinFileIDs = _crowdinContext.files
+	fileId = crowdinFileIDs[crowdinFilePath]
 	print(f"Requesting export of {crowdinFilePath} for {language} from Crowdin")
-	client = getCrowdinClient()
-	try:
-		res = client.translations.export_project_translation(
-			fileIds=[fileId],
-			targetLanguageId=language,
-		)
-	except Exception as e:
-		raise RuntimeError(f"Crowdin export request failed: {e}")
-	if res is None or "data" not in res or "url" not in res["data"]:
-		raise ValueError("Crowdin export failed or invalid response")
+	res = getCrowdinClient().translations.export_project_translation(
+		fileIds=[fileId],
+		targetLanguageId=language,
+	)
+	if res is None:
+		raise ValueError("Crowdin export failed")
 	download_url = res["data"]["url"]
 	print(f"Downloading from {download_url}")
-	# Ensure the local directory exists (if a directory component is present)
-	dirname = os.path.dirname(localFilePath)
-	if dirname:
-		os.makedirs(dirname, exist_ok=True)
-	try:
-		r = requests.get(download_url, timeout=60)
-		r.raise_for_status()
-	except Exception as e:
-		raise RuntimeError(f"Failed to download translation file: {e}")
 	with open(localFilePath, "wb") as f:
+		r = requests.get(download_url)
 		f.write(r.content)
 	print(f"Saved to {localFilePath}")
 
