@@ -263,6 +263,38 @@ def downloadTranslationFile(crowdinFilePath: str, localFilePath: str, language: 
 	print(f"Saved to {localFilePath}")
 
 
+def uploadTranslationFile(crowdinFilePath: str, localFilePath: str, language: str):
+	"""
+	Upload a translation file to Crowdin.
+	:param crowdinFilePath: The Crowdin file path
+	:param localFilePath: The path to the local file to be uploaded
+	:param language: The language code to upload the translation for
+	"""
+	crowdinFileIDs = _crowdinContext.files
+	if crowdinFilePath not in crowdinFileIDs:
+		_crowdinContext.files = {**getFiles()}
+		crowdinFileIDs = _crowdinContext.files
+	fileId = crowdinFileIDs[crowdinFilePath]
+	print(f"Uploading {localFilePath} to Crowdin")
+	with open(localFilePath, "rb") as f:
+		res = getCrowdinClient().storages.add_storage(f)
+	if res is None:
+		raise ValueError("Crowdin storage upload failed")
+	storageId = res["data"]["id"]
+	print(f"Stored with ID {storageId}")
+	print(
+		f"Importing translation for {crowdinFilePath} in {language} from storage with ID {storageId}",
+	)
+	res = getCrowdinClient().translations.upload_translation(
+		fileId=fileId,
+		languageId=language,
+		storageId=storageId,
+		autoApproveImported=True,
+		importEqSuggestions=True,
+	)
+	print("Done")
+
+
 def uploadSourceFile(localFilePath: str | None) -> None:
 	"""
 	Upload a source file to Crowdin.
@@ -321,67 +353,6 @@ def uploadSourceFile(localFilePath: str | None) -> None:
 	except Exception as e:
 		raise RuntimeError(f"Failed to add or update file in Crowdin: {e}")
 
-
-def getFiles() -> dict[str, int]:
-	"""
-	Gets files from Crowdin.
-	:return: A dictionary mapping file names to their IDs.
-	"""
-
-	dictionary: dict[str, int] = {}
-	print(f"Fetching files from Crowdin (projectId: {_crowdinContext.projectId})...")
-	client = getCrowdinClient()
-	res = client.source_files.with_fetch_all().list_files(_crowdinContext.projectId)
-	if res is None or "data" not in res:
-		raise ValueError("Crowdin list_files failed")
-	for file in res["data"]:
-		fileInfo = file["data"]
-		name = fileInfo["name"]
-		fileId = fileInfo["id"]
-		dictionary[name] = fileId
-		if os.path.splitext(name)[1] == ".pot":
-			alias = os.path.splitext(name)[0] + ".po"
-			dictionary[alias] = fileId
-	return dictionary
-
-
-def uploadTranslationFile(crowdinFilePath: str, localFilePath: str, language: str):
-	"""
-	Upload a translation file to Crowdin.
-	:param crowdinFilePath: The Crowdin file path
-	:param localFilePath: The path to the local file to be uploaded
-	:param language: The language code to upload the translation for
-	"""
-	filename = os.path.basename(localFilePath)
-	files = _crowdinContext.files
-	if filename not in files:
-		_crowdinContext.files = {**getFiles()}
-		files = _crowdinContext.files
-	fileId = files.get(crowdinFilePath)
-	if fileId is None:
-		raise ValueError(f"File not found in Crowdin: {crowdinFilePath}")
-	print(f"Uploading {localFilePath} to Crowdin")
-	client = getCrowdinClient()
-	try:
-		with open(localFilePath, "rb") as f:
-			res = client.storages.add_storage(f)
-		if res is None or "data" not in res or "id" not in res["data"]:
-			raise ValueError("Crowdin storage upload failed or invalid response")
-		storageId = res["data"]["id"]
-		print(f"Stored with ID {storageId}")
-		print(f"Importing translation for {crowdinFilePath} in {language} from storage with ID {storageId}")
-		res = client.translations.upload_translation(
-			fileId=fileId,
-			languageId=language,
-			storageId=storageId,
-			autoApproveImported=True,
-			importEqSuggestions=True,
-		)
-		if res is None:
-			raise ValueError("Crowdin translation upload failed")
-		print("Done")
-	except Exception as e:
-		raise RuntimeError(f"Failed to upload translation file: {e}")
 
 
 def exportTranslations(outputDir: str, language: str | None = None):
@@ -472,6 +443,30 @@ def exportTranslations(outputDir: str, language: str | None = None):
 		print(f"\nExport complete! All translations extracted to '{outputDir}' directory.")
 	else:
 		print(f"\nExport complete! All {language} translations extracted to '{outputDir}' directory.")
+
+
+
+def getFiles() -> dict[str, int]:
+	"""
+	Gets files from Crowdin.
+	:return: A dictionary mapping file names to their IDs.
+	"""
+
+	dictionary: dict[str, int] = {}
+	print(f"Fetching files from Crowdin (projectId: {_crowdinContext.projectId})...")
+	client = getCrowdinClient()
+	res = client.source_files.with_fetch_all().list_files(_crowdinContext.projectId)
+	if res is None or "data" not in res:
+		raise ValueError("Crowdin list_files failed")
+	for file in res["data"]:
+		fileInfo = file["data"]
+		name = fileInfo["name"]
+		fileId = fileInfo["id"]
+		dictionary[name] = fileId
+		if os.path.splitext(name)[1] == ".pot":
+			alias = os.path.splitext(name)[0] + ".po"
+			dictionary[alias] = fileId
+	return dictionary
 
 
 def loadConfig(configFile: str) -> None:
