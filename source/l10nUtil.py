@@ -1,4 +1,5 @@
 # A part of NonVisual Desktop Access (NVDA)
+	
 # Copyright (C) 2024-2026 NV Access Limited, Noelia Ruiz Martínez
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
@@ -232,7 +233,8 @@ def stripXliff(xliffPath: str, outputPath: str, oldXliffPath: str | None = None)
 	if existingTranslationCount > 0:
 		print(f"Ignored {existingTranslationCount} existing translations.")
 	keptTranslations = segmentCount - untranslatedCount - emptyCount - corruptCount - existingTranslationCount
-	print(f"Added or changed {keptTranslations} translations.")
+	if keptTranslations > 0:
+		print(f"Added or changed {keptTranslations} translations.")
 
 
 def downloadTranslationFile(crowdinFilePath: str, localFilePath: str, language: str):
@@ -584,20 +586,22 @@ class _PoChecker:
 
 	@property
 	def MSGFMT_PATH(self) -> str:
-		try:
-			# When running from source, miscDeps is the sibling of parent this script.
-			_MSGFMT = os.path.join(os.path.dirname(__file__), "..", "miscDeps", "tools", "msgfmt.exe")
-		except NameError:
-			# When running from a frozen executable, __file__ is not defined.
-			# In this case, we use the distribution path.
-			# When running from a distribution, source/l10nUtil.py is built to l10nUtil.exe.
-			# miscDeps is the sibling of this script in the distribution.
-			_MSGFMT = os.path.join(sys.prefix, "miscDeps", "tools", "msgfmt.exe")
+		# When running as a PyInstaller frozen executable
+		if getattr(sys, 'frozen', False):
+			# PyInstaller extracts bundled files to sys._MEIPASS
+			_MSGFMT = os.path.join(getattr(sys, '_MEIPASS', ''), "msgfmt.exe")
+		else:
+			try:
+				# When running from source, miscDeps is the sibling of parent this script.
+				_MSGFMT = os.path.join(os.path.dirname(__file__), "..", "miscDeps", "tools", "msgfmt.exe")
+			except NameError:
+				# Fallback: When running from a distribution installation
+				_MSGFMT = os.path.join(sys.prefix, "miscDeps", "tools", "msgfmt.exe")
 
 		if not os.path.exists(_MSGFMT):
 			raise FileNotFoundError(
-				"msgfmt executable not found. "
-				"Please ensure that miscDeps/tools/msgfmt.exe exists in the source tree or distribution.",
+				f"msgfmt executable not found at: {_MSGFMT}. "
+				"Please ensure msgfmt.exe is bundled with the executable or available in miscDeps/tools/."
 			)
 		return _MSGFMT
 
