@@ -1,0 +1,3 @@
+[submodule "miscDeps"]
+	path = miscDeps
+	url = https://github.com/nvaccess/nvda-misc-deps.git
