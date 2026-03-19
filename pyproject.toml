@@ -31,15 +31,16 @@ dependencies = [
 	"nh3==0.2.19",
 	"pymdown-extensions>=10.12",
 	"requests>=2.32.5",
-	"ruff==0.8.1",
-	"pre-commit==4.0.1",
-	"pyright==1.1.396",
 ]
 [project.urls]
 Repository = "https://github.com/nvaccess/nvdaL10n"
 
-[tool.uv]
-dev-dependencies = []
+[dependency-groups]
+dev = [
+	"ruff==0.8.1",
+	"pre-commit==4.0.1",
+	"pyright==1.1.396",
+]
 
 [tool.setuptools.packages.find]
 where = ["source"]
