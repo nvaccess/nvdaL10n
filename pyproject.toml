@@ -41,9 +41,6 @@ Repository = "https://github.com/nvaccess/nvdaL10n"
 [tool.uv]
 dev-dependencies = []
 
-[tool.uv.scripts]
-build = "pyinstaller l10nUtil.spec"
-
 [tool.setuptools.packages.find]
 where = ["source"]
 
