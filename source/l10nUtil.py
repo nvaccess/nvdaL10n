@@ -938,10 +938,6 @@ def main():
 	downloadTranslationFileCommand.add_argument(
 		"-c", "--config", help="Path to the configuration file", default=None
 	)
-	
-	downloadTranslationFileCommand.add_argument(
-		"-i", "--id", help="Crowdin project ID", type=int, default=None
-	)
 
 	uploadTranslationFileCommand = commands.add_parser(
 		"uploadTranslationFile",
@@ -967,7 +963,6 @@ def main():
 		default=None,
 		help="The path to the local file to be uploaded. If not provided, the Crowdin file path will be used.",
 	)
-	uploadTranslationFileCommand.add_argument("-i", "--id", help="Crowdin project ID", type=int, default=None)
 	uploadTranslationFileCommand.add_argument(
 		"-c", "--config", help="Path to the configuration file", default=None
 	)
@@ -979,7 +974,6 @@ def main():
 		"localFilePath",
 		help="The local path to the file.",
 	)
-	uploadSourceFileCommand.add_argument("-i", "--id", help="Crowdin project ID", type=int, default=None)
 	uploadSourceFileCommand.add_argument(
 		"-c", "--config", help="Path to the configuration file", default=None
 	)
@@ -999,7 +993,6 @@ def main():
 		help="Language code to export (e.g., 'es', 'fr', 'de'). If not specified, exports all languages.",
 		default=None,
 	)
-	exportTranslationsCommand.add_argument("-i", "--id", help="Crowdin project ID", type=int, default=None)
 	exportTranslationsCommand.add_argument(
 		"-c", "--config", help="Path to the configuration file", default=None
 	)
