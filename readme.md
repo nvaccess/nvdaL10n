@@ -45,7 +45,7 @@ To install all dependencies (including PyInstaller) and build a standalone execu
 1. Install all dependencies:
 
 	```sh
-	uv run pip install .
+	uv sync
 	```
 
 2. Build the executable:
