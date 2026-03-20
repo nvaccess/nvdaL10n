@@ -27,7 +27,6 @@ from pathlib import Path
 
 POLLING_INTERVAL_SECONDS = 5
 EXPORT_TIMEOUT_SECONDS = 60 * 10  # 10 minutes
-DEFAULT_CONFIG_FILE = "l10nConfig.yaml"
 
 
 def fetchCrowdinAuthToken() -> str:
@@ -65,8 +64,11 @@ _crowdinContext = CrowdinContext()
 
 
 class ConfigFile(StrEnum):
+	"""Configuration files for nvdaL10n."""
+
 	NVDA = "nvda.yaml"
 	ADDON = "addonTemplate.yaml"
+	DEFAULT = "l10nConfig.yaml"
 
 	@property
 	def path(self) -> str:
@@ -74,6 +76,8 @@ class ConfigFile(StrEnum):
 		Get the absolute path to this config file.
 		:return: The absolute path to the config file
 		"""
+		if self.name == "DEFAULT":
+			return str(Path(self.value).resolve())
 		if hasattr(sys, '_MEIPASS'):
 			# PyInstaller bundled executable.
 			basePath = Path(getattr(sys, '_MEIPASS'))
@@ -507,11 +511,11 @@ def loadConfig(configFile: str) -> None:
 def writeConfig(configFile: str | None, projectId: int | None) -> None:
 	"""
 	Write the current configuration to a YAML file.
-	:param configFile: The path to the YAML configuration file. If None, defaults to DEFAULT_CONFIG_FILE.
+	:param configFile: The path to the YAML configuration file. If None, defaults to ConfigFile.DEFAULT.path.
 	:param projectId: The Crowdin project ID to save. If None, uses the project ID from the current context.
 	"""
 	if configFile is None:
-		configFile = DEFAULT_CONFIG_FILE
+		configFile = ConfigFile.DEFAULT.path
 	if projectId is not None:
 		_crowdinContext.projectId = projectId
 	files = getFiles()
