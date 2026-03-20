@@ -1014,15 +1014,16 @@ def main():
 	)
 	args = args.parse_args()
 	configPath = getattr(args, "config", None)
+	if configPath is None:
+		configPath = "nvda"
 	# Check if configPath is a ConfigFile enum member name (e.g., "NVDA", "ADDON").
-	if configPath is not None:
-		try:
-			config = ConfigFile[str(configPath).upper()]
-			configPath = config.path
-		except (KeyError, AttributeError):
-			# Not a ConfigFile member, use the provided path as-is.
-			pass
-		loadConfig(configPath)
+	try:
+		config = ConfigFile[str(configPath).upper()]
+		configPath = config.path
+	except (KeyError, AttributeError):
+		# Not a ConfigFile member, use the provided path as-is.
+		pass
+	loadConfig(configPath)
 	if getattr(args, 'id', None) is not None:
 		_crowdinContext.projectId = args.id
 	match args.command:
