@@ -38,7 +38,7 @@ Repository = "https://github.com/nvaccess/nvdaL10n"
 [dependency-groups]
 dev = [
 	"ruff==0.8.1",
-	"pre-commit==4.0.1",
+	"pre-commit==4.2.0",
 	"pyright==1.1.396",
 ]
 
