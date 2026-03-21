@@ -58,7 +58,7 @@ def fetchCrowdinAuthToken() -> str:
 class CrowdinContext:
 	"""Hold the Crowdin client and related information"""
 
-	_client: crowdin.CrowdinClient | None = None
+	client: crowdin.CrowdinClient | None = None
 	projectId: int | None = None
 	files: dict[str, int] = field(default_factory=dict)
 
@@ -94,10 +94,10 @@ def getCrowdinClient() -> crowdin.CrowdinClient:
 	Create or fetch the Crowdin client instance.
 	:return: The Crowdin client
 	"""
-	if _crowdinContext._client is None:
+	if _crowdinContext.client is None:
 		token = fetchCrowdinAuthToken()
-		_crowdinContext._client = crowdin.CrowdinClient(token=token, project_id=_crowdinContext.projectId)
-	return _crowdinContext._client
+		_crowdinContext.client = crowdin.CrowdinClient(token=token, project_id=_crowdinContext.projectId)
+	return _crowdinContext.client
 
 
 def fetchLanguageFromXliff(xliffPath: str, source: bool = False) -> str:
