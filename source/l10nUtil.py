@@ -96,6 +96,11 @@ def getCrowdinClient() -> crowdin.CrowdinClient:
 	:return: The Crowdin client
 	"""
 	if _crowdinContext.client is None:
+		if _crowdinContext.projectId is None:
+			raise ValueError(
+				"Crowdin projectId is not set. Ensure configuration has been loaded "
+				"and contains a valid 'projectId' before creating a Crowdin client."
+			)
 		token = fetchCrowdinAuthToken()
 		_crowdinContext.client = crowdin.CrowdinClient(token=token, project_id=_crowdinContext.projectId)
 	return _crowdinContext.client
