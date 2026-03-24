@@ -99,7 +99,7 @@ def getCrowdinClient() -> crowdin.CrowdinClient:
 		if _crowdinContext.projectId is None:
 			raise ValueError(
 				"Crowdin projectId is not set. Ensure configuration has been loaded "
-				"and contains a valid 'projectId' before creating a Crowdin client."
+				"and contains a valid 'projectId' before creating a Crowdin client.",
 			)
 		token = fetchCrowdinAuthToken()
 		_crowdinContext.client = crowdin.CrowdinClient(token=token, project_id=_crowdinContext.projectId)
@@ -282,7 +282,7 @@ def downloadTranslationFile(crowdinFilePath: str, localFilePath: str, language: 
 		_crowdinContext.files = {**getFiles()}
 		crowdinFileIDs = _crowdinContext.files
 		if crowdinFilePath not in crowdinFileIDs:
-			raise ValueError(f"Crowdin file path not found: {crowdinFilePath}")	
+			raise ValueError(f"Crowdin file path not found: {crowdinFilePath}")
 	fileId = crowdinFileIDs[crowdinFilePath]
 	print(f"Requesting export of {crowdinFilePath} for {language} from Crowdin")
 	res = getCrowdinClient().translations.export_project_translation(
