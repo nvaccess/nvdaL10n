@@ -28,4 +28,4 @@ jobs:
         commit: ${{ github.sha }}
         replacesArtifacts: true
         tag: dev-${{ github.run_number }}
-        make_latest: true
+        makeLatest: true
