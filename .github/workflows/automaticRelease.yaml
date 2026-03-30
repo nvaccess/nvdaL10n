@@ -20,9 +20,12 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v8
     - name: Release
-      uses: softprops/action-gh-release@v2
+      uses: ncipollo/release-action@v1
       with:
-        files: l10nUtil.exe
+        artifacts: l10nUtil.exe
         name: Development build
-        tag_name: dev-${{ github.run_number }}
+        allowUpdates: true
+        commit: ${{ github.sha }}
+        replacesArtifacts: true
+        tag: dev-${{ github.run_number }}
         make_latest: true
