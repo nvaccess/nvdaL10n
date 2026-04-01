@@ -1,0 +1,26 @@
+name: automatic-release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+
+  build:
+    uses: ./.github/workflows/buildExecutable.yaml
+
+  Automatic-release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+    - name: Download artifact
+      uses: actions/download-artifact@v8
+    - name: Release
+      run: |
+        gh release create v${{ github.run_number }} l10nUtil.exe
+      env:
+        GH_TOKEN: ${{ github.token }}
