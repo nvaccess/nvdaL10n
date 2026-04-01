@@ -296,7 +296,7 @@ requires-dist = [
     { name = "nh3", specifier = "==0.2.19" },
     { name = "pyinstaller", specifier = "==6.19.0" },
     { name = "pymdown-extensions", specifier = ">=10.12" },
-    { name = "requests", specifier = ">=2.32.5" },
+    { name = "requests", specifier = ">=2.33.0" },
 ]
 
 [package.metadata.requires-dev]
