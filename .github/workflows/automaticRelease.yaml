@@ -20,12 +20,5 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v8
     - name: Release
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: l10nUtil.exe
-        name: Development build
-        allowUpdates: true
-        commit: ${{ github.sha }}
-        replacesArtifacts: true
-        tag: dev-${{ github.run_number }}
-        makeLatest: true
+      run: |
+        gh release create v${{ github.run_number }} l10nUtil.exe
