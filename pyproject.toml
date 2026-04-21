@@ -23,7 +23,7 @@ dependencies = [
 	"pyinstaller==6.19.0",
 	"crowdin-api-client==1.21.0",
 	"l2m4m==1.0.4",
-	"lxml==6.0.2",
+	"lxml==6.1.0",
 	"markdown==3.10",
 	"markdown-link-attr-modifier==0.2.1",
 	"mdx-gh-links==0.4",
