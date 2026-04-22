@@ -2,6 +2,7 @@
 # Copyright (C) 2010-2024 NV Access Limited, Mesar Hameed, Takuya Nishimoto
 # This file may be used under the terms of the GNU General Public License, version 2 or later, as modified by the NVDA license.
 # For full terms and any additional permissions, see the NVDA license file: https://github.com/nvaccess/nvda/blob/master/copying.txt
+
 """
 Generates the Key Commands document from the User Guide.
 Works as a Python Markdown Extension:
