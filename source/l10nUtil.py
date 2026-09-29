@@ -5,26 +5,25 @@
 # See the file COPYING for more details.
 
 
-import argparse
-import codecs
-import os
-import re
-import shutil
-import subprocess
-import sys
-import tempfile
-import time
-import zipfile
-from dataclasses import dataclass, field
-from enum import StrEnum
-from pathlib import Path
-
 import crowdin_api as crowdin
+import tempfile
 import lxml.etree
+import os
+import shutil
+import argparse
 import markdownTranslate
 import md2html
 import requests
+import codecs
+import re
+import subprocess
+import sys
+import zipfile
+import time
 import yaml
+from dataclasses import dataclass, field
+from enum import StrEnum
+from pathlib import Path
 
 POLLING_INTERVAL_SECONDS = 5
 EXPORT_TIMEOUT_SECONDS = 60 * 10  # 10 minutes
@@ -84,7 +83,7 @@ class ConfigFile(StrEnum):
 			return str(Path(self.value).resolve())
 		if hasattr(sys, "_MEIPASS"):
 			# PyInstaller bundled executable.
-			basePath = Path(sys._MEIPASS)
+			basePath = Path(getattr(sys, "_MEIPASS"))
 		else:
 			# Development environment.
 			basePath = Path(__file__).parent.parent / "config"
@@ -255,7 +254,7 @@ def stripXliff(xliffPath: str, outputPath: str, oldXliffPath: str | None = None)
 				f"./xliff:file/xliff:unit[@id='{unitID}']/xliff:segment/xliff:target",
 				namespaces=namespace,
 			)
-			if oldTarget is not None and oldTarget.getparent().get("state") != "initial":  # noqa: SIM102
+			if oldTarget is not None and oldTarget.getparent().get("state") != "initial":
 				if oldTarget.text == targetText:
 					file.remove(unit)
 					existingTranslationCount += 1
@@ -351,7 +350,7 @@ def uploadSourceFile(localFilePath: str | None) -> None:
 		if res is None or "data" not in res or "id" not in res["data"]:
 			raise ValueError("Crowdin storage upload failed or invalid response")
 		storageId = res["data"]["id"]
-	except Exception as e:  # noqa: BLE001
+	except Exception as e:
 		raise RuntimeError(f"Failed to upload file to Crowdin storage: {e}")
 	print(f"Stored with ID {storageId}")
 	fileId = files.get(filename)
@@ -387,7 +386,7 @@ def uploadSourceFile(localFilePath: str | None) -> None:
 				if res is None:
 					raise ValueError("Crowdin update_file failed")
 				print(f"Updated to revision {res['data']['revisionId']}")
-	except Exception as e:  # noqa: BLE001
+	except Exception as e:
 		raise RuntimeError(f"Failed to add or update file in Crowdin: {e}")
 
 
@@ -463,7 +462,8 @@ def exportTranslations(outputDir: str, language: str | None = None):
 	response.raise_for_status()
 
 	with open(zip_path, "wb") as f:
-		f.writelines(response.iter_content(chunk_size=8192))
+		for chunk in response.iter_content(chunk_size=8192):
+			f.write(chunk)
 
 	print(f"Archive saved to {zip_path}")
 	print("Extracting translations...")
@@ -629,7 +629,7 @@ class _PoChecker:
 		This will set the hasSyntaxError attribute to True if there is a syntax error.
 		"""
 
-		result = subprocess.run(  # noqa: PLW1510
+		result = subprocess.run(
 			(self.MSGFMT_PATH, "-o", "-", self._poPath),
 			stdout=subprocess.DEVNULL,
 			stderr=subprocess.PIPE,
@@ -718,7 +718,9 @@ class _PoChecker:
 		if self.alerts:
 			return False
 		self._checkMessages()
-		return not self.alerts
+		if self.alerts:
+			return False
+		return True
 
 	# e.g. %s %d %10.2f %-5s (but not %%) or %%(name)s %(name)d
 	RE_UNNAMED_PERCENT = re.compile(
@@ -1067,7 +1069,7 @@ def main():
 			)
 		case "md2xliff":
 			if args.oldXliffPath is not None:
-				temp_oldXliffFile = tempfile.NamedTemporaryFile(  # noqa: SIM115
+				temp_oldXliffFile = tempfile.NamedTemporaryFile(
 					suffix=Path(args.oldXliffPath).suffix or ".xliff",
 					delete=False,
 				)
@@ -1096,7 +1098,7 @@ def main():
 				args.xliffPath,
 				source=args.untranslated,
 			)
-			temp_mdFile = tempfile.NamedTemporaryFile(  # noqa: SIM115
+			temp_mdFile = tempfile.NamedTemporaryFile(
 				suffix=".md",
 				delete=False,
 				mode="w",
@@ -1146,7 +1148,7 @@ def main():
 			localFilePath = args.localFilePath or args.crowdinFilePath
 			needsDelete = False
 			if args.crowdinFilePath.endswith(".xliff"):
-				tmp = tempfile.NamedTemporaryFile(  # noqa: SIM115
+				tmp = tempfile.NamedTemporaryFile(
 					suffix=".xliff",
 					delete=False,
 					mode="w",

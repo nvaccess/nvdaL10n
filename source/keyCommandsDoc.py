@@ -1,8 +1,7 @@
-# -*- coding: UTF-8 -*-
 # A part of NonVisual Desktop Access (NVDA)
 # Copyright (C) 2010-2024 NV Access Limited, Mesar Hameed, Takuya Nishimoto
-# This file is covered by the GNU General Public License.
-# See the file COPYING for more details.
+# This file may be used under the terms of the GNU General Public License, version 2 or later, as modified by the NVDA license.
+# For full terms and any additional permissions, see the NVDA license file: https://github.com/nvaccess/nvda/blob/master/copying.txt
 
 """
 Generates the Key Commands document from the User Guide.
@@ -13,7 +12,7 @@ Refer to user guide standards for more information on syntax rules:
 https://github.com/nvaccess/nvda/blob/master/projectDocs/dev/userGuideStandards.md
 """
 
-from enum import auto, Enum, IntEnum, StrEnum  # noqa: I001
+from enum import auto, Enum, IntEnum, StrEnum
 import re
 from collections.abc import Iterator
 
@@ -175,7 +174,7 @@ class KeyCommandsPreprocessor(Preprocessor):
 	def _writeHeadings(self):
 		level = self._kcLastHeadingLevel + 1
 		# Only write headings we haven't yet written.
-		for level, heading in enumerate(self._headings[level:], level):  # noqa: B020
+		for level, heading in enumerate(self._headings[level:], level):
 			self._kcLines.append(heading.group(0))
 		self._kcLastHeadingLevel = level
 
@@ -195,7 +194,7 @@ class KeyCommandsPreprocessor(Preprocessor):
 	def _handleSetting(self):
 		if not self._settingsHeaderRow:
 			raise KeyCommandsError(
-				"%d, setting command cannot be used before settingsSection command" % self._lineNum,  # noqa: UP031
+				"%d, setting command cannot be used before settingsSection command" % self._lineNum,
 			)
 
 		tableHeadersRequired = False
