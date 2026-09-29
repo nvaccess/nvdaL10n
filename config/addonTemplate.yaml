@@ -5,15 +5,31 @@ files:
   BMI.po: 300
   BMI.pot: 300
   BMI.xliff: 302
+  BrailleExtender.po: 592
+  BrailleExtender.pot: 592
+  IndentNav.po: 578
+  IndentNav.pot: 578
   MSEdgeDiscardAnnouncements.po: 372
   MSEdgeDiscardAnnouncements.pot: 372
   MSEdgeDiscardAnnouncements.xliff: 374
   SentenceNav.po: 360
   SentenceNav.pot: 360
   SentenceNav.xliff: 362
+  TeleNVDA.po: 588
+  TeleNVDA.pot: 588
+  TeleNVDA.xliff: 616
+  VLC.po: 582
+  VLC.pot: 582
+  askOpenRouter.po: 458
+  askOpenRouter.pot: 458
+  askOpenRouter.xliff: 456
   beepKeyboard.po: 408
   beepKeyboard.pot: 408
   beepKeyboard.xliff: 410
+  brailleEssentials.po: 627
+  brailleEssentials.pot: 627
+  calibre.po: 586
+  calibre.pot: 586
   charInfo.po: 296
   charInfo.pot: 296
   charInfo.xliff: 298
@@ -26,12 +42,18 @@ files:
   columnsReview.po: 332
   columnsReview.pot: 332
   columnsReview.xliff: 334
+  contactsManager.po: 645
+  contactsManager.pot: 645
+  contactsManager.xliff: 647
   controlUsageAssistant.po: 260
   controlUsageAssistant.pot: 260
   controlUsageAssistant.xliff: 262
   cursorLocator.po: 224
   cursorLocator.pot: 224
   cursorLocator.xliff: 436
+  customBrowseMode.po: 629
+  customBrowseMode.pot: 629
+  customBrowseMode.xliff: 631
   customNotifications.po: 244
   customNotifications.pot: 244
   customNotifications.xliff: 268
@@ -41,6 +63,11 @@ files:
   debugHelper.po: 428
   debugHelper.pot: 428
   debugHelper.xliff: 430
+  dengjen_neural_voices.po: 661
+  dengjen_neural_voices.pot: 661
+  dotPad.po: 663
+  dotPad.pot: 663
+  dotPad.xliff: 665
   dropbox.po: 416
   dropbox.pot: 416
   dropbox.xliff: 418
@@ -62,6 +89,9 @@ files:
   evtTracker.po: 438
   evtTracker.pot: 438
   evtTracker.xliff: 440
+  favoriteLinks.po: 643
+  favoriteLinks.pot: 643
+  favoriteLinks.xliff: 637
   goldenCursor.po: 368
   goldenCursor.pot: 368
   goldenCursor.xliff: 370
@@ -77,6 +107,12 @@ files:
   mp3DirectCut.po: 404
   mp3DirectCut.pot: 404
   mp3DirectCut.xliff: 406
+  noBeepsSpeechMode.po: 570
+  noBeepsSpeechMode.pot: 570
+  noBeepsSpeechMode.xliff: 602
+  notepadMarkdownBrowseMode.po: 659
+  notepadMarkdownBrowseMode.pot: 659
+  notepadMarkdownBrowseMode.xliff: 657
   numpadNavMode.po: 412
   numpadNavMode.pot: 412
   numpadNavMode.xliff: 414
@@ -95,16 +131,23 @@ files:
   pcKbBrl.po: 228
   pcKbBrl.pot: 228
   pcKbBrl.xliff: 276
+  perky.po: 633
+  perky.pot: 633
+  perky.xliff: 635
+  placeMarkers.po: 576
+  placeMarkers.pot: 576
+  placeMarkers.xliff: 610
   proxy.po: 384
   proxy.pot: 384
   proxy.xliff: 386
   rdAccess.po: 288
   rdAccess.pot: 288
   rdAccess.xliff: 290
-  readFeeds.md: 450
   readFeeds.po: 232
   readFeeds.pot: 232
   readFeeds.xliff: 278
+  readonlyProfiles.po: 618
+  readonlyProfiles.pot: 618
   readonlyProfiles.xliff: 270
   reportSymbols.po: 236
   reportSymbols.pot: 236
@@ -127,6 +170,12 @@ files:
   searchWith.po: 388
   searchWith.pot: 388
   searchWith.xliff: 390
+  showSelectionWhenBrailleTetheredToReview.po: 568
+  showSelectionWhenBrailleTetheredToReview.pot: 568
+  showSelectionWhenBrailleTetheredToReview.xliff: 600
+  soundSplitter.po: 584
+  soundSplitter.pot: 584
+  soundSplitter.xliff: 614
   speechLogger.po: 348
   speechLogger.pot: 348
   speechLogger.xliff: 350
@@ -136,10 +185,21 @@ files:
   systrayList.po: 340
   systrayList.pot: 340
   systrayList.xliff: 342
+  terminalAccess.po: 590
+  terminalAccess.pot: 590
+  thunderbirdPlus.po: 572
+  thunderbirdPlus.pot: 572
+  thunderbirdPlus.xliff: 604
+  toneMaster.po: 574
+  toneMaster.pot: 574
+  toneMaster.xliff: 608
   tonysEnhancements.po: 304
   tonysEnhancements.pot: 304
   tonysEnhancements.xliff: 306
-  translateNvdaAddonsWithCrowdin.md: 448
+  toolbarsExplorer.po: 580
+  toolbarsExplorer.pot: 580
+  toolbarsExplorer.xliff: 612
+  trainingKeyboardCommands.xliff: 606
   translateNvdaAddonsWithCrowdin.po: 446
   translateNvdaAddonsWithCrowdin.pot: 446
   unicodeBrailleInput.po: 328
@@ -160,7 +220,19 @@ files:
   winWizard.po: 344
   winWizard.pot: 344
   winWizard.xliff: 346
+  windowState.po: 653
+  windowState.pot: 653
+  windowState.xliff: 655
+  wintenApps.po: 639
+  wintenApps.pot: 639
+  wintenApps.xliff: 641
   wordNav.po: 364
   wordNav.pot: 364
   wordNav.xliff: 366
+  wordPredictor.po: 649
+  wordPredictor.pot: 649
+  wordPredictor.xliff: 651
+  zoomEnhancements.po: 623
+  zoomEnhancements.pot: 623
+  zoomEnhancements.xliff: 625
 projectId: 780748
