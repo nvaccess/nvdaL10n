@@ -17,10 +17,13 @@ jobs:
         with:
           python-version-file: ".python-version"
       - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@v7
-      - name: Build executable
+        uses: astral-sh/setup-uv@v10.2.0
+      - name: Lint with prek
         run: |
           uv sync
+          uv run prek run --all-files
+      - name: Build executable
+        run: |
           uv run pyinstaller l10nUtil.spec
       - name: Upload artifact
         uses: actions/upload-artifact@v7
