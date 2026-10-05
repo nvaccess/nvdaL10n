@@ -3,20 +3,20 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-from typing import Generator
-from collections.abc import Iterable
-import tempfile
-import os
-import contextlib
-import lxml.etree
 import argparse
-import uuid
+import contextlib
+import difflib
+import os
 import re
+import subprocess
+import tempfile
+import uuid
+from collections.abc import Generator, Iterable
+from dataclasses import dataclass
 from itertools import zip_longest
 from xml.sax.saxutils import escape as xmlEscape
-import difflib
-from dataclasses import dataclass
-import subprocess
+
+import lxml.etree
 
 re_kcTitle = re.compile(r"^(<!--\s+KC:title:\s*)(.+?)(\s*-->)$")
 re_kcSettingsSection = re.compile(r"^(<!--\s+KC:settingsSection:\s*)(.+?)(\s*-->)$")
@@ -46,7 +46,7 @@ def createAndDeleteTempFilePath_contextManager(
 	dir: str | None = None,
 	prefix: str | None = None,
 	suffix: str | None = None,
-) -> Generator[str, None, None]:
+) -> Generator[str]:
 	"""A context manager that creates a temporary file and deletes it when the context is exited"""
 	with tempfile.NamedTemporaryFile(
 		dir=dir,
@@ -115,9 +115,9 @@ def getGithubRepoURL() -> str:
 	)
 	remote_url = result.stdout.strip()
 	# Convert SSH or HTTPS URL to raw GitHub URL format
-	if match := re.match(r"git@github\.com:(.+?)(?:\.git)?$", remote_url):
-		repo_path = match.group(1)
-	elif match := re.match(r"https://github\.com/(.+?)(?:\.git)?$", remote_url):
+	if (match := re.match(r"git@github\.com:(.+?)(?:\.git)?$", remote_url)) or (
+		match := re.match(r"https://github\.com/(.+?)(?:\.git)?$", remote_url)
+	):
 		repo_path = match.group(1)
 	else:
 		raise ValueError(f"Cannot parse GitHub URL from git remote: {remote_url}")
@@ -148,16 +148,14 @@ def skeletonizeLine(mdLine: str) -> str | None:
 		return None
 	elif m := re_heading.match(mdLine):
 		prefix, content, suffix = m.groups()
-	elif m := re_bullet.match(mdLine):
+	elif (m := re_bullet.match(mdLine)) or (m := re_number.match(mdLine)):
 		prefix, content = m.groups()
-	elif m := re_number.match(mdLine):
-		prefix, content = m.groups()
-	elif m := re_tableRow.match(mdLine):
-		prefix, content, suffix = m.groups()
-	elif m := re_kcTitle.match(mdLine):
-		prefix, content, suffix = m.groups()
-	elif m := re_kcSettingsSection.match(mdLine):
-		prefix, content, suffix = m.groups()
+	elif (
+		(m := re_tableRow.match(mdLine))
+		or (m := re_kcTitle.match(mdLine))
+		or (m := re_kcSettingsSection.match(mdLine))
+	):
+		prefix, content, suffix = m.groups()  # noqa: RUF059
 	elif re_comment.match(mdLine):
 		return None
 	ID = str(uuid.uuid4())
@@ -360,7 +358,7 @@ def generateXliff(
 					f"<segment>\n"
 					f"<source>{xmlEscape(source)}</source>\n"
 					"</segment>\n"
-					"</unit>\n",  # fmt: skip
+					"</unit>\n",  # fmt: skip  # noqa: RUF028
 				)
 			else:
 				if mdLine != skelLine:
@@ -470,7 +468,7 @@ def translateXliff(
 					raise ValueError(
 						f'Line {lineNo} of translation does not start with "{prefix}", {pretranslatedLine=}, {skelLine=}',
 					)
-				if suffix and not pretranslatedLine.endswith(suffix):
+				if suffix and not pretranslatedLine.endswith(suffix):  # noqa: SIM102
 					if allowBadAnchors and (m := re_heading.match(pretranslatedLine)):
 						print(
 							f"Warning: ignoring bad anchor in line {lineNo}: {pretranslatedLine}",
@@ -680,7 +678,7 @@ def pretranslateAllPossibleLanguages(langsDir: str, mdBaseName: str):
 				outputPath=langXliffPath,
 				allowBadAnchors=True,
 			)
-		except Exception as e:
+		except Exception as e:  # noqa: BLE001
 			print(f"Failed to translate {langDir}: {e}")
 			continue
 		rebuiltLangMdPath = os.path.join(langDirPath, f"rebuilt_{mdBaseName}.md")
@@ -689,7 +687,7 @@ def pretranslateAllPossibleLanguages(langsDir: str, mdBaseName: str):
 				xliffPath=langXliffPath,
 				outputPath=rebuiltLangMdPath,
 			)
-		except Exception as e:
+		except Exception as e:  # noqa: BLE001
 			print(f"Failed to rebuild {langDir} markdown: {e}")
 			os.remove(langXliffPath)
 			continue
@@ -699,7 +697,7 @@ def pretranslateAllPossibleLanguages(langsDir: str, mdBaseName: str):
 				langPretranslatedMdPath,
 				allowBadAnchors=True,
 			)
-		except Exception as e:
+		except Exception as e:  # noqa: BLE001
 			print(
 				f"Rebuilt {langDir} markdown does not match pretranslated markdown: {e}",
 			)
