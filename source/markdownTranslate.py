@@ -91,7 +91,6 @@ def getRawGithubURLForPath(filePath: str) -> str:
 
 def getGithubRepoURL() -> str:
 	"""Get the base ``raw.githubusercontent.com`` URL for the repository.
-	return f"{RAW_GITHUB_REPO_URL}/{commitID}/{relativePath}"
 
 	Reads the ``origin`` remote from the local git config and converts either
 	an SSH (``git@github.com:…``) or HTTPS (``https://github.com/…``) URL to
