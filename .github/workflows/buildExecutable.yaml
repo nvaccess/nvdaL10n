@@ -19,9 +19,11 @@ jobs:
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v10.2.0
       - name: Lint with prek
+        env:
+          PREK_SKIP: no-commit-to-branch
         run: |
           uv sync
-          export PREK_SKIP=no-commit-to-branch; uv run prek run --all-files
+          uv run prek run --all-files
       - name: Build executable
         run: |
           uv run pyinstaller l10nUtil.spec
