@@ -1,22 +1,21 @@
 # A part of NonVisual Desktop Access (NVDA)
-# Copyright (C) 2024 NV Access Limited.
-# This file is covered by the GNU General Public License.
-# See the file COPYING for more details.
+# Copyright (C) 2024-2026 NV Access Limited
+# This file may be used under the terms of the GNU General Public License, version 2 or later, as modified by the NVDA license.
+# For full terms and any additional permissions, see the NVDA license file: https://github.com/nvaccess/nvda/blob/master/copying.txt
 
-import argparse
-import contextlib
-import difflib
-import os
-import re
-import subprocess
+from collections.abc import Generator  # noqa: I001
 import tempfile
+import os
+import contextlib
+import lxml.etree
+import argparse
 import uuid
-from collections.abc import Generator, Iterable
-from dataclasses import dataclass
+import re
 from itertools import zip_longest
 from xml.sax.saxutils import escape as xmlEscape
-
-import lxml.etree
+import difflib
+from dataclasses import dataclass
+import subprocess
 
 re_kcTitle = re.compile(r"^(<!--\s+KC:title:\s*)(.+?)(\s*-->)$")
 re_kcSettingsSection = re.compile(r"^(<!--\s+KC:settingsSection:\s*)(.+?)(\s*-->)$")
@@ -29,14 +28,12 @@ re_hiddenHeaderRow = re.compile(r"^\|\s*\.\s*\{\.hideHeaderRow\}\s*(\|\s*\.\s*)*
 re_postTableHeaderLine = re.compile(r"^(\|\s*-+\s*)+\|$")
 re_tableRow = re.compile(r"^(\|)(.+)(\|)$")
 re_translationID = re.compile(r"^(.*)\$\(ID:([0-9a-f-]+)\)(.*)$")
-re_inlineMarkdownLintComment = re.compile(r"^(.*?)(?:\s*<!-- markdownlint.*-->)(\s*)$")
+re_inlineMarkdownLintComment = re.compile(r"^(.*?)(\s*<!--\s*markdownlint.*-->)(\s*)$")
 
 
 def prettyPathString(path: str) -> str:
 	cwd = os.getcwd()
-	if os.path.normcase(os.path.splitdrive(path)[0]) != os.path.normcase(
-		os.path.splitdrive(cwd)[0],
-	):
+	if os.path.normcase(os.path.splitdrive(path)[0]) != os.path.normcase(os.path.splitdrive(cwd)[0]):
 		return path
 	return os.path.relpath(path, cwd)
 
@@ -48,12 +45,7 @@ def createAndDeleteTempFilePath_contextManager(
 	suffix: str | None = None,
 ) -> Generator[str]:
 	"""A context manager that creates a temporary file and deletes it when the context is exited"""
-	with tempfile.NamedTemporaryFile(
-		dir=dir,
-		prefix=prefix,
-		suffix=suffix,
-		delete=False,
-	) as tempFile:
+	with tempfile.NamedTemporaryFile(dir=dir, prefix=prefix, suffix=suffix, delete=False) as tempFile:
 		tempFilePath = tempFile.name
 		tempFile.close()
 		yield tempFilePath
@@ -124,21 +116,24 @@ def getGithubRepoURL() -> str:
 	return f"https://raw.githubusercontent.com/{repo_path}"
 
 
-def preprocessMarkdownLines(mdLines: Iterable[str]) -> Iterable[str]:
-	"""
-	Preprocess markdown lines such as removing inline markdown lint comments.\
-	:param mdLines: The markdown lines to preprocess
-	:returns: The preprocessed markdown lines
-	"""
-	for mdLine in mdLines:
-		# #18982: Remove markdown lint comments completely - not needed for intermediate markdown or final html.
-		mdLine = re_inlineMarkdownLintComment.sub(r"\1\2", mdLine)
-		yield mdLine
+def getSkeletonContentFromXliffText(skeletonText: str | None) -> str:
+	"""Return skeleton content while preserving meaningful leading/trailing whitespace."""
+	if skeletonText is None:
+		return ""
+	# Skeleton content is written as <skeleton>\n{content}\n</skeleton>.
+	# Remove only wrapper newlines, not significant whitespace inside the skeleton itself.
+	skeletonText = skeletonText.removeprefix("\n")
+	skeletonText = skeletonText.removesuffix("\n")
+	return skeletonText
 
 
 def skeletonizeLine(mdLine: str) -> str | None:
 	prefix = ""
 	suffix = ""
+	markdownLintComment = ""
+	if m := re_inlineMarkdownLintComment.match(mdLine):
+		mdLine, markdownLintComment, trailingWhitespace = m.groups()
+		mdLine = f"{mdLine}{trailingWhitespace}"
 	if (
 		mdLine.isspace()
 		or mdLine.strip() == "[TOC]"
@@ -159,7 +154,7 @@ def skeletonizeLine(mdLine: str) -> str | None:
 	elif re_comment.match(mdLine):
 		return None
 	ID = str(uuid.uuid4())
-	return f"{prefix}$(ID:{ID}){suffix}\n"
+	return f"{prefix}$(ID:{ID}){suffix}{markdownLintComment}\n"
 
 
 @dataclass
@@ -169,15 +164,13 @@ class Result_generateSkeleton:
 
 
 def generateSkeleton(mdPath: str, outputPath: str) -> Result_generateSkeleton:
-	print(
-		f"Generating skeleton file {prettyPathString(outputPath)} from {prettyPathString(mdPath)}...",
-	)
+	print(f"Generating skeleton file {prettyPathString(outputPath)} from {prettyPathString(mdPath)}...")
 	res = Result_generateSkeleton()
 	with (
 		open(mdPath, "r", encoding="utf8") as mdFile,
 		open(outputPath, "w", encoding="utf8", newline="") as outputFile,
 	):
-		for mdLine in preprocessMarkdownLines(mdFile.readlines()):
+		for mdLine in mdFile:
 			res.numTotalLines += 1
 			skelLine = skeletonizeLine(mdLine)
 			if skelLine:
@@ -202,25 +195,18 @@ class Result_updateSkeleton:
 
 
 def extractSkeleton(xliffPath: str, outputPath: str):
-	print(
-		f"Extracting skeleton from {prettyPathString(xliffPath)} to {prettyPathString(outputPath)}...",
-	)
+	print(f"Extracting skeleton from {prettyPathString(xliffPath)} to {prettyPathString(outputPath)}...")
 	with contextlib.ExitStack() as stack:
-		outputFile = stack.enter_context(
-			open(outputPath, "w", encoding="utf8", newline=""),
-		)
+		outputFile = stack.enter_context(open(outputPath, "w", encoding="utf8", newline=""))
 		xliff = lxml.etree.parse(xliffPath)
 		xliffRoot = xliff.getroot()
 		namespace = {"xliff": "urn:oasis:names:tc:xliff:document:2.0"}
 		if xliffRoot.tag != "{urn:oasis:names:tc:xliff:document:2.0}xliff":
 			raise ValueError("Not an xliff file")
-		skeletonNode = xliffRoot.find(
-			"./xliff:file/xliff:skeleton",
-			namespaces=namespace,
-		)
+		skeletonNode = xliffRoot.find("./xliff:file/xliff:skeleton", namespaces=namespace)
 		if skeletonNode is None:
 			raise ValueError("No skeleton found in xliff file")
-		skeletonContent = skeletonNode.text.strip()
+		skeletonContent = getSkeletonContentFromXliffText(skeletonNode.text)
 		outputFile.write(skeletonContent)
 		print(f"Extracted skeleton to {prettyPathString(outputPath)}")
 
@@ -239,11 +225,9 @@ def updateSkeleton(
 		origMdFile = stack.enter_context(open(origMdPath, "r", encoding="utf8"))
 		newMdFile = stack.enter_context(open(newMdPath, "r", encoding="utf8"))
 		origSkelFile = stack.enter_context(open(origSkelPath, "r", encoding="utf8"))
-		outputFile = stack.enter_context(
-			open(outputPath, "w", encoding="utf8", newline=""),
-		)
-		origMdLines = preprocessMarkdownLines(origMdFile.readlines())
-		newMdLines = preprocessMarkdownLines(newMdFile.readlines())
+		outputFile = stack.enter_context(open(outputPath, "w", encoding="utf8", newline=""))
+		origMdLines = origMdFile.readlines()
+		newMdLines = newMdFile.readlines()
 		mdDiff = difflib.ndiff(list(origMdLines), list(newMdLines))
 		origSkelLines = iter(origSkelFile.readlines())
 		for mdDiffLine in mdDiff:
@@ -252,6 +236,10 @@ def updateSkeleton(
 			if mdDiffLine.startswith(" "):
 				res.numUnchangedLines += 1
 				skelLine = next(origSkelLines)
+				# Extracted skeletons may lack a trailing newline on the last line.
+				# Preserve line boundaries when this unchanged line is followed by additions.
+				if mdDiffLine[2:].endswith("\n") and not skelLine.endswith("\n"):
+					skelLine = f"{skelLine}\n"
 				if re_translationID.match(skelLine):
 					res.numUnchangedTranslationPlaceholders += 1
 				outputFile.write(skelLine)
@@ -308,9 +296,7 @@ def generateXliff(
 	)
 	with contextlib.ExitStack() as stack:
 		mdFile = stack.enter_context(open(mdPath, "r", encoding="utf8"))
-		outputFile = stack.enter_context(
-			open(outputPath, "w", encoding="utf8", newline=""),
-		)
+		outputFile = stack.enter_context(open(outputPath, "w", encoding="utf8", newline=""))
 		fileID = os.path.basename(mdPath)
 		mdUri = getRawGithubURLForPath(mdPath)
 		print(f"Including Github raw URL: {mdUri}")
@@ -323,7 +309,7 @@ def generateXliff(
 		res.numTranslatableStrings = 0
 		for lineNo, (mdLine, skelLine) in enumerate(
 			zip_longest(
-				preprocessMarkdownLines(mdFile.readlines()),
+				mdFile.readlines(),
 				skelContent.splitlines(keepends=True),
 			),
 			start=1,
@@ -334,25 +320,17 @@ def generateXliff(
 				res.numTranslatableStrings += 1
 				prefix, ID, suffix = m.groups()
 				if prefix and not mdLine.startswith(prefix):
-					raise ValueError(
-						f'Line {lineNo}: does not start with "{prefix}", {mdLine=}, {skelLine=}',
-					)
+					raise ValueError(f'Line {lineNo}: does not start with "{prefix}", {mdLine=}, {skelLine=}')
 				if suffix and not mdLine.endswith(suffix):
-					raise ValueError(
-						f'Line {lineNo}: does not end with "{suffix}", {mdLine=}, {skelLine=}',
-					)
+					raise ValueError(f'Line {lineNo}: does not end with "{suffix}", {mdLine=}, {skelLine=}')
 				source = mdLine[len(prefix) : len(mdLine) - len(suffix)]
 				outputFile.write(
 					f'<unit id="{ID}">\n<notes>\n<note appliesTo="source">line: {lineNo + 1}</note>\n',
 				)
 				if prefix:
-					outputFile.write(
-						f'<note appliesTo="source">prefix: {xmlEscape(prefix)}</note>\n',
-					)
+					outputFile.write(f'<note appliesTo="source">prefix: {xmlEscape(prefix)}</note>\n')
 				if suffix:
-					outputFile.write(
-						f'<note appliesTo="source">suffix: {xmlEscape(suffix)}</note>\n',
-					)
+					outputFile.write(f'<note appliesTo="source">suffix: {xmlEscape(suffix)}</note>\n')
 				outputFile.write(
 					"</notes>\n"
 					f"<segment>\n"
@@ -362,13 +340,9 @@ def generateXliff(
 				)
 			else:
 				if mdLine != skelLine:
-					raise ValueError(
-						f"Line {lineNo}: {mdLine=} does not match {skelLine=}",
-					)
+					raise ValueError(f"Line {lineNo}: {mdLine=} does not match {skelLine=}")
 		outputFile.write("</file>\n</xliff>")
-		print(
-			f"Generated xliff file with {res.numTranslatableStrings} translatable strings",
-		)
+		print(f"Generated xliff file with {res.numTranslatableStrings} translatable strings")
 		return res
 
 
@@ -389,27 +363,15 @@ def updateXliff(
 	)
 	with contextlib.ExitStack() as stack:
 		origMdPath = stack.enter_context(
-			createAndDeleteTempFilePath_contextManager(
-				dir=outputDir,
-				prefix="generated_",
-				suffix=".md",
-			),
+			createAndDeleteTempFilePath_contextManager(dir=outputDir, prefix="generated_", suffix=".md"),
 		)
 		generateMarkdown(xliffPath=xliffPath, outputPath=origMdPath, translated=False)
 		origSkelPath = stack.enter_context(
-			createAndDeleteTempFilePath_contextManager(
-				dir=outputDir,
-				prefix="extracted_",
-				suffix=".skel",
-			),
+			createAndDeleteTempFilePath_contextManager(dir=outputDir, prefix="extracted_", suffix=".skel"),
 		)
 		extractSkeleton(xliffPath=xliffPath, outputPath=origSkelPath)
 		updatedSkelPath = stack.enter_context(
-			createAndDeleteTempFilePath_contextManager(
-				dir=outputDir,
-				prefix="updated_",
-				suffix=".skel",
-			),
+			createAndDeleteTempFilePath_contextManager(dir=outputDir, prefix="updated_", suffix=".skel"),
 		)
 		updateSkeleton(
 			origMdPath=origMdPath,
@@ -437,26 +399,21 @@ def translateXliff(
 	)
 	res = Result_translateXliff()
 	with contextlib.ExitStack() as stack:
-		pretranslatedMdFile = stack.enter_context(
-			open(pretranslatedMdPath, "r", encoding="utf8"),
-		)
+		pretranslatedMdFile = stack.enter_context(open(pretranslatedMdPath, "r", encoding="utf8"))
 		xliff = lxml.etree.parse(xliffPath)
 		xliffRoot = xliff.getroot()
 		namespace = {"xliff": "urn:oasis:names:tc:xliff:document:2.0"}
 		if xliffRoot.tag != "{urn:oasis:names:tc:xliff:document:2.0}xliff":
 			raise ValueError("Not an xliff file")
 		xliffRoot.set("trgLang", lang)
-		skeletonNode = xliffRoot.find(
-			"./xliff:file/xliff:skeleton",
-			namespaces=namespace,
-		)
+		skeletonNode = xliffRoot.find("./xliff:file/xliff:skeleton", namespaces=namespace)
 		if skeletonNode is None:
 			raise ValueError("No skeleton found in xliff file")
-		skeletonContent = skeletonNode.text.strip()
+		skeletonContent = getSkeletonContentFromXliffText(skeletonNode.text)
 		for lineNo, (skelLine, pretranslatedLine) in enumerate(
 			zip_longest(
 				skeletonContent.splitlines(),
-				preprocessMarkdownLines(pretranslatedMdFile.readlines()),
+				pretranslatedMdFile.readlines(),
 			),
 			start=1,
 		):
@@ -470,9 +427,7 @@ def translateXliff(
 					)
 				if suffix and not pretranslatedLine.endswith(suffix):  # noqa: SIM102
 					if allowBadAnchors and (m := re_heading.match(pretranslatedLine)):
-						print(
-							f"Warning: ignoring bad anchor in line {lineNo}: {pretranslatedLine}",
-						)
+						print(f"Warning: ignoring bad anchor in line {lineNo}: {pretranslatedLine}")
 						suffix = m.group(3)
 				if suffix and not pretranslatedLine.endswith(suffix):
 					raise ValueError(
@@ -480,10 +435,7 @@ def translateXliff(
 					)
 				translation = pretranslatedLine[len(prefix) : len(pretranslatedLine) - len(suffix)]
 				try:
-					unit = xliffRoot.find(
-						f'./xliff:file/xliff:unit[@id="{ID}"]',
-						namespaces=namespace,
-					)
+					unit = xliffRoot.find(f'./xliff:file/xliff:unit[@id="{ID}"]', namespaces=namespace)
 					if unit is not None:
 						segment = unit.find("./xliff:segment", namespaces=namespace)
 						if segment is not None:
@@ -504,9 +456,7 @@ def translateXliff(
 					f"Line {lineNo}: pretranslated line {pretranslatedLine!r}, does not match skeleton line {skelLine!r}",
 				)
 		xliff.write(outputPath, encoding="utf8", xml_declaration=True)
-		print(
-			f"Translated xliff file with {res.numTranslatedStrings} translated strings",
-		)
+		print(f"Translated xliff file with {res.numTranslatedStrings} translated strings")
 		return res
 
 
@@ -518,40 +468,26 @@ class Result_generateMarkdown:
 	numBadTranslationStrings = 0
 
 
-def generateMarkdown(
-	xliffPath: str,
-	outputPath: str,
-	translated: bool = True,
-) -> Result_generateMarkdown:
-	print(
-		f"Generating markdown file {prettyPathString(outputPath)} from {prettyPathString(xliffPath)}...",
-	)
+def generateMarkdown(xliffPath: str, outputPath: str, translated: bool = True) -> Result_generateMarkdown:
+	print(f"Generating markdown file {prettyPathString(outputPath)} from {prettyPathString(xliffPath)}...")
 	res = Result_generateMarkdown()
 	with contextlib.ExitStack() as stack:
-		outputFile = stack.enter_context(
-			open(outputPath, "w", encoding="utf8", newline=""),
-		)
+		outputFile = stack.enter_context(open(outputPath, "w", encoding="utf8", newline=""))
 		xliff = lxml.etree.parse(xliffPath)
 		xliffRoot = xliff.getroot()
 		namespace = {"xliff": "urn:oasis:names:tc:xliff:document:2.0"}
 		if xliffRoot.tag != "{urn:oasis:names:tc:xliff:document:2.0}xliff":
 			raise ValueError("Not an xliff file")
-		skeletonNode = xliffRoot.find(
-			"./xliff:file/xliff:skeleton",
-			namespaces=namespace,
-		)
+		skeletonNode = xliffRoot.find("./xliff:file/xliff:skeleton", namespaces=namespace)
 		if skeletonNode is None:
 			raise ValueError("No skeleton found in xliff file")
-		skeletonContent = skeletonNode.text.strip()
+		skeletonContent = getSkeletonContentFromXliffText(skeletonNode.text)
 		for lineNum, line in enumerate(skeletonContent.splitlines(keepends=True), 1):
 			res.numTotalLines += 1
 			if m := re_translationID.match(line):
 				prefix, ID, suffix = m.groups()
 				res.numTranslatableStrings += 1
-				unit = xliffRoot.find(
-					f'./xliff:file/xliff:unit[@id="{ID}"]',
-					namespaces=namespace,
-				)
+				unit = xliffRoot.find(f'./xliff:file/xliff:unit[@id="{ID}"]', namespaces=namespace)
 				if unit is None:
 					raise ValueError(f"Cannot locate Unit {ID} in xliff file")
 				segment = unit.find("./xliff:segment", namespaces=namespace)
@@ -595,16 +531,14 @@ def generateMarkdown(
 
 
 def ensureMarkdownFilesMatch(path1: str, path2: str, allowBadAnchors: bool = False):
-	print(
-		f"Ensuring files {prettyPathString(path1)} and {prettyPathString(path2)} match...",
-	)
+	print(f"Ensuring files {prettyPathString(path1)} and {prettyPathString(path2)} match...")
 	with contextlib.ExitStack() as stack:
 		file1 = stack.enter_context(open(path1, "r", encoding="utf8"))
 		file2 = stack.enter_context(open(path2, "r", encoding="utf8"))
 		for lineNo, (line1, line2) in enumerate(
 			zip_longest(
-				preprocessMarkdownLines(file1.readlines()),
-				preprocessMarkdownLines(file2.readlines()),
+				file1.readlines(),
+				file2.readlines(),
 			),
 			start=1,
 		):
@@ -630,15 +564,11 @@ def ensureMarkdownFilesMatch(path1: str, path2: str, allowBadAnchors: bool = Fal
 					)
 					continue
 				if allowBadAnchors and (m1 := re_heading.match(line1)) and (m2 := re_heading.match(line2)):
-					print(
-						f"Warning: ignoring bad anchor in headings at line {lineNo}: {line1}, {line2}",
-					)
+					print(f"Warning: ignoring bad anchor in headings at line {lineNo}: {line1}, {line2}")
 					line1 = m1.group(1) + m1.group(2)
 					line2 = m2.group(1) + m2.group(2)
 			if line1 != line2:
-				raise ValueError(
-					f"Files do not match at line {lineNo}: {line1=} {line2=}",
-				)
+				raise ValueError(f"Files do not match at line {lineNo}: {line1=} {line2=}")
 		print("Files match")
 
 
@@ -692,15 +622,9 @@ def pretranslateAllPossibleLanguages(langsDir: str, mdBaseName: str):
 			os.remove(langXliffPath)
 			continue
 		try:
-			ensureMarkdownFilesMatch(
-				rebuiltLangMdPath,
-				langPretranslatedMdPath,
-				allowBadAnchors=True,
-			)
+			ensureMarkdownFilesMatch(rebuiltLangMdPath, langPretranslatedMdPath, allowBadAnchors=True)
 		except Exception as e:  # noqa: BLE001
-			print(
-				f"Rebuilt {langDir} markdown does not match pretranslated markdown: {e}",
-			)
+			print(f"Rebuilt {langDir} markdown does not match pretranslated markdown: {e}")
 			os.remove(langXliffPath)
 			continue
 		os.remove(rebuiltLangMdPath)
@@ -708,18 +632,12 @@ def pretranslateAllPossibleLanguages(langsDir: str, mdBaseName: str):
 		succeededLangs.add(langDir)
 	if len(skippedLangs) > 0:
 		print(f"Skipped {len(skippedLangs)} languages already pretranslated.")
-	print(
-		f"Pretranslated {len(succeededLangs)} out of {len(allLangs) - len(skippedLangs)} languages.",
-	)
+	print(f"Pretranslated {len(succeededLangs)} out of {len(allLangs) - len(skippedLangs)} languages.")
 
 
 if __name__ == "__main__":
 	mainParser = argparse.ArgumentParser()
-	commandParser = mainParser.add_subparsers(
-		title="commands",
-		dest="command",
-		required=True,
-	)
+	commandParser = mainParser.add_subparsers(title="commands", dest="command", required=True)
 	generateXliffParser = commandParser.add_parser("generateXliff")
 	generateXliffParser.add_argument(
 		"-m",
@@ -819,9 +737,7 @@ if __name__ == "__main__":
 		action="store_false",
 		help="Generate the markdown file with the untranslated strings",
 	)
-	ensureMarkdownFilesMatchParser = commandParser.add_parser(
-		"ensureMarkdownFilesMatch",
-	)
+	ensureMarkdownFilesMatchParser = commandParser.add_parser("ensureMarkdownFilesMatch")
 	ensureMarkdownFilesMatchParser.add_argument(
 		dest="path1",
 		type=str,
@@ -860,11 +776,7 @@ if __name__ == "__main__":
 				outputPath=args.output,
 			)
 		case "generateMarkdown":
-			generateMarkdown(
-				xliffPath=args.xliff,
-				outputPath=args.output,
-				translated=args.translated,
-			)
+			generateMarkdown(xliffPath=args.xliff, outputPath=args.output, translated=args.translated)
 		case "translateXliff":
 			translateXliff(
 				xliffPath=args.xliff,
@@ -873,10 +785,7 @@ if __name__ == "__main__":
 				outputPath=args.output,
 			)
 		case "pretranslateLangs":
-			pretranslateAllPossibleLanguages(
-				langsDir=args.langsDir,
-				mdBaseName=args.mdBaseName,
-			)
+			pretranslateAllPossibleLanguages(langsDir=args.langsDir, mdBaseName=args.mdBaseName)
 		case "ensureMarkdownFilesMatch":
 			ensureMarkdownFilesMatch(path1=args.path1, path2=args.path2)
 		case _:
