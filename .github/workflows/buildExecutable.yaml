@@ -19,6 +19,8 @@ jobs:
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v10.2.0
       - name: Lint with prek
+        env:
+          PREK_SKIP: no-commit-to-branch
         run: |
           uv sync
           uv run prek run --all-files
