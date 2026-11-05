@@ -65,3 +65,9 @@ To install all dependencies (including PyInstaller) and build a standalone execu
 	```
 
 The resulting executable will be located in the `dist` directory.
+
+## Run tests
+
+```sh
+uv run python -m unittest discover -s tests -v
+```
