@@ -4,8 +4,6 @@
 
 <!-- KC:title: NVDA NVDA_VERSION Résumé des commandes -->
 
-
-
 ## Introduction {#Introduction}
 
 Bienvenue dans NVDA !
@@ -102,7 +100,7 @@ Ces étapes supposent une certaine familiarité avec la navigation sur une page 
 
 * Ouvrez votre navigateur Web (appuyez sur la touche `Windows`, tapez le mot "internet" sans les guillemets et appuyez sur `entrer`)
 * Chargez la page de téléchargement de NV Access (Appuyez sur `alt+d`, tapez l'adresse suivante et appuyez sur `entrée`):
-https://www.nvaccess.org/download
+<https://www.nvaccess.org/download>
 * Activez le bouton "télécharger"
 * Le navigateur peut ou non demander une action à effectuer après le téléchargement, puis lancer le téléchargement
 * Selon le navigateur, le fichier peut s'exécuter automatiquement après son téléchargement
@@ -204,53 +202,53 @@ Les commandes réelles ne s'exécuteront pas en mode d'aide à la saisie.
 
 #### Démarrer et Arrêter NVDA {#StartingAndStoppingNVDA}
 
-| Nom |Touche ordinateur de bureau |Touche ordinateur portable |Description|
-|---|---|---|---|
-|Démarrer NVDA |`contrôle+alt+n` |`contrôle+alt+n` |Démarre ou redémarre NVDA|
-|Quitter NVDA |`NVDA+q`, puis `entrée` |`NVDA+q`, puis `entrée` |quitte NVDA|
-|Interrompre ou relancer la parole |`majuscule` |`majuscule` |Interrompt instantanément la parole. Un nouvel appui reprendra la parole là où elle s'est arrêtée|
-|Arrêt de la parole |`contrôle` |`contrôle` |Interrompt instantanément la parole|
+| Nom | Touche ordinateur de bureau | Touche ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Démarrer NVDA | `contrôle+alt+n` | `contrôle+alt+n` | Démarre ou redémarre NVDA |
+| Quitter NVDA | `NVDA+q`, puis `entrée` | `NVDA+q`, puis `entrée` | quitte NVDA |
+| Interrompre ou relancer la parole | `majuscule` | `majuscule` | Interrompt instantanément la parole. Un nouvel appui reprendra la parole là où elle s'est arrêtée |
+| Arrêt de la parole | `contrôle` | `contrôle` | Interrompt instantanément la parole |
 
 #### Lire du texte {#ReadingText}
 
-| Nom |Touche ordinateur de bureau |Touche ordinateur portable |Description|
-|---|---|---|---|
-|Dire tout |`NVDA+flècheBas` |`NVDA+a` |Commence à lire à partir de la position courante en la déplaçant au fur et à mesure|
-|Lire la ligne courante |`NVDA+flècheHaut` |`NVDA+l` |Lit la ligne. Un double appui épelle la ligne. Un triple appui épelle la ligne en utilisant la description de caractères (Alpha, Bravo, Charlie, etc)|
-|Lire la sélection |`NVDA+maj+flècheHaut` |`NVDA+maj+s` |Lit tout texte sélectionné. Un double appui épelle l'information. Un triple appui l'épelle en code international|
-|Lire le texte du presse-papiers |`NVDA+c` |`NVDA+c` |Lit tout texte dans le presse-papiers. Un double appui épelle l'information. Un triple appui l'épelle en code international|
+| Nom | Touche ordinateur de bureau | Touche ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Dire tout | `NVDA+flècheBas` | `NVDA+a` | Commence à lire à partir de la position courante en la déplaçant au fur et à mesure |
+| Lire la ligne courante | `NVDA+flècheHaut` | `NVDA+l` | Lit la ligne. Un double appui épelle la ligne. Un triple appui épelle la ligne en utilisant la description de caractères (Alpha, Bravo, Charlie, etc) |
+| Lire la sélection | `NVDA+maj+flècheHaut` | `NVDA+maj+s` | Lit tout texte sélectionné. Un double appui épelle l'information. Un triple appui l'épelle en code international |
+| Lire le texte du presse-papiers | `NVDA+c` | `NVDA+c` | Lit tout texte dans le presse-papiers. Un double appui épelle l'information. Un triple appui l'épelle en code international |
 
 #### Annoncer la position et autres informations {#ReportingLocation}
 
-| Nom |Touche ordinateur de bureau |Touche ordinateur portable |Description|
-|---|---|---|---|
-|Titre de la fenêtre |`NVDA+t` |`NVDA+t` |Annonce le titre de la fenêtre actuellement active. Un double appui épelle l'information. Un triple appui la copie dans le presse-papiers|
-|Annoncer le focus |`NVDA+tab` |`NVDA+tab` |Annonce le contrôle actuellement en focus. Un double appui épelle l'information. Un triple appui l'épelle en code international|
-|Lire la fenêtre |`NVDA+b` |`NVDA+b` |Lit entièrement la fenêtre courante (utile pour les dialogues)|
-|Lire la barre d'état |`NVDA+fin` |`NVDA+maj+fin` |Annonce la barre d'état si NVDA en trouve une. Un double appui épelle l'information. Un triple appui la copie dans le presse-papiers|
-|Lire l'heure |`NVDA+f12` |`NVDA+f12` |Un appui annonce l'heure courante, un double appui annonce la date. L'heure et la date sont annoncées dans le format spécifié dans les paramètres Windows pour l'horloge de la barre d'état système.|
-|Annoncer la mise en forme du texte |`NVDA+f` |`NVDA+f` |Annonce la mise en forme du texte. Un double appui affiche l'information dans une fenêtre|
-|Annoncer la destination du lien |`NVDA+k` |`NVDA+k` |Un appui annonce l'URL de destination du lien à la position courante du curseur ou du focus. Deux appuis l'affichent dans une fenêtre pour une revue plus attentive|
+| Nom | Touche ordinateur de bureau | Touche ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Titre de la fenêtre | `NVDA+t` | `NVDA+t` | Annonce le titre de la fenêtre actuellement active. Un double appui épelle l'information. Un triple appui la copie dans le presse-papiers |
+| Annoncer le focus | `NVDA+tab` | `NVDA+tab` | Annonce le contrôle actuellement en focus. Un double appui épelle l'information. Un triple appui l'épelle en code international |
+| Lire la fenêtre | `NVDA+b` | `NVDA+b` | Lit entièrement la fenêtre courante (utile pour les dialogues) |
+| Lire la barre d'état | `NVDA+fin` | `NVDA+maj+fin` | Annonce la barre d'état si NVDA en trouve une. Un double appui épelle l'information. Un triple appui la copie dans le presse-papiers |
+| Lire l'heure | `NVDA+f12` | `NVDA+f12` | Un appui annonce l'heure courante, un double appui annonce la date. L'heure et la date sont annoncées dans le format spécifié dans les paramètres Windows pour l'horloge de la barre d'état système. |
+| Annoncer la mise en forme du texte | `NVDA+f` | `NVDA+f` | Annonce la mise en forme du texte. Un double appui affiche l'information dans une fenêtre |
+| Annoncer la destination du lien | `NVDA+k` | `NVDA+k` | Un appui annonce l'URL de destination du lien à la position courante du curseur ou du focus. Deux appuis l'affichent dans une fenêtre pour une revue plus attentive |
 
 #### Choisir les informations lues par NVDA {#ToggleWhichInformationNVDAReads}
 
-| Nom |Touche ordinateur de bureau |Touche ordinateur portable |Description|
-|---|---|---|---|
-|Dire les caractères tapés |`NVDA+2` |`NVDA+2` |Lorsqu'activé, NVDA annoncera tous les caractères que vous tapez sur le clavier.|
-|Dire les mots tapés |`NVDA+3` |`NVDA+3` |Lorsqu'activé, NVDA annoncera les mots que vous tapez sur le clavier.|
-|Dire les touches de commande |`NVDA+4` |`NVDA+4` |Lorsqu'activé, annoncera toutes les touches n'étant pas des caractères que vous taperez sur le clavier. Cela inclut les combinaisons de touches telles que contrôle plus une autre lettre.|
-|Activer le suivi de la souris |`NVDA+m` |`NVDA+m` |Lorsqu'activé, NVDA annoncera le texte actuellement sous le pointeur souris, tandis que vous le déplacez sur l'écran. Cela vous permet de trouver les choses sur l'écran, en déplaçant physiquement la souris, plutôt que d'essayer de les trouver en utilisant la navigation par objet.|
+| Nom | Touche ordinateur de bureau | Touche ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Dire les caractères tapés | `NVDA+2` | `NVDA+2` | Lorsqu'activé, NVDA annoncera tous les caractères que vous tapez sur le clavier. |
+| Dire les mots tapés | `NVDA+3` | `NVDA+3` | Lorsqu'activé, NVDA annoncera les mots que vous tapez sur le clavier. |
+| Dire les touches de commande | `NVDA+4` | `NVDA+4` | Lorsqu'activé, annoncera toutes les touches n'étant pas des caractères que vous taperez sur le clavier. Cela inclut les combinaisons de touches telles que contrôle plus une autre lettre. |
+| Activer le suivi de la souris | `NVDA+m` | `NVDA+m` | Lorsqu'activé, NVDA annoncera le texte actuellement sous le pointeur souris, tandis que vous le déplacez sur l'écran. Cela vous permet de trouver les choses sur l'écran, en déplaçant physiquement la souris, plutôt que d'essayer de les trouver en utilisant la navigation par objet. |
 
 #### La boucle des paramètres synthétiseur {#TheSynthSettingsRing}
 
-| Nom |Touche ordinateur de bureau |Touche ordinateur portable |Description|
-|---|---|---|---|
-|Aller au paramètre synthétiseur suivant |`NVDA+contrôle+flècheDroit` |`NVDA+maj+contrôle+flècheDroit` |Va au paramètre vocal suivant disponible, retournant au premier après le dernier|
-|Aller au paramètre synthétiseur précédent |`NVDA+contrôle+flècheGauche` |`NVDA+maj+contrôle+flècheGauche` |Va au paramètre vocal précédent disponible, retournant au dernier après le premier|
-|Augmenter le paramètre synthétiseur courant |`NVDA+contrôle+flècheHaut` |`NVDA+maj+contrôle+flècheHaut` |Augmente le paramètre vocal sur lequel vous vous trouvez. Ex. augmente le débit, choisit la voix suivante, augmente le volume|
-|Augmenter le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important |`NVDA+contrôle+pagePrec` |`NVDA+maj+contrôle+pagePrec` |Augmente d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, avancer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera incrémentée de 20%|
-|Diminuer le paramètre synthétiseur courant |`NVDA+contrôle+flècheBas` |`NVDA+maj+contrôle+flècheBas` |diminue le paramètre vocal sur lequel vous vous trouvez. Ex. diminue le débit, choisit la voix précédente, diminue le volume|
-|Diminuer le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important |`NVDA+contrôle+pageSuiv` |`NVDA+maj+contrôle+pageSuiv` |Diminue d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, reculer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera décrémentée de 20%|
+| Nom | Touche ordinateur de bureau | Touche ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Aller au paramètre synthétiseur suivant | `NVDA+contrôle+flècheDroit` | `NVDA+maj+contrôle+flècheDroit` | Va au paramètre vocal suivant disponible, retournant au premier après le dernier |
+| Aller au paramètre synthétiseur précédent | `NVDA+contrôle+flècheGauche` | `NVDA+maj+contrôle+flècheGauche` | Va au paramètre vocal précédent disponible, retournant au dernier après le premier |
+| Augmenter le paramètre synthétiseur courant | `NVDA+contrôle+flècheHaut` | `NVDA+maj+contrôle+flècheHaut` | Augmente le paramètre vocal sur lequel vous vous trouvez. Ex. augmente le débit, choisit la voix suivante, augmente le volume |
+| Augmenter le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important | `NVDA+contrôle+pagePrec` | `NVDA+maj+contrôle+pagePrec` | Augmente d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, avancer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera incrémentée de 20% |
+| Diminuer le paramètre synthétiseur courant | `NVDA+contrôle+flècheBas` | `NVDA+maj+contrôle+flècheBas` | diminue le paramètre vocal sur lequel vous vous trouvez. Ex. diminue le débit, choisit la voix précédente, diminue le volume |
+| Diminuer le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important | `NVDA+contrôle+pageSuiv` | `NVDA+maj+contrôle+pageSuiv` | Diminue d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, reculer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera décrémentée de 20% |
 
 Il est également possible de sauter à la première ou à la dernière valeur du paramètre de synthétiseur courant en attribuant des gestes personnalisés dans la [boîte de dialogue Gestes de commandes](#InputGestures), sous la catégorie parole.
 Par exemple, cela signifie que lorsque le débit est le paramètre courant, le débit sera modifié à 0 ou 100.
@@ -260,17 +258,17 @@ Lorsque vous êtes sur le paramètre voix, la première ou la dernière voix ser
 
 La liste complète des touches de navigation à lettre unique se trouve dans la section [Mode Navigation](#BrowseMode) du guide de l'utilisateur.
 
-| Commande |Frappe |Description|
-|---|---|---|
-|Titre |`h` |Aller au titre suivant|
-|Titre de niveau 1, 2, ou 3 |`1`, `2`, `3` |Aller au titre suivant au niveau spécifié|
-|Champ de formulaire |`f` |Aller au champ de formulaire suivant (zone d'édition, bouton, etc)|
-|Lien |`k` |Aller au lien suivant|
-|Région |`d` |Aller à la région suivante|
-|Liste |`l` |Aller à la liste suivante|
-|Tableau |`t` |Aller au tableau suivant|
-|Revenir en arrière |`maj+lettre` |Pressez `maj` et n'importe laquelle des lettres ci-dessus pour aller à l'élément précédent de ce type|
-|Liste des éléments |`NVDA+f7` |Liste différents types d'éléments, tels que liens et titres|
+| Commande | Frappe | Description |
+| --- | --- | --- |
+| Titre | `h` | Aller au titre suivant |
+| Titre de niveau 1, 2, ou 3 | `1`, `2`, `3` | Aller au titre suivant au niveau spécifié |
+| Champ de formulaire | `f` | Aller au champ de formulaire suivant (zone d'édition, bouton, etc) |
+| Lien | `k` | Aller au lien suivant |
+| Région | `d` | Aller à la région suivante |
+| Liste | `l` | Aller à la liste suivante |
+| Tableau | `t` | Aller au tableau suivant |
+| Revenir en arrière | `maj+lettre` | Pressez `maj` et n'importe laquelle des lettres ci-dessus pour aller à l'élément précédent de ce type |
+| Liste des éléments | `NVDA+f7` | Liste différents types d'éléments, tels que liens et titres |
 
 ### Préférences {#Preferences}
 
@@ -281,6 +279,7 @@ Pour ouvrir directement le dialogue des paramètres généraux de NVDA, appuyez 
 De nombreux écrans de paramètres ont des touches pour les ouvrir directement, comme `NVDA+contrôle+s` pour le synthétiseur, ou `NVDA+contrôle+v` pour les autres options de parole.
 
 ### Extensions {#Addons}
+
 Les extension sont des programmes qui fournissent des fonctionnalités nouvelles ou modifiées pour NVDA.
 Les extensions sont développées par la communauté NVDA ou par des sociétés externes et ne sont pas affiliés à NV Access.
 Comme pour tout logiciel, il est important de faire confiance au développeur d'une extension avant de l’utiliser.
@@ -298,6 +297,7 @@ Lorsque l'Add-on Store s'ouvre, il affiche "Extensions disponibles" si aucune ex
 Lorsque des extensions sont déjà installées, l'Add-on Store s'ouvre sur l'onglet "Extensions installées".
 
 #### Extensions disponibles {#AvailableAddons}
+
 Lorsque la fenêtre s'ouvre pour la première fois, le chargement des extensions peut prendre quelques secondes.
 NVDA lira le nom de la première extension une fois que le chargement de la liste des extensions est terminé.
 Les extensions disponibles sont listées par ordre alphabétique dans une liste à plusieurs colonnes.
@@ -311,6 +311,7 @@ Pour parcourir la liste et trouver une extension spécifique :
 1. Pour revenir à la liste des extensions, appuyez sur `alt+e`, ou `maj+tab` jusqu'à atteindre la liste.
 
 #### Rechercher des extensions {#SearchingForAddons}
+
 En plus de pouvoir parcourir toutes les extensions disponibles, il est possible de filtrer les extensions affichées.
 Pour effectuer une recherche, appuyez sur `alt+r` pour accéder au champ "Recherche" et tapez le texte à rechercher.
 La recherche vérifie les correspondances dans les champs ID, nom affiché, éditeur, auteur ou description de l'extension.
@@ -335,6 +336,7 @@ Pendant le processus d'installation, les extensions peuvent afficher des boîtes
 1. Appuyez sur `entrée` pour redémarrer NVDA.
 
 #### Gérer les extensions {#ManagingInstalledAddons}
+
 Appuyez sur `contrôle+tab` pour vous déplacer entre les onglets de l'Add-on Store.
 Les onglets sont : "Extensions installées", "Mises à jour", "Extensions disponibles" et "Extensions incompatibles installés".
 Chacun des onglets est présenté de manière similaire, sous la forme d'une liste d'extensions, d'un panneau pour plus de détails sur l'extension sélectionné et d'un bouton pour effectuer des actions pour l'extension sélectionnée.
@@ -346,6 +348,7 @@ Ces modifications ne prendront effet qu'une fois NVDA redémarré.
 Veuillez noter que dans la fenêtre de l'Add-on Store, `échap` fonctionne de la même manière que le bouton Fermer.
 
 #### Mettre à jour des extensions {#UpdatingAddons}
+
 Lorsqu'une mise à jour pour une extension que vous avez installée est disponible, elle sera listée dans l'onglet "Mises à jour".
 Appuyez sur `contrôle+tab` pour accéder à cet onglet depuis n'importe où dans l'Add-on Store.
 L'état de l'extension sera "Mise à jour disponible".
@@ -389,6 +392,7 @@ Vous pouvez créer des rapports de bogues ou des demandes de fonctionnalités vi
 Les [contribution guidelines](https://github.com/nvaccess/nvda/blob/master/.github/CONTRIBUTING.md) (en anglais) contiennent des informations précieuses pour contribuer à la communauté.
 
 ## Plus d'Options de Configuration {#MoreSetupOptions}
+
 ### Options d'Installation {#InstallingNVDA}
 
 Si vous installez NVDA directement depuis le lanceur NVDA téléchargé, appuyez sur le bouton Installer NVDA.
@@ -460,6 +464,7 @@ Les copies portables et temporaires de NVDA ont les restrictions suivantes :
 * L'atténuation audio n'est pas supportée.
 
 ## Prendre en Main NVDA {#GettingStartedWithNVDA}
+
 ### Démarrer NVDA {#LaunchingNVDA}
 
 Si NVDA a été installé à l'aide de l'installateur, alors il suffit, soit de frapper la combinaison contrôle+alt+n, soit de choisir dans le menu Démarrer / Programmes / NVDA / NVDA.
@@ -500,6 +505,7 @@ Note : l'appui sur "oui" ou "non" sauvegardera ce choix et ce dialogue n'appara
 Cependant, vous pouvez activer ou désactiver le processus de collecte de données manuellement dans l'écran de paramètres généraux de NVDA. Pour modifier ce paramètre manuellement, vous pouvez cocher ou décocher la case appelée [Autoriser le projet NVDA à recueillir des statistiques d'utilisation](#GeneralSettingsGatherUsageStats).
 
 ### À Propos des Commandes Clavier de NVDA {#AboutNVDAKeyboardCommands}
+
 #### La Touche NVDA {#TheNVDAModifierKey}
 
 La plupart des commandes spécifiques de NVDA se font en appuyant sur la touche NVDA en conjonction avec une ou plusieurs autres touches.
@@ -611,16 +617,16 @@ Lorsque le menu apparaît, vous pouvez utiliser les touches fléchées pour navi
 
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Tactile |Description|
-|---|---|---|---|---|
-|Démarrer ou redémarrer NVDA |Contrôle+alt+n |Contrôle+alt+n |aucun |Démarre ou redémarre NVDA depuis le bureau, si ce raccourci Windows est activé durant le processus d'installation de NVDA. Ceci est un raccourci spécifique à Windows et de ce fait il ne peut être réassigné dans le dialogue gestes de commandes.|
-|Arrêt parole |Contrôle |Contrôle |tape 2 doigts |Arrêt instantané de la parole|
-|Pause parole |Maj |Maj |Aucun |Pause instantanée de la parole, un second appui reprend la parole là où elle s'était arrêtée|
-|Menu NVDA |NVDA+n |NVDA+n |Double-tape 2 doigts |Affiche le menu NVDA pour vous permettre d'accéder aux préférences, outils, aide etc.|
-|Passage en mode aide à la saisie |NVDA+1 |NVDA+1 |Aucun |Dans ce mode, l'appui sur n'importe quelle touche donnera son nom et la description de la commande NVDA qui lui est éventuellement associée|
-|Quitter NVDA |NVDA+q |NVDA+q |Aucun |Quitter NVDA|
-|Ignorer la touche suivante |NVDA+f2 |NVDA+f2 |Aucun |Indique à NVDA de passer la touche suivante directement à l'application - même si cette touche correspond normalement à une commande NVDA|
-|Bascule du mode veille |NVDA+maj+s |NVDA+maj+z |Aucun |Le mode veille désactive toutes les commandes NVDA ainsi que la parole et le braille pour l'application en cours. Ceci est utile dans les applications fournissant leur propre système de revue d'écran. Appuyez à nouveau la combinaison pour désactiver le mode veille.|
+| Nom | Ordinateur de bureau | Ordinateur portable | Tactile | Description |
+| --- | --- | --- | --- | --- |
+| Démarrer ou redémarrer NVDA | Contrôle+alt+n | Contrôle+alt+n | aucun | Démarre ou redémarre NVDA depuis le bureau, si ce raccourci Windows est activé durant le processus d'installation de NVDA. Ceci est un raccourci spécifique à Windows et de ce fait il ne peut être réassigné dans le dialogue gestes de commandes. |
+| Arrêt parole | Contrôle | Contrôle | tape 2 doigts | Arrêt instantané de la parole |
+| Pause parole | Maj | Maj | Aucun | Pause instantanée de la parole, un second appui reprend la parole là où elle s'était arrêtée |
+| Menu NVDA | NVDA+n | NVDA+n | Double-tape 2 doigts | Affiche le menu NVDA pour vous permettre d'accéder aux préférences, outils, aide etc. |
+| Passage en mode aide à la saisie | NVDA+1 | NVDA+1 | Aucun | Dans ce mode, l'appui sur n'importe quelle touche donnera son nom et la description de la commande NVDA qui lui est éventuellement associée |
+| Quitter NVDA | NVDA+q | NVDA+q | Aucun | Quitter NVDA |
+| Ignorer la touche suivante | NVDA+f2 | NVDA+f2 | Aucun | Indique à NVDA de passer la touche suivante directement à l'application - même si cette touche correspond normalement à une commande NVDA |
+| Bascule du mode veille | NVDA+maj+s | NVDA+maj+z | Aucun | Le mode veille désactive toutes les commandes NVDA ainsi que la parole et le braille pour l'application en cours. Ceci est utile dans les applications fournissant leur propre système de revue d'écran. Appuyez à nouveau la combinaison pour désactiver le mode veille. |
 
 <!-- KC:endInclude -->
 
@@ -628,11 +634,11 @@ Lorsque le menu apparaît, vous pouvez utiliser les touches fléchées pour navi
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Annoncer date/heure |NVDA+f12 |Un appui annonce l'heure, deux appuis annoncent la date|
-|Annoncer l'état de la batterie |NVDA+maj+b |Annonce le pourcentage de charge de la batterie ou si l'adaptateur secteur est connectée|
-|Annoncer le contenu du presse-papiers |NVDA+c |Lit le contenu du presse-papier s'il y a lieu|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Annoncer date/heure | NVDA+f12 | Un appui annonce l'heure, deux appuis annoncent la date |
+| Annoncer l'état de la batterie | NVDA+maj+b | Annonce le pourcentage de charge de la batterie ou si l'adaptateur secteur est connectée |
+| Annoncer le contenu du presse-papiers | NVDA+c | Lit le contenu du presse-papier s'il y a lieu |
 
 <!-- KC:endInclude -->
 
@@ -657,9 +663,9 @@ Les exemples incluent lors d'un enregistrement audio, lors de l'utilisation d'un
 Un geste permet de parcourir les différents modes de parole :
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Faire défiler les modes de parole |`NVDA+s` |Passer d’un mode vocal à l’autre|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Faire défiler les modes de parole | `NVDA+s` | Passer d’un mode vocal à l’autre |
 
 <!-- KC:endInclude -->
 
@@ -686,13 +692,13 @@ Quand la [Mise en Évidence Visuelle](#VisionFocusHighlight) est activée, la po
 Quelques touches de commandes utiles pour naviguer avec le focus :
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Description|
-|---|---|---|---|
-|Annonce du focus courant |NVDA+tab |NVDA+tab |Annonce l'objet en cours ou le contrôle qui a le focus système. Un double appui épelle l'information|
-|Annonce du titre |NVDA+t |NVDA+t |Annonce le titre de la fenêtre active. Un double appui épelle l'information, un triple appui la copie dans le presse-papiers|
-|Lecture de la fenêtre active |NVDA+b |NVDA+b |lit tous les contrôles de la fenêtre active (utile pour les dialogues)|
-|Annonce de la barre d'état |NVDA+fin |NVDA+maj+fin |Lit la barre d'état si NVDA en trouve une. Un double appui épelle l'information. Un triple appui la copie dans le presse-papiers|
-|Annoncer le Raccourci Clavier |`maj+pavnum2` |`NVDA+contrôle+maj+point-virgule` |Annonce le raccourci clavier (accélérateur) de l'objet actuellement en focus|
+| Nom | Ordinateur de bureau | Ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Annonce du focus courant | NVDA+tab | NVDA+tab | Annonce l'objet en cours ou le contrôle qui a le focus système. Un double appui épelle l'information |
+| Annonce du titre | NVDA+t | NVDA+t | Annonce le titre de la fenêtre active. Un double appui épelle l'information, un triple appui la copie dans le presse-papiers |
+| Lecture de la fenêtre active | NVDA+b | NVDA+b | lit tous les contrôles de la fenêtre active (utile pour les dialogues) |
+| Annonce de la barre d'état | NVDA+fin | NVDA+maj+fin | Lit la barre d'état si NVDA en trouve une. Un double appui épelle l'information. Un triple appui la copie dans le presse-papiers |
+| Annoncer le Raccourci Clavier | `maj+pavnum2` | `NVDA+contrôle+maj+point-virgule` | Annonce le raccourci clavier (accélérateur) de l'objet actuellement en focus |
 
 <!-- KC:endInclude -->
 
@@ -707,33 +713,33 @@ NVDA annonce le déplacement par caractère, mot ou ligne, et annonce aussi la s
 NVDA fournit les commandes clavier suivantes relatives au curseur système :
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Description|
-|---|---|---|---|
-|Dire tout |NVDA+flèche bas |NVDA+a |Démarre la lecture depuis la position du curseur système en lui faisant suivre la lecture|
-|Lire ligne courante |NVDA+flèche haut |NVDA+l |Lit la ligne où se trouve le curseur système. Un double appui épelle la ligne. Un triple appui l'épelle en code international.|
-|Lire texte sélectionné |NVDA+Maj+flèche haut |NVDA+Maj+s |Lit tout le texte actuellement sélectionné|
-|Annoncer la mise en forme du texte |NVDA+f |NVDA+f |annonce la mise en forme du texte à la position actuelle du curseur. Un double appui présente l'information en mode navigation|
-|Annoncer la destination du lien |`NVDA+k` |`NVDA+k` |Un appui annonce l'URL de destination du lien à la position courante du curseur ou du focus. Deux appuis l'affichent dans une fenêtre pour une revue plus attentive|
-|Annoncer la position du curseur |NVDA+pavnumEffacement |NVDA+effacement |Annonce des informations sur l'emplacement du texte ou de l'objet à la position du curseur système. Par exemple, cela peut inclure le pourcentage dans le document, la distance depuis le bord de la page ou la position exacte sur l'écran. Appuyer deux fois peut fournir plus de détails.|
-|Phrase suivante |alt+flècheBas |alt+flècheBas |Amène le curseur à la phrase suivante et la lit. (Supporté seulement sous Microsoft Word et Outlook)|
-|Phrase précédente |alt+flècheHaut |alt+flècheHaut |Amène le curseur à la phrase précédente et la lit. (Supporté seulement sous Microsoft Word et Outlook)|
+| Nom | Ordinateur de bureau | Ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Dire tout | NVDA+flèche bas | NVDA+a | Démarre la lecture depuis la position du curseur système en lui faisant suivre la lecture |
+| Lire ligne courante | NVDA+flèche haut | NVDA+l | Lit la ligne où se trouve le curseur système. Un double appui épelle la ligne. Un triple appui l'épelle en code international. |
+| Lire texte sélectionné | NVDA+Maj+flèche haut | NVDA+Maj+s | Lit tout le texte actuellement sélectionné |
+| Annoncer la mise en forme du texte | NVDA+f | NVDA+f | annonce la mise en forme du texte à la position actuelle du curseur. Un double appui présente l'information en mode navigation |
+| Annoncer la destination du lien | `NVDA+k` | `NVDA+k` | Un appui annonce l'URL de destination du lien à la position courante du curseur ou du focus. Deux appuis l'affichent dans une fenêtre pour une revue plus attentive |
+| Annoncer la position du curseur | NVDA+pavnumEffacement | NVDA+effacement | Annonce des informations sur l'emplacement du texte ou de l'objet à la position du curseur système. Par exemple, cela peut inclure le pourcentage dans le document, la distance depuis le bord de la page ou la position exacte sur l'écran. Appuyer deux fois peut fournir plus de détails. |
+| Phrase suivante | alt+flècheBas | alt+flècheBas | Amène le curseur à la phrase suivante et la lit. (Supporté seulement sous Microsoft Word et Outlook) |
+| Phrase précédente | alt+flècheHaut | alt+flècheHaut | Amène le curseur à la phrase précédente et la lit. (Supporté seulement sous Microsoft Word et Outlook) |
 
 Dans un tableau, vous disposez également des touches de commandes suivantes :
 
-| Nom |Touche |Description|
-|---|---|---|
-|Aller à la colonne précédente |contrôle+alt+flèche gauche |Déplace le curseur système à la colonne précédente en restant sur la même ligne|
-|Aller à la colonne suivante |contrôle+alt+flèche droite |Déplace le curseur système à la colonne suivante en restant sur la même ligne|
-|Aller à la ligne précédente |contrôle+alt+flèche haut |Déplace le curseur système à la ligne précédente en restant sur la même colonne|
-|Aller à la ligne suivante |contrôle+alt+flèche bas |Déplace le curseur système à la ligne suivante en restant sur la même colonne|
-|Aller à la première colonne |contrôle+alt+début |Déplace le curseur système à la première colonne (en restant sur la même ligne)|
-|Aller à la dernière colonne |contrôle+alt+fin |Déplace le curseur système à la dernière colonne (en restant sur la même ligne)|
-|Aller à la première ligne |contrôle+alt+PagePrec |Déplace le curseur système à la première ligne (en restant sur la même colonne)|
-|Aller à la dernière ligne |contrôle+alt+pageSuiv |Déplace le curseur système à la dernière ligne (en restant sur la même colonne)|
-|Dire tout dans la colonne |`NVDA+contrôle+alt+flècheBas` |Lit la colonne verticalement depuis la cellule courante jusqu'à la dernière cellule de la colonne.|
-|Dire tout dans la ligne |`NVDA+contrôle+alt+flècheDroit` |Lit la ligne horizontalement depuis la cellule courante jusqu'à la dernière cellule de la ligne.|
-|Lire toute la colonne |`NVDA+contrôle+alt+flècheHaut` |Lit la colonne courante verticalement du début à la fin sans déplacer le curseur système.|
-|Lire toute la ligne |`NVDA+contrôle+alt+flècheGauche` |Lit la ligne courante horizontalement de gauche à droite sans déplacer le curseur système.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Aller à la colonne précédente | contrôle+alt+flèche gauche | Déplace le curseur système à la colonne précédente en restant sur la même ligne |
+| Aller à la colonne suivante | contrôle+alt+flèche droite | Déplace le curseur système à la colonne suivante en restant sur la même ligne |
+| Aller à la ligne précédente | contrôle+alt+flèche haut | Déplace le curseur système à la ligne précédente en restant sur la même colonne |
+| Aller à la ligne suivante | contrôle+alt+flèche bas | Déplace le curseur système à la ligne suivante en restant sur la même colonne |
+| Aller à la première colonne | contrôle+alt+début | Déplace le curseur système à la première colonne (en restant sur la même ligne) |
+| Aller à la dernière colonne | contrôle+alt+fin | Déplace le curseur système à la dernière colonne (en restant sur la même ligne) |
+| Aller à la première ligne | contrôle+alt+PagePrec | Déplace le curseur système à la première ligne (en restant sur la même colonne) |
+| Aller à la dernière ligne | contrôle+alt+pageSuiv | Déplace le curseur système à la dernière ligne (en restant sur la même colonne) |
+| Dire tout dans la colonne | `NVDA+contrôle+alt+flècheBas` | Lit la colonne verticalement depuis la cellule courante jusqu'à la dernière cellule de la colonne. |
+| Dire tout dans la ligne | `NVDA+contrôle+alt+flècheDroit` | Lit la ligne horizontalement depuis la cellule courante jusqu'à la dernière cellule de la ligne. |
+| Lire toute la colonne | `NVDA+contrôle+alt+flècheHaut` | Lit la colonne courante verticalement du début à la fin sans déplacer le curseur système. |
+| Lire toute la ligne | `NVDA+contrôle+alt+flècheGauche` | Lit la ligne courante horizontalement de gauche à droite sans déplacer le curseur système. |
 
 <!-- KC:endInclude -->
 
@@ -773,20 +779,20 @@ Pour naviguer par objet, utilisez les commandes suivantes :
 
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Tactile |Description|
-|---|---|---|---|---|
-|Annonce de l'objet courant |NVDA+pavnum5 |NVDA+Maj+o |Aucun |Annonce l'objet navigateur courant, deux appuis épellent l'information, trois appuis copient le nom et le contenu de l'objet dans le presse-papiers|
-|Aller à l'objet parent |NVDA+pavnum8 |NVDA+maj+flèche haut |Glisser vers le haut (mode objet) |Va à l'objet parent (qui contient l'objet navigateur courant)|
-|Aller à l'objet précédent |NVDA+pavnum4 |NVDA+maj+flèchegauche |aucun |Se déplace vers l'objet avant l'objet navigateur courant|
-|Aller à l'objet précédent en vue à plat |NVDA+pavnum9 |NVDA+maj+ù |glisser vers la gauche (mode objet) |Passe à l'objet précédent dans une vue à plat de la hiérarchie de navigation d'objets|
-|Passer à l'objet suivant |NVDA+pavnum6 |NVDA+maj+flècheDroite |aucun |Se déplace vers l'objet après l'objet navigateur courant|
-|Passer à l'objet suivant dans la vue à plat |NVDA+pavnum3 |NVDA+maj+* |glisser vers la droite (mode objet) |Passe à l'objet suivant dans une vue à plat de la hiérarchie de navigation d'objets|
-|Aller au premier objet inclus |NVDA+pavnum2 |NVDA+maj+flèche bas |Glisser vers le bas (mode objet) |Va au premier objet inclus dans l'objet navigateur courant|
-|Aller à l'objet en focus |NVDA+pavnumMoins |NVDA+retour arrière |Aucun |Va à l'objet ayant le focus système, et place le curseur de revue sur le curseur système s'il est présent|
-|Activer l'objet navigateur courant |NVDA+pavnumEntrer |NVDA+entrée |Double tape |Active l'objet navigateur courant (similaire à un clic de souris ou à appuyer la barre d'espace quand l'objet a le focus système)|
-|Amener le focus système à l'objet navigateur courant |NVDA+maj+pavnumMoins |NVDA+maj+retour arrière |Aucun |Amène le focus système à l'objet navigateur courant si c'est possible|
-|Annoncer la position du curseur de revue |NVDA+pavnumEffacement |NVDA+effacement |Aucun |Annonce la position du texte ou de l'objet sous le curseur de revue. Cela peut inclure, par exemple, le pourcentage dans le document, la distance au bord de la page ou la position exacte sur l'écran. Un double appui annonce éventuellement des informations supplémentaires.|
-|Amener le curseur de revue à la barre d'état |aucun |aucun |aucun |Annonce la barre d'état si NVDA en trouve une. Amène également l'objet navigateur à sa position.|
+| Nom | Ordinateur de bureau | Ordinateur portable | Tactile | Description |
+| --- | --- | --- | --- | --- |
+| Annonce de l'objet courant | NVDA+pavnum5 | NVDA+Maj+o | Aucun | Annonce l'objet navigateur courant, deux appuis épellent l'information, trois appuis copient le nom et le contenu de l'objet dans le presse-papiers |
+| Aller à l'objet parent | NVDA+pavnum8 | NVDA+maj+flèche haut | Glisser vers le haut (mode objet) | Va à l'objet parent (qui contient l'objet navigateur courant) |
+| Aller à l'objet précédent | NVDA+pavnum4 | NVDA+maj+flèchegauche | aucun | Se déplace vers l'objet avant l'objet navigateur courant |
+| Aller à l'objet précédent en vue à plat | NVDA+pavnum9 | NVDA+maj+ù | glisser vers la gauche (mode objet) | Passe à l'objet précédent dans une vue à plat de la hiérarchie de navigation d'objets |
+| Passer à l'objet suivant | NVDA+pavnum6 | NVDA+maj+flècheDroite | aucun | Se déplace vers l'objet après l'objet navigateur courant |
+| Passer à l'objet suivant dans la vue à plat | NVDA+pavnum3 | NVDA+maj+* | glisser vers la droite (mode objet) | Passe à l'objet suivant dans une vue à plat de la hiérarchie de navigation d'objets |
+| Aller au premier objet inclus | NVDA+pavnum2 | NVDA+maj+flèche bas | Glisser vers le bas (mode objet) | Va au premier objet inclus dans l'objet navigateur courant |
+| Aller à l'objet en focus | NVDA+pavnumMoins | NVDA+retour arrière | Aucun | Va à l'objet ayant le focus système, et place le curseur de revue sur le curseur système s'il est présent |
+| Activer l'objet navigateur courant | NVDA+pavnumEntrer | NVDA+entrée | Double tape | Active l'objet navigateur courant (similaire à un clic de souris ou à appuyer la barre d'espace quand l'objet a le focus système) |
+| Amener le focus système à l'objet navigateur courant | NVDA+maj+pavnumMoins | NVDA+maj+retour arrière | Aucun | Amène le focus système à l'objet navigateur courant si c'est possible |
+| Annoncer la position du curseur de revue | NVDA+pavnumEffacement | NVDA+effacement | Aucun | Annonce la position du texte ou de l'objet sous le curseur de revue. Cela peut inclure, par exemple, le pourcentage dans le document, la distance au bord de la page ou la position exacte sur l'écran. Un double appui annonce éventuellement des informations supplémentaires. |
+| Amener le curseur de revue à la barre d'état | aucun | aucun | aucun | Annonce la barre d'état si NVDA en trouve une. Amène également l'objet navigateur à sa position. |
 
 <!-- KC:endInclude -->
 
@@ -807,29 +813,29 @@ Note : Le suivi de la Navigation par Objet par le Braille peut être configuré
 Vous disposez des commandes suivantes pour explorer du texte :
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Tactile |Description|
-|---|---|---|---|---|
-|Aller à la première ligne en revue |Maj+pavnum7 |NVDA+contrôle+début |Aucun |Amène le curseur de revue à la première ligne du texte|
-|Aller à la ligne précédente en revue |pavnum7 |NVDA+flèche haut |Glisser vers le haut (mode texte) |Amène le curseur de revue sur la ligne de texte précédente|
-|Annoncer la ligne courante en revue |pavnum8 |NVDA+maj+point-virgule |Aucun |Lit la ligne de texte sous le curseur de revue, un double appui épelle la ligne|
-|Aller à la ligne suivante en revue |pavnum9 |NVDA+flèche bas |Glisser vers le bas (mode texte) |Amène le curseur de revue à la ligne de texte suivante|
-|Aller à la dernière ligne en revue |maj+pavnum9 |NVDA+contrôle+fin |Aucun |Amène le curseur de revue à la dernière ligne de texte|
-|Aller au mot précédent en revue |pavnum4 |NVDA+contrôle+flèche gauche |Glisser vers la gauche 2 doigts (mode texte) |Amène le curseur de revue au mot précédent dans le texte|
-|Annoncer le mot courant en revue |pavnum5 |NVDA+contrôle+point-virgule |Aucun |Lit le mot à la position du curseur de revue, un double appui épelle le mot|
-|Aller au mot suivant en revue |pavnum6 |NVDA+contrôle+flèche droite |Glisser vers la droite 2 doigts (mode texte) |Amène le curseur de revue au mot suivant|
-|Aller au début de la ligne en revue |maj+pavnum1 |NVDA+début |Aucun |Amène le curseur de revue au début de la ligne courante|
-|Aller au caractère précédent en revue |pavnum1 |NVDA+flèche gauche |Glisser vers la gauche (mode texte) |Amène le curseur de revue au caractère précédent de la ligne courante|
-|Annoncer le caractère courant en revue |pavnum2 |NVDA+point-virgule |Aucun |Annonce le caractère courant sous le curseur de revue, un double appui annonce la valeur du caractère en décimal et hexadécimal|
-|Aller au caractère suivant en revue |pavnum3 |NVDA+flèche droite |Glisser vers la droite (mode texte) |Amène le curseur de revue au caractère suivant de la ligne courante|
-|Aller en fin de ligne en revue |maj+pavnum3 |NVDA+fin |Aucun |Amène le curseur de revue à la fin de la ligne courante|
-|Aller à la page précédente en revue |`NVDA+pagePrec` |`NVDA+maj+pagePrec` |aucune |Amène le curseur de revue à la page précédente de texte si supporté par l'application|
-|Aller à la page suivante en revue |`NVDA+pageSuiv` |`NVDA+maj+pageSuiv` |aucune |Amène le curseur de revue à la page suivante de texte si supporté par l'application|
-|Dire tout en revue |pavnumPlus |NVDA+maj+a |Glisser vers le bas 3 doigts (mode texte) |Lit en partant de la position du curseur de revue, celui-ci suivant la lecture|
-|Sélectionner puis copier à partir du curseur de revue |NVDA+f9 |NVDA+f9 |Aucun |Commence à sélectionner puis copier le texte depuis la position du curseur de revue. La copie ne s'effectue pas tant qu'on n'a pas indiqué la fin du texte à copier|
-|Sélectionner puis copier jusqu'au curseur de revue |NVDA+f10 |NVDA+f10 |Aucun |Au premier appui, le texte est sélectionné depuis la position préalablement définie par "copier à partir du curseur de revue" jusqu'à la position actuelle du curseur de revue. Si le curseur système peut atteindre le texte, il sera amené au texte sélectionné. Au second appui, le texte est copié dans le presse-papiers de Windows.|
-|aller au marqueur de début de copie en mode revue |NVDA+maj+f9 |NVDA+maj+f9 |aucun |Amène le curseur de revue à la position préalablement définiee comme marqueur de début de copie|
-|Annoncer la mise en forme du texte |NVDA+maj+f |NVDA+maj+f |Aucun |Annonce la mise en forme du texte à la position du curseur de revue. Un double appui affiche l'information en mode navigation|
-|Annonce le remplacement du symbole courant |Aucun |Aucun |aucun |Dit le symbole à la position du curseur de revue. Un double appui montre le symbole et le texte utilisé pour le remplacer en mode navigation.|
+| Nom | Ordinateur de bureau | Ordinateur portable | Tactile | Description |
+| --- | --- | --- | --- | --- |
+| Aller à la première ligne en revue | Maj+pavnum7 | NVDA+contrôle+début | Aucun | Amène le curseur de revue à la première ligne du texte |
+| Aller à la ligne précédente en revue | pavnum7 | NVDA+flèche haut | Glisser vers le haut (mode texte) | Amène le curseur de revue sur la ligne de texte précédente |
+| Annoncer la ligne courante en revue | pavnum8 | NVDA+maj+point-virgule | Aucun | Lit la ligne de texte sous le curseur de revue, un double appui épelle la ligne |
+| Aller à la ligne suivante en revue | pavnum9 | NVDA+flèche bas | Glisser vers le bas (mode texte) | Amène le curseur de revue à la ligne de texte suivante |
+| Aller à la dernière ligne en revue | maj+pavnum9 | NVDA+contrôle+fin | Aucun | Amène le curseur de revue à la dernière ligne de texte |
+| Aller au mot précédent en revue | pavnum4 | NVDA+contrôle+flèche gauche | Glisser vers la gauche 2 doigts (mode texte) | Amène le curseur de revue au mot précédent dans le texte |
+| Annoncer le mot courant en revue | pavnum5 | NVDA+contrôle+point-virgule | Aucun | Lit le mot à la position du curseur de revue, un double appui épelle le mot |
+| Aller au mot suivant en revue | pavnum6 | NVDA+contrôle+flèche droite | Glisser vers la droite 2 doigts (mode texte) | Amène le curseur de revue au mot suivant |
+| Aller au début de la ligne en revue | maj+pavnum1 | NVDA+début | Aucun | Amène le curseur de revue au début de la ligne courante |
+| Aller au caractère précédent en revue | pavnum1 | NVDA+flèche gauche | Glisser vers la gauche (mode texte) | Amène le curseur de revue au caractère précédent de la ligne courante |
+| Annoncer le caractère courant en revue | pavnum2 | NVDA+point-virgule | Aucun | Annonce le caractère courant sous le curseur de revue, un double appui annonce la valeur du caractère en décimal et hexadécimal |
+| Aller au caractère suivant en revue | pavnum3 | NVDA+flèche droite | Glisser vers la droite (mode texte) | Amène le curseur de revue au caractère suivant de la ligne courante |
+| Aller en fin de ligne en revue | maj+pavnum3 | NVDA+fin | Aucun | Amène le curseur de revue à la fin de la ligne courante |
+| Aller à la page précédente en revue | `NVDA+pagePrec` | `NVDA+maj+pagePrec` | aucune | Amène le curseur de revue à la page précédente de texte si supporté par l'application |
+| Aller à la page suivante en revue | `NVDA+pageSuiv` | `NVDA+maj+pageSuiv` | aucune | Amène le curseur de revue à la page suivante de texte si supporté par l'application |
+| Dire tout en revue | pavnumPlus | NVDA+maj+a | Glisser vers le bas 3 doigts (mode texte) | Lit en partant de la position du curseur de revue, celui-ci suivant la lecture |
+| Sélectionner puis copier à partir du curseur de revue | NVDA+f9 | NVDA+f9 | Aucun | Commence à sélectionner puis copier le texte depuis la position du curseur de revue. La copie ne s'effectue pas tant qu'on n'a pas indiqué la fin du texte à copier |
+| Sélectionner puis copier jusqu'au curseur de revue | NVDA+f10 | NVDA+f10 | Aucun | Au premier appui, le texte est sélectionné depuis la position préalablement définie par "copier à partir du curseur de revue" jusqu'à la position actuelle du curseur de revue. Si le curseur système peut atteindre le texte, il sera amené au texte sélectionné. Au second appui, le texte est copié dans le presse-papiers de Windows. |
+| aller au marqueur de début de copie en mode revue | NVDA+maj+f9 | NVDA+maj+f9 | aucun | Amène le curseur de revue à la position préalablement définiee comme marqueur de début de copie |
+| Annoncer la mise en forme du texte | NVDA+maj+f | NVDA+maj+f | Aucun | Annonce la mise en forme du texte à la position du curseur de revue. Un double appui affiche l'information en mode navigation |
+| Annonce le remplacement du symbole courant | Aucun | Aucun | aucun | Dit le symbole à la position du curseur de revue. Un double appui montre le symbole et le texte utilisé pour le remplacer en mode navigation. |
 
 <!-- KC:endInclude -->
 
@@ -838,11 +844,11 @@ Note : Les touches du pavé numérique nécessitent de désactiver le verrouill
 Pour vous aider à mémoriser les touches de commandes de la disposition ordinateur de bureau, notez que les commandes de base de revue de texte sont organisées selon une grille de 3 sur 3 avec, de haut en bas, lignes, mots, caractères et, de gauche à droite, précédent, courant, suivant.
 La disposition se présente ainsi :
 
-| . {.hideHeaderRow} |. |.|
-|---|---|---|
-|Ligne précédente |Ligne courante |Ligne suivante|
-|Mot précédent |Mot courant |Mot suivant|
-|Caractère précédent |Caractère courant |Caractère suivant|
+| . {.hideHeaderRow} | . | . |
+| --- | --- | --- |
+| Ligne précédente | Ligne courante | Ligne suivante |
+| Mot précédent | Mot courant | Mot suivant |
+| Caractère précédent | Caractère courant | Caractère suivant |
 
 ### Modes de Revue {#ReviewModes}
 
@@ -851,10 +857,10 @@ Les commandes de [revue](#ReviewingText) de NVDA permettent de lire le contenu d
 Les commandes suivantes basculent entre les modes de revue :
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Tactile |Description|
-|---|---|---|---|---|
-|Passer au mode revue suivant |NVDA+pavnum7 |NVDA+PagePrec |Glisser vers le haut 2 doigts |Passe au mode de revue suivant disponible supérieur au mode actuel.|
-|Passer au mode revue précédent |NVDA+pavnum1 |NVDA+PageSuiv |Glisser vers le bas 2 doigts |Passe au mode de revue suivant disponible inférieur au mode actuel.|
+| Nom | Ordinateur de bureau | Ordinateur portable | Tactile | Description |
+| --- | --- | --- | --- | --- |
+| Passer au mode revue suivant | NVDA+pavnum7 | NVDA+PagePrec | Glisser vers le haut 2 doigts | Passe au mode de revue suivant disponible supérieur au mode actuel. |
+| Passer au mode revue précédent | NVDA+pavnum1 | NVDA+PageSuiv | Glisser vers le bas 2 doigts | Passe au mode de revue suivant disponible inférieur au mode actuel. |
 
 <!-- KC:endInclude -->
 
@@ -902,14 +908,14 @@ Si vous voulez en tirer profit, vous pouvez les configurer dans la catégorie [S
 Bien qu'une souris physique ou un pavé tactile devrait être utilisée pour naviguer à la souris, NVDA possède quelques commandes clavier liées à la souris :
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Tactile |Description|
-|---|---|---|---|---|
-|Clic gauche |pavnumDiviser |NVDA+uAccentGrave |Aucun |Simple clic gauche. Le double clic s'obtient par deux appuis rapides|
-|Verrouillage du bouton gauche de la souris |maj+pavnumDiviser |NVDA+maj+uAccentGrave |Aucun |Verrouille le bouton gauche de la souris en position enfoncée. Un second appui déverrouille le bouton. Pour glisser-déposer avec la souris, verrouillez le bouton puis déplacez la souris soit physiquement ou par l'une des commandes NVDA prévues à cet effet|
-|Clic droit |pavnumMultiplier |NVDA+astérisque |Taper et maintenir |Simple clic droit|
-|Verrouillage du bouton droit de la souris |maj+pavnumMultiplier |NVDA+maj+astérisque |Aucun |Verrouille le bouton droit de la souris en position enfoncée, un second appui déverrouille le bouton. Pour glisser-déposer avec la souris, verrouillez le bouton puis déplacez la souris soit physiquement ou par l'une des commandes NVDA prévues à cet effet|
-|Amener la souris à l'objet navigateur courant |NVDA+pavnumDiviser |NVDA+maj+m |Aucun |Amène la souris à la position de l'objet navigateur courant puis au curseur de revue|
-|Aller à l'objet sous la souris |NVDA+pavnumMultiplier |NVDA+maj+n |Aucun |Amène l'objet navigateur à l'objet situé à la position de la souris|
+| Nom | Ordinateur de bureau | Ordinateur portable | Tactile | Description |
+| --- | --- | --- | --- | --- |
+| Clic gauche | pavnumDiviser | NVDA+uAccentGrave | Aucun | Simple clic gauche. Le double clic s'obtient par deux appuis rapides |
+| Verrouillage du bouton gauche de la souris | maj+pavnumDiviser | NVDA+maj+uAccentGrave | Aucun | Verrouille le bouton gauche de la souris en position enfoncée. Un second appui déverrouille le bouton. Pour glisser-déposer avec la souris, verrouillez le bouton puis déplacez la souris soit physiquement ou par l'une des commandes NVDA prévues à cet effet |
+| Clic droit | pavnumMultiplier | NVDA+astérisque | Taper et maintenir | Simple clic droit |
+| Verrouillage du bouton droit de la souris | maj+pavnumMultiplier | NVDA+maj+astérisque | Aucun | Verrouille le bouton droit de la souris en position enfoncée, un second appui déverrouille le bouton. Pour glisser-déposer avec la souris, verrouillez le bouton puis déplacez la souris soit physiquement ou par l'une des commandes NVDA prévues à cet effet |
+| Amener la souris à l'objet navigateur courant | NVDA+pavnumDiviser | NVDA+maj+m | Aucun | Amène la souris à la position de l'objet navigateur courant puis au curseur de revue |
+| Aller à l'objet sous la souris | NVDA+pavnumMultiplier | NVDA+maj+n | Aucun | Amène l'objet navigateur à l'objet situé à la position de la souris |
 
 <!-- KC:endInclude -->
 
@@ -946,14 +952,14 @@ De plus, vous pouvez aussi passer manuellement NVDA en mode formulaire, après q
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Bascule entre mode formulaire et mode navigation |NVDA+espace |Bascule entre le mode formulaire et le mode navigation|
-|Quitter le mode formulaire |échap |Retourne en mode navigation si le mode formulaire a préalablement été activé automatiquement|
-|Réactualiser le document |NVDA+f5 |Recharge le document en cours, (utile si le contenu de la page semble incomplet. Non disponible sous Microsoft Word et Outlook.)|
-|Rechercher |NVDA+contrôle+f |Affiche un dialogue qui vous permet de rechercher du texte dans le document courant. Voir [chercher du texte](#SearchingForText) pour plus d'information|
-|Rechercher suivant |NVDA+f3 |Recherche l'occurrence suivante du texte que vous avez préalablement recherché dans le document|
-|Rechercher précédent |NVDA+maj+f3 |Recherche l'occurrence précédente du texte que vous avez préalablement recherché dans le document|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Bascule entre mode formulaire et mode navigation | NVDA+espace | Bascule entre le mode formulaire et le mode navigation |
+| Quitter le mode formulaire | échap | Retourne en mode navigation si le mode formulaire a préalablement été activé automatiquement |
+| Réactualiser le document | NVDA+f5 | Recharge le document en cours, (utile si le contenu de la page semble incomplet. Non disponible sous Microsoft Word et Outlook.) |
+| Rechercher | NVDA+contrôle+f | Affiche un dialogue qui vous permet de rechercher du texte dans le document courant. Voir [chercher du texte](#SearchingForText) pour plus d'information |
+| Rechercher suivant | NVDA+f3 | Recherche l'occurrence suivante du texte que vous avez préalablement recherché dans le document |
+| Rechercher précédent | NVDA+maj+f3 | Recherche l'occurrence précédente du texte que vous avez préalablement recherché dans le document |
 
 <!-- KC:endInclude -->
 
@@ -992,10 +998,10 @@ Les touches suivantes permettent d'aller à l'élément suivant. En les combinan
 
 Pour se déplacer au début ou à la fin des éléments contenants comme les listes et tableaux :
 
-| Nom |Touche |Description|
-|---|---|---|
-|Aller au début du conteneur |maj+virgule |Se déplace au début du conteneur (liste, tableau etc.) où le curseur est positionné|
-|Aller après la fin du conteneur |virgule |Se déplace après la fin du conteneur (liste, tableau etc.) où le curseur se trouve|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Aller au début du conteneur | maj+virgule | Se déplace au début du conteneur (liste, tableau etc.) où le curseur est positionné |
+| Aller après la fin du conteneur | virgule | Se déplace après la fin du conteneur (liste, tableau etc.) où le curseur se trouve |
 
 <!-- KC:endInclude -->
 
@@ -1061,9 +1067,9 @@ Une zone d'édition est également présente dans le dialogue, elle vous permet 
 Quand vous avez choisi un élément, des boutons vous permettent de vous y rendre ou de l'activer.
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Liste d'éléments du document |NVDA+f7 |Liste les différents types d'éléments du document courant|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Liste d'éléments du document | NVDA+f7 | Liste les différents types d'éléments du document courant |
 
 <!-- KC:endInclude -->
 
@@ -1076,11 +1082,11 @@ Par exemple, quand Respecter la casse est sélectionné, vous trouverez " NV Acc
 Utilisez les touches suivantes pour effectuer des recherches :
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Rechercher du texte |NVDA+contrôle+f |Ouvre le dialogue de recherche|
-|Trouver l'occurrence suivante |NVDA+f3 |recherche l'occurrence suivante du terme en cours de recherche|
-|Trouver l'occurrence précédente |NVDA+maj+f3 |recherche l'occurrence précédente du terme en cours de recherche|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Rechercher du texte | NVDA+contrôle+f | Ouvre le dialogue de recherche |
+| Trouver l'occurrence suivante | NVDA+f3 | recherche l'occurrence suivante du terme en cours de recherche |
+| Trouver l'occurrence précédente | NVDA+maj+f3 | recherche l'occurrence précédente du terme en cours de recherche |
 
 <!-- KC:endInclude -->
 
@@ -1094,9 +1100,9 @@ Si l'objet est accessible, vous pourrez interagir avec lui comme n'importe quell
 Une touche de commande permet de retourner à la page contenant l'objet embarqué.
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Aller au document contenant l'objet |NVDA+contrôle+espace |Retire le focus à l'objet embarqué en cours et le rend au document contenant l'objet|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Aller au document contenant l'objet | NVDA+contrôle+espace | Retire le focus à l'objet embarqué en cours et le rend au document contenant l'objet |
 
 <!-- KC:endInclude -->
 
@@ -1108,9 +1114,9 @@ Cependant, NVDA dispose d'un mode de sélection native qui peut être activé da
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Activer ou désactiver le mode de sélection native |`NVDA+maj+f10` |Active ou désactive le mode de sélection native|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Activer ou désactiver le mode de sélection native | `NVDA+maj+f10` | Active ou désactive le mode de sélection native |
 
 <!-- KC:endInclude -->
 
@@ -1167,9 +1173,9 @@ Par défaut, le curseur de revue suit le curseur système, vous pouvez donc gén
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Interagir avec le contenu mathématique |NVDA+alt+m |Commence l'interaction avec le contenu mathématique.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Interagir avec le contenu mathématique | NVDA+alt+m | Commence l'interaction avec le contenu mathématique. |
 
 <!-- KC:endInclude -->
 
@@ -1211,100 +1217,100 @@ Vous pouvez configurer le braille dans la catégorie [Braille](#BrailleSettings)
 
 Dans le but de loger autant d'informations que possible sur un afficheur braille, les abréviations suivantes ont été définies pour indiquer le type et l'état des contrôles ainsi que les repères.
 
-| Abréviation |Type de contrôle|
-|---|---|
-|app |application|
-|art |article|
-|ctn |citation|
-|btn |bouton|
-|btnd |bouton déroulant|
-|btnrot |bouton rotatif|
-|btnp |bouton partagé|
-|bsc |bascule|
-|lég |légende|
-|lstd |liste déroulante|
-|càc |case à cocher|
-|dlg |dialogue|
-|doc |document|
-|éd |zone d'édition|
-|édmdp |édition de mot de passe|
-|objemb |objet embarqué|
-|notef |note de fin|
-|fig |figure|
-|noteb |note de bas de page|
-|gra |graphique|
-|grp |groupe|
-|tN |titre de niveau n, ex : t1, t2.|
-|aid |bulle d'aide|
-|rgn |repère|
-|ln |lien|
-|lnv |lien visité|
-|lst |liste|
-|mnu |menu|
-|bmnu |barre de menu|
-|btnmnu |bouton de menu|
-|élmnu |élément de menu|
-|pn |panneau|
-|bpr |barre de progression|
-|indoc |indicateur d'occupation|
-|btnr |bouton radio|
-|bdéf |barre de défilement|
-|sect |section|
-|bét |barre d'état|
-|ong |Contrôle d'onglet|
-|tb |tableau|
-|cN |colonne n d'un tableau, ex : c1, c2.|
-|lN |ligne n d'un tableau, ex : l1, l2.|
-|term |terminal|
-|bo |barre d'outils|
-|sug |suggestion|
-|arb |arborescence|
-|btnarb |bouton d'arborescence|
-|élarb |élément d'arborescence|
-|nv N |un élément d'arborescence a un niveau hiérarchique N|
-|fen |fenêtre|
-|⠤⠤⠤⠤⠤ |séparateur|
-|mrq |contenu marqué|
+| Abréviation | Type de contrôle |
+| --- | --- |
+| app | application |
+| art | article |
+| ctn | citation |
+| btn | bouton |
+| btnd | bouton déroulant |
+| btnrot | bouton rotatif |
+| btnp | bouton partagé |
+| bsc | bascule |
+| lég | légende |
+| lstd | liste déroulante |
+| càc | case à cocher |
+| dlg | dialogue |
+| doc | document |
+| éd | zone d'édition |
+| édmdp | édition de mot de passe |
+| objemb | objet embarqué |
+| notef | note de fin |
+| fig | figure |
+| noteb | note de bas de page |
+| gra | graphique |
+| grp | groupe |
+| tN | titre de niveau n, ex : t1, t2. |
+| aid | bulle d'aide |
+| rgn | repère |
+| ln | lien |
+| lnv | lien visité |
+| lst | liste |
+| mnu | menu |
+| bmnu | barre de menu |
+| btnmnu | bouton de menu |
+| élmnu | élément de menu |
+| pn | panneau |
+| bpr | barre de progression |
+| indoc | indicateur d'occupation |
+| btnr | bouton radio |
+| bdéf | barre de défilement |
+| sect | section |
+| bét | barre d'état |
+| ong | Contrôle d'onglet |
+| tb | tableau |
+| cN | colonne n d'un tableau, ex : c1, c2. |
+| lN | ligne n d'un tableau, ex : l1, l2. |
+| term | terminal |
+| bo | barre d'outils |
+| sug | suggestion |
+| arb | arborescence |
+| btnarb | bouton d'arborescence |
+| élarb | élément d'arborescence |
+| nv N | un élément d'arborescence a un niveau hiérarchique N |
+| fen | fenêtre |
+| ⠤⠤⠤⠤⠤ | séparateur |
+| mrq | contenu marqué |
 
 Les indicateurs d'état suivants sont également définis :
 
-| Abréviation |État du contrôle|
-|---|---|
-|... |affiché quand un objet supporte l'autocomplétion|
-|⢎⣿⡱ |affiché quand un objet (ex : une bascule) est enfoncé|
-|⢎⣀⡱ |affiché quand un objet (ex : une bascule) n'est pas enfoncé|
-|⣏⣿⣹ |affiché quand un objet (ex : une case à cocher) est coché|
-|⣏⣸⣹ |affiché quand un objet (ex : une case à cocher) est semi-coché|
-|⣏⣀⣹ |affiché quand un objet (ex : une case à cocher) n'est pas coché|
-|- |affiché quand un objet tel qu'un élément d'arborescence peut être réduit|
-|+ |affiché quand un objet tel qu'un élément d'arborescence peut être développé|
-|*** |affiché quand on rencontre un contrôle ou un document protégé|
-|clq |affiché quand un objet est cliquable|
-|cmnt |affiché quand il y a un commentaire pour une cellule de feuille de travail ou un document|
-|frml |affiché quand il y a une formule dans une cellule de feuille de travail|
-|invl |affiché lors d'une saisie invalide|
-|ldesc |affiché quand un objet, généralement un graphique, a une description longue|
-|mléd |affiché quand un champ d'édition permet la frappe de plusieurs lignes de texte comme les zones de commentaire sur les sites web|
-|oblg |affiché quand on rencontre un champ de saisie obligatoire|
-|ls |affiché quand un objet tel qu'une zone d'édition est en lecture seule|
-|sél |affiché quand un objet est sélectionné|
-|nsél |affiché quand un objet n'est pas sélectionné|
-|tcro |affiché quand un objet est trié en ordre croissant|
-|tdéc |affiché quand un objet est trié en ordre décroissant|
-|smnu |affiché quand un objet a un sous-menu|
+| Abréviation | État du contrôle |
+| --- | --- |
+| ... | affiché quand un objet supporte l'autocomplétion |
+| ⢎⣿⡱ | affiché quand un objet (ex : une bascule) est enfoncé |
+| ⢎⣀⡱ | affiché quand un objet (ex : une bascule) n'est pas enfoncé |
+| ⣏⣿⣹ | affiché quand un objet (ex : une case à cocher) est coché |
+| ⣏⣸⣹ | affiché quand un objet (ex : une case à cocher) est semi-coché |
+| ⣏⣀⣹ | affiché quand un objet (ex : une case à cocher) n'est pas coché |
+| - | affiché quand un objet tel qu'un élément d'arborescence peut être réduit |
+| + | affiché quand un objet tel qu'un élément d'arborescence peut être développé |
+| *** | affiché quand on rencontre un contrôle ou un document protégé |
+| clq | affiché quand un objet est cliquable |
+| cmnt | affiché quand il y a un commentaire pour une cellule de feuille de travail ou un document |
+| frml | affiché quand il y a une formule dans une cellule de feuille de travail |
+| invl | affiché lors d'une saisie invalide |
+| ldesc | affiché quand un objet, généralement un graphique, a une description longue |
+| mléd | affiché quand un champ d'édition permet la frappe de plusieurs lignes de texte comme les zones de commentaire sur les sites web |
+| oblg | affiché quand on rencontre un champ de saisie obligatoire |
+| ls | affiché quand un objet tel qu'une zone d'édition est en lecture seule |
+| sél | affiché quand un objet est sélectionné |
+| nsél | affiché quand un objet n'est pas sélectionné |
+| tcro | affiché quand un objet est trié en ordre croissant |
+| tdéc | affiché quand un objet est trié en ordre décroissant |
+| smnu | affiché quand un objet a un sous-menu |
 
 Enfin, les abréviations de repères suivantes sont définies :
 
-| Abréviation |Repère|
-|---|---|
-|bnr |bannière|
-|cinf |information sur le contenu|
-|cmp |complémentaire|
-|form |formulaire|
-|prc |principale|
-|nav |navigation|
-|rch |recherche|
-|rgn |région|
+| Abréviation | Repère |
+| --- | --- |
+| bnr | bannière |
+| cinf | information sur le contenu |
+| cmp | complémentaire |
+| form | formulaire |
+| prc | principale |
+| nav | navigation |
+| rch | recherche |
+| rgn | région |
 
 ### Saisie en Braille {#BrailleInput}
 
@@ -1376,9 +1382,9 @@ Vous pouvez activer le Rideau d'Écran dans la [catégorie vision](#VisionSettin
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Activer ou désactiver le rideau d'écran |`NVDA+contrôle+échap` |Activer pour rendre l'écran noir ou désactiver pour afficher le contenu de l'écran. Un appui active le rideau d'écran jusqu'au prochain redémarrage de NVDA. Deux appuis activent le rideau d'écran jusqu'à ce que vous le désactiviez.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Activer ou désactiver le rideau d'écran | `NVDA+contrôle+échap` | Activer pour rendre l'écran noir ou désactiver pour afficher le contenu de l'écran. Un appui active le rideau d'écran jusqu'au prochain redémarrage de NVDA. Deux appuis activent le rideau d'écran jusqu'à ce que vous le désactiviez. |
 
 <!-- KC:endInclude -->
 
@@ -1427,6 +1433,7 @@ Pour reconnaître le texte dans l'objet navigateur courant en utilisant la recon
 NVDA fournit ses propres fonctionnalités additionnelles dans quelques applications pour rendre certaines tâches plus faciles ou pour donner accès à certaines fonctions qui ne seraient pas accessibles autrement.
 
 ### Microsoft Word {#MicrosoftWord}
+
 #### Lecture Automatique des En-têtes de Lignes et de Colonnes {#WordAutomaticColumnAndRowHeaderReading}
 
 NVDA est capable d'annoncer automatiquement les en-têtes des lignes et des colonnes quand on navigue dans un tableau sous Microsoft Word.
@@ -1438,10 +1445,10 @@ Au contraire, si vous n'utilisez pas [UIA pour accéder aux documents Word](#MSW
 Après vous être placé sur la première cellule dans la colonne ou la ligne contenant les titres, utilisez l'une des commandes suivantes :
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Définir les titres de colonnes |NVDA+maj+c |Appuyer une fois indique à NVDA que cette cellule est la première de la ligne contenant les titres de colonnes, qui devraient être annoncés automatiquement en naviguant entre les colonnes sous cette ligne. Appuyer deux fois permet d'effacer le paramétrage.|
-|Définir les titres de lignes |NVDA+maj+r |Appuyer une fois indique à NVDA que cette cellule est la première de la colonne contenant les titres de lignes, qui devraient être annoncés automatiquement en naviguant entre les lignes après cette colonne. Appuyer deux fois permet d'effacer le paramétrage.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Définir les titres de colonnes | NVDA+maj+c | Appuyer une fois indique à NVDA que cette cellule est la première de la ligne contenant les titres de colonnes, qui devraient être annoncés automatiquement en naviguant entre les colonnes sous cette ligne. Appuyer deux fois permet d'effacer le paramétrage. |
+| Définir les titres de lignes | NVDA+maj+r | Appuyer une fois indique à NVDA que cette cellule est la première de la colonne contenant les titres de lignes, qui devraient être annoncés automatiquement en naviguant entre les lignes après cette colonne. Appuyer deux fois permet d'effacer le paramétrage. |
 
 <!-- KC:endInclude -->
 Ces paramètres seront enregistrés dans le document comme des signets, compatibles avec d'autres revues d'écran comme JAWS.
@@ -1470,6 +1477,7 @@ Pour annoncer tout commentaire à la position actuelle du curseur, pressez NVDA+
 Tous les commentaires pour le document ainsi que les autres demandes de modification peuvent aussi être listés dans la liste d'éléments de NVDA en choisissant le type Annotations.
 
 ### Microsoft Excel {#MicrosoftExcel}
+
 #### Lecture Automatique des En-têtes de Lignes et de Colonnes {#ExcelAutomaticColumnAndRowHeaderReading}
 
 NVDA est capable d'annoncer automatiquement les en-têtes des lignes et des colonnes quand on navigue dans un tableau dans une feuille de calcul Excel.
@@ -1478,10 +1486,10 @@ Ensuite, NVDA doit savoir quelle ligne ou colonne contient les titres dans le ta
 Après vous être placé sur la première cellule dans la colonne ou la ligne contenant les titres, utilisez l'une des commandes suivantes :
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Définir les titres de colonnes |NVDA+maj+c |Appuyer une fois indique à NVDA que cette cellule est la première de la ligne contenant les titres de colonnes, qui devraient être annoncés automatiquement en naviguant entre les colonnes sous cette ligne. Appuyer deux fois permet d'effacer le paramétrage.|
-|Définir les titres de lignes |NVDA+maj+r |Appuyer une fois indique à NVDA que cette cellule est la première de la colonne contenant les titres de lignes, qui devraient être annoncés automatiquement en naviguant entre les lignes après cette colonne. Appuyer deux fois permet d'effacer le paramétrage.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Définir les titres de colonnes | NVDA+maj+c | Appuyer une fois indique à NVDA que cette cellule est la première de la ligne contenant les titres de colonnes, qui devraient être annoncés automatiquement en naviguant entre les colonnes sous cette ligne. Appuyer deux fois permet d'effacer le paramétrage. |
+| Définir les titres de lignes | NVDA+maj+r | Appuyer une fois indique à NVDA que cette cellule est la première de la colonne contenant les titres de lignes, qui devraient être annoncés automatiquement en naviguant entre les lignes après cette colonne. Appuyer deux fois permet d'effacer le paramétrage. |
 
 <!-- KC:endInclude -->
 Ces paramètres seront enregistrés dans le document comme plages de noms définis, compatibles avec d'autres revues d'écran comme JAWS.
@@ -1552,9 +1560,9 @@ Pour plus d'information concernant le mode navigation et la navigation par lettr
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Basculer l'arrêt de la lecture vocale |contrôle+maj+s |Lorsque l'on est dans un diaporama en cours de lecture, cette commande basculera entre les notes du commentateur du diaporama et le contenu de celui-ci. Cela n'affecte que ce que NVDA lira, pas l'affichage à l'écran.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Basculer l'arrêt de la lecture vocale | contrôle+maj+s | Lorsque l'on est dans un diaporama en cours de lecture, cette commande basculera entre les notes du commentateur du diaporama et le contenu de celui-ci. Cela n'affecte que ce que NVDA lira, pas l'affichage à l'écran. |
 
 <!-- KC:endInclude -->
 
@@ -1562,11 +1570,11 @@ Pour plus d'information concernant le mode navigation et la navigation par lettr
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Annonce du temps restant |contrôle+maj+r |Annonce le temps restant pour le morceau en cours.|
-|Annonce du temps écoulé |contrôle+maj+e |annonce le temps écoulé de la piste en cours.|
-|Annonce de la longueur de la piste |contrôle+maj+t |Annonce la longueur de la piste en cours.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Annonce du temps restant | contrôle+maj+r | Annonce le temps restant pour le morceau en cours. |
+| Annonce du temps écoulé | contrôle+maj+e | annonce le temps écoulé de la piste en cours. |
+| Annonce de la longueur de la piste | contrôle+maj+t | Annonce la longueur de la piste en cours. |
 
 <!-- KC:endInclude -->
 
@@ -1576,9 +1584,9 @@ Note : Les raccourcis ci-dessus fonctionnent seulement avec le format de chaîn
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Annonce de message récent |NVDA+contrôle+1-4 |Annonce un des messages récents selon le chiffre appuyé ; ex : NVDA+contrôle+2 lit le second message le plus récent.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Annonce de message récent | NVDA+contrôle+1-4 | Annonce un des messages récents selon le chiffre appuyé ; ex : NVDA+contrôle+2 lit le second message le plus récent. |
 
 <!-- KC:endInclude -->
 
@@ -1588,12 +1596,12 @@ NVDA offre un support amélioré pour Poedit 3.4 ou plus récent.
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Annonce des notes pour les traducteurs |`contrôle+maj+a` |Annonce les notes pour les traducteurs. Deux appuis présente les notes en mode navigation|
-|Annonce de la fenêtre de commentaires |`contrôle+maj+c` |Annonce tout commentaire dans la fenêtre de commentaires. Deux appuis présente le commentaire en mode navigation|
-|Annonce de l'ancien texte source |`contrôle+maj+o` |Annonce l'ancien texte source s'il y en a un. Deux appuis présente le texte en mode navigation|
-|Annonce l'avertissement de traduction |`contrôle+maj+w` |Annonce l'avertissement de traduction, s'il y en a un. Deux appuis présente l'avertissement en mode navigation|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Annonce des notes pour les traducteurs | `contrôle+maj+a` | Annonce les notes pour les traducteurs. Deux appuis présente les notes en mode navigation |
+| Annonce de la fenêtre de commentaires | `contrôle+maj+c` | Annonce tout commentaire dans la fenêtre de commentaires. Deux appuis présente le commentaire en mode navigation |
+| Annonce de l'ancien texte source | `contrôle+maj+o` | Annonce l'ancien texte source s'il y en a un. Deux appuis présente le texte en mode navigation |
+| Annonce l'avertissement de traduction | `contrôle+maj+w` | Annonce l'avertissement de traduction, s'il y en a un. Deux appuis présente l'avertissement en mode navigation |
 
 <!-- KC:endInclude -->
 
@@ -1643,10 +1651,10 @@ Pour afficher, éditer ou effacer une note.
 <!-- KC:beginInclude -->
 Quand vous êtes dans le tableau des livres ajoutés :
 
-| Nom |Touche |Description|
-|---|---|---|
-|Entrée |entrée |Ouvre le livre sélectionné.|
-|Menu contextuel |applications |Ouvre le menu contextuel pour le livre sélectionné.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Entrée | entrée | Ouvre le livre sélectionné. |
+| Menu contextuel | applications | Ouvre le menu contextuel pour le livre sélectionné. |
 
 <!-- KC:endInclude -->
 
@@ -1661,12 +1669,12 @@ Dans les versions plus récentes de la console et dans Windows Terminal, il est 
 <!-- KC:beginInclude -->
 Les raccourcis clavier propres à Windows suivants peuvent être utiles pour [revoir du texte](#ReviewingText) avec NVDA dans les versions plus anciennes de la Console Windows :
 
-| Nom |Touche |Description|
-|---|---|---|
-|Défilement vers le haut |contrôle+flècheHaute |Fait défiler la fenêtre de la console vers le haut pour que le texte plus ancien puisse être lu.|
-|Défilement vers le bas |contrôle+flècheBasse |Fait défiler la fenêtre de la console vers le bas pour que le texte plus récent puisse être lu.|
-|Aller au début |contrôle+début |Aligne la fenêtre de la console sur le début du tampon.|
-|Aller à la fin |contrôle+fin |Aligne la fenêtre de la console sur la fin du tampon.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Défilement vers le haut | contrôle+flècheHaute | Fait défiler la fenêtre de la console vers le haut pour que le texte plus ancien puisse être lu. |
+| Défilement vers le bas | contrôle+flècheBasse | Fait défiler la fenêtre de la console vers le bas pour que le texte plus récent puisse être lu. |
+| Aller au début | contrôle+début | Aligne la fenêtre de la console sur le début du tampon. |
+| Aller à la fin | contrôle+fin | Aligne la fenêtre de la console sur la fin du tampon. |
 
 <!-- KC:endInclude -->
 
@@ -1897,7 +1905,7 @@ Ce champ d'édition vous permet d'entrer la valeur du changement de hauteur de l
 Cette valeur est un pourcentage, une valeur négative réduit la hauteur, une valeur positive l'augmente.
 Pour n'avoir aucun changement de hauteur, entrez la valeur 0.
 D'ordinaire, NVDA augmente légèrement la tonalité pour chaque lettre majuscule, mais certains synthétiseurs peuvent ne pas supporter cela correctement.
-Si le changement de hauteur pour les majuscules n'est pas supporté, optez pour [Dire "majuscule" après les majuscules](#SpeechSettingsSayCapBefore) et/ou [ Émettre un bip pour signaler les majuscules](#SpeechSettingsBeepForCaps) à la place.
+Si le changement de hauteur pour les majuscules n'est pas supporté, optez pour [Dire "majuscule" après les majuscules](#SpeechSettingsSayCapBefore) et/ou [Émettre un bip pour signaler les majuscules](#SpeechSettingsBeepForCaps) à la place.
 
 ##### Dire "majuscule" après les majuscules {#SpeechSettingsSayCapBefore}
 
@@ -1920,10 +1928,10 @@ Si vous rencontrez des problèmes à l'épellation de caractères, essayez de d�
 
 ##### Description différée des caractères lors du mouvement du curseur {#delayedCharacterDescriptions}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Activé, Désactivé|
-|Défaut |Désactivé|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Activé, Désactivé |
+| Défaut | Désactivé |
 
 Lorsque ce paramètre est coché, NVDA dira la description du caractère lorsque vous vous déplacerez par caractère.
 
@@ -1967,14 +1975,14 @@ Cela peut être utile pour quelqu'un qui veut utiliser NVDA seulement avec le br
 Si vous voulez changer rapidement les paramètres vocaux sans passer par la catégorie Voix du dialogue Paramètres, il y a quelques touches de commandes qui vous permettent de le faire de n'importe où quand NVDA est en fonction.
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Description|
-|---|---|---|---|
-|Aller au paramètre synthétiseur suivant |NVDA+contrôle+flèche droite |NVDA+contrôle+maj+flèche droite |Va au paramètre synthétiseur applicable suivant, retourne au premier après le dernier|
-|Aller au paramètre synthétiseur précédent |NVDA+contrôle+flèche gauche |NVDA+contrôle+maj+flèche gauche |Va au paramètre synthétiseur applicable précédent, retourne au dernier après le premier|
-|Augmenter le paramètre synthétiseur courant |NVDA+contrôle+flèche haut |NVDA+contrôle+maj+flèche haut |Augmente le paramètre synthétiseur sur lequel vous vous trouvez. Ex : augmente le débit, choisit la voix suivante, augmente le volume|
-|Augmenter le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important |`NVDA+contrôle+pagePrec` |`NVDA+maj+contrôle+pagePrec` |Augmente d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, avancer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera incrémentée de 20%|
-|Diminuer le paramètre synthétiseur courant |NVDA+contrôle+flèche bas |NVDA+contrôle+maj+flèche bas |diminue le paramètre synthétiseur sur lequel vous vous trouvez. Ex : diminue le débit, choisit la voix précédente, diminue le volume|
-|Diminuer le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important |`NVDA+contrôle+pageSuiv` |`NVDA+maj+contrôle+pageSuiv` |Diminue d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, reculer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera décrémentée de 20%|
+| Nom | Ordinateur de bureau | Ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Aller au paramètre synthétiseur suivant | NVDA+contrôle+flèche droite | NVDA+contrôle+maj+flèche droite | Va au paramètre synthétiseur applicable suivant, retourne au premier après le dernier |
+| Aller au paramètre synthétiseur précédent | NVDA+contrôle+flèche gauche | NVDA+contrôle+maj+flèche gauche | Va au paramètre synthétiseur applicable précédent, retourne au dernier après le premier |
+| Augmenter le paramètre synthétiseur courant | NVDA+contrôle+flèche haut | NVDA+contrôle+maj+flèche haut | Augmente le paramètre synthétiseur sur lequel vous vous trouvez. Ex : augmente le débit, choisit la voix suivante, augmente le volume |
+| Augmenter le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important | `NVDA+contrôle+pagePrec` | `NVDA+maj+contrôle+pagePrec` | Augmente d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, avancer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera incrémentée de 20% |
+| Diminuer le paramètre synthétiseur courant | NVDA+contrôle+flèche bas | NVDA+contrôle+maj+flèche bas | diminue le paramètre synthétiseur sur lequel vous vous trouvez. Ex : diminue le débit, choisit la voix précédente, diminue le volume |
+| Diminuer le paramètre courant dans la boucle des paramètres du synthétiseur d'un interval plus important | `NVDA+contrôle+pageSuiv` | `NVDA+maj+contrôle+pageSuiv` | Diminue d'un pas plus important la valeur du paramètre vocal courant sur lequel vous vous trouvez. Ex. lorsque vous êtes sur le paramètre du choix de la voix, reculer de 20 voix ; lorsque vous êtes sur un paramètres avec potentiomètre (débit, hauteur, etc.), la valeur sera décrémentée de 20% |
 
 <!-- KC:endInclude -->
 
@@ -2076,10 +2084,10 @@ Dans ce cas, le braille ne suivra pas le focus système et le curseur système.
 
 ##### Déplacer le curseur système lors du routage du curseur de revue {#BrailleSettingsReviewRoutingMovesSystemCaret}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Jamais), Jamais, Seulement quand le braille suit automatiquement, Toujours|
-|Défaut |Jamais|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Jamais), Jamais, Seulement quand le braille suit automatiquement, Toujours |
+| Défaut | Jamais |
 
 Ce paramètre détermine si le curseur système doit également être déplacé lors d'un appui sur une touche de routage du curseur.
 Cette option est définie sur Jamais par défaut, ce qui signifie que le routage ne déplacera jamais le curseur système lors du routage du curseur de revue.
@@ -2146,10 +2154,10 @@ Pour modifier l'option "Afficher le contexte du focus" de n'importe où, veuille
 
 ##### Interrompre la parole pendant le défilement {#BrailleSettingsInterruptSpeech}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Activé), Activé, Désactivé|
-|Défaut |Activé|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Activé), Activé, Désactivé |
+| Défaut | Activé |
 
 Ce paramètre détermine si la parole doit être interrompue lorsque l'afficheur braille défile vers l'arrière/vers l'avant.
 Les commandes de ligne précédente/suivante interrompent toujours la parole.
@@ -2161,10 +2169,10 @@ La désactivation de cette option permet d'entendre la parole tout en lisant sim
 
 ##### Afficher la sélection {#BrailleSettingsShowSelection}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Activé), Activé, Désactivé|
-|Défaut |Activé|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Activé), Activé, Désactivé |
+| Défaut | Activé |
 
 Ce réglage détermine si l'indicateur de sélection (points 7 et 8) s'affiche sur l'afficheur braille.
 L'option est activée par défaut, donc l'indicateur de sélection est affiché.
@@ -2256,10 +2264,10 @@ Il n'est pas possible de supporter l'atténuation audio pour les versions portab
 
 ##### Le volume des sons NVDA suit le volume de la voix {#SoundVolumeFollowsVoice}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Désactivé, Activé|
-|Défaut |Désactivé|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Désactivé, Activé |
+| Défaut | Désactivé |
 
 Lorsque cette option est activée, le volume des sons et des bips de NVDA suivra le réglage du volume de la voix que vous utilisez.
 Si vous diminuez le volume de la voix, le volume des sons diminuera.
@@ -2280,9 +2288,9 @@ Par défaut, la séparation du son est désactivée.
 Un geste de commande permet de parcourir les différents modes de séparation du son :
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Faire défiler les modes de séparation du son |`NVDA+alt+s` |Passer d'un mode de séparation du son à l'autre.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Faire défiler les modes de séparation du son | `NVDA+alt+s` | Passer d'un mode de séparation du son à l'autre. |
 
 <!-- KC:endInclude -->
 
@@ -2839,10 +2847,10 @@ Cette catégorie vous permet d'ajuster divers aspects de la navigation dans les 
 
 ##### Style des paragraphes {#ParagraphStyle}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Géré par l' application), géré par l' application, Saut de ligne unique, Saut de ligne multiple|
-|Défaut |Géré par l'application|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Géré par l' application), géré par l' application, Saut de ligne unique, Saut de ligne multiple |
+| Défaut | Géré par l'application |
 
 Cette liste déroulante vous permet de sélectionner le style de paragraphe à utiliser lors de la navigation par paragraphes avec `contrôle+flècheHaut` et `contrôle+flècheBas`.
 Les styles de paragraphe disponibles sont :
@@ -2904,10 +2912,10 @@ Ce bouton n'est disponible que si NVDA est configuré pour permettre le chargeme
 
 ##### Enregistrement des événements et modifications de propriété UI Automation {#AdvancedSettingsSelectiveUIAEventRegistration}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Automatique, Sélectif, Global|
-|Défaut |Automatique|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Automatique, Sélectif, Global |
+| Défaut | Automatique |
 
 Cette option change la façon dont NVDA enregistre les événements déclenchés par l'API d'accessibilité UI Automation de Microsoft.
 La liste déroulante Enregistrement des événements et modifications de propriété UI Automation a trois options :
@@ -2941,20 +2949,20 @@ L'implémentation de UI Automation dans Microsoft Excel est en constante évolut
 
 ##### Utiliser le traitement des événements amélioré {#UIAEnhancedEventProcessing}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Activé), Désactivé, Activé|
-|Défaut |Activé|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Activé), Désactivé, Activé |
+| Défaut | Activé |
 
 Lorsque cette option est activée, NVDA devrait rester réactif lorsqu'il est submergé de nombreux événements UI Automation, par ex. de grandes quantités de texte dans un terminal.
 Après avoir modifié cette option, vous devrez redémarrer NVDA pour que la modification prenne effet.
 
 ##### Prise en charge de la Console Windows {#AdvancedSettingsConsoleUIA}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Automatique, UIA si disponible, Héritée|
-|Défaut |Automatique|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Automatique, UIA si disponible, Héritée |
+| Défaut | Automatique |
 
 Cette option sélectionne la façon dont NVDA interagit avec la console Windows utilisée par l'invite de commande, PowerShell et le sous-système Windows pour Linux.
 Cela n'affecte pas le terminal Windows moderne.
@@ -3004,10 +3012,10 @@ Les options suivantes existent :
 
 ##### Signaler les régions Actives {#BrailleLiveRegions}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Activé), Désactivé, Activé|
-|Défaut |Activé|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Activé), Désactivé, Activé |
+| Défaut | Activé |
 
 Cette option définit si NVDA signale les changements dans certains contenus Web dynamiques en Braille.
 Désactiver cette option équivaut au comportement de NVDA dans les versions 2023.1 et antérieures, qui ne signalaient ces changements de contenu que par la parole.
@@ -3042,10 +3050,10 @@ Cependant, dans les terminaux, lors de l'insertion ou de la suppression d'un car
 
 ##### Annoncez un nouveau texte dans le terminal Windows via {#WtStrategy}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Comparaison du texte), Comparaison du texte, Notifications UIA|
-|Défaut |Comparaison du texte|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Comparaison du texte), Comparaison du texte, Notifications UIA |
+| Défaut | Comparaison du texte |
 
 Cette option sélectionne la façon dont NVDA détermine quel texte est "nouveau" (et donc ce qu'il faut prononcer lorsque "signaler les changements de contenu dynamique" est activé) dans Windows Terminal et le contrôle WPF Windows Terminal utilisé dans Visual Studio 2022.
 Elle n'affecte pas la console Windows (`conhost.exe`).
@@ -3079,10 +3087,10 @@ Pour plusieurs API GUI historiquement populaires, le texte peut être rendu avec
 
 ##### Utiliser WASAPI pour la sortie audio {#WASAPI}
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|Options |Défaut (Activé), Désactivé, Activé|
-|Défaut |Activé|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| Options | Défaut (Activé), Désactivé, Activé |
+| Défaut | Activé |
 
 Cette option active la sortie audio via l'API Windows Audio Session (WASAPI).
 WASAPI est une architecture audio plus moderne qui peut améliorer la réactivité, les performances et la stabilité de la sortie audio NVDA, y compris la parole et les sons.
@@ -3230,10 +3238,10 @@ Vous pouvez également réinitialiser votre configuration aux valeurs d'usine en
 Les touches de commandes suivantes sont également utiles :
 <!-- KC:beginInclude -->
 
-| Nom |Ordinateur de bureau |Ordinateur portable |Description|
-|---|---|---|---|
-|Sauvegarder la configuration |NVDA+contrôle+c |NVDA+contrôle+c |Sauvegarde votre configuration pour qu'elle ne soit pas perdue en quittant NVDA|
-|Réinitialiser la configuration |NVDA+contrôle+r |NVDA+contrôle+r |Appuyez une fois pour réinitialiser à la configuration qui existait lors de votre dernière sauvegarde. Appuyez trois fois pour revenir à la configuration par défaut de NVDA.|
+| Nom | Ordinateur de bureau | Ordinateur portable | Description |
+| --- | --- | --- | --- |
+| Sauvegarder la configuration | NVDA+contrôle+c | NVDA+contrôle+c | Sauvegarde votre configuration pour qu'elle ne soit pas perdue en quittant NVDA |
+| Réinitialiser la configuration | NVDA+contrôle+r | NVDA+contrôle+r | Appuyez une fois pour réinitialiser à la configuration qui existait lors de votre dernière sauvegarde. Appuyez trois fois pour revenir à la configuration par défaut de NVDA. |
 
 <!-- KC:endInclude -->
 
@@ -3489,6 +3497,7 @@ Vous pouvez parcourir les extensions incompatibles disponibles à l'aide des [on
 Vous pouvez parcourir les extensions incompatibles installées à l'aide de l'[onglet extensions incompatibles](#AddonStoreFilterStatus).
 
 ## Outils Additionnels {#ExtraTools}
+
 ### Visionneuse du Journal {#LogViewer}
 
 La visionneuse du journal, située dans "Outils" du menu NVDA, vous permet de consulter les événements enregistrés depuis le démarrage de la dernière session de NVDA.
@@ -3503,10 +3512,10 @@ A ce moment, le fichier de journal de la session NVDA précédente est déplacé
 Vous pouvez également copier un fragment du fichier de journal courant dans le presse-papiers sans ouvrir la visionneuse de journaux.
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Ouvrir la visionneuse de journaux |`NVDA+f1` |Ouvre la visionneuse de journaux et affiche des informations pour le développeur sur l'objet navigateur courant.|
-|Copier un fragment du journal dans le presse-papiers |`NVDA+contrôle+maj+f1` |Au premier appui, le point de départ pour le contenu du journal qui doit être capturé est défini. Au deuxième appui, le contenu du journal depuis le point de départ est copié dans votre presse-papiers.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Ouvrir la visionneuse de journaux | `NVDA+f1` | Ouvre la visionneuse de journaux et affiche des informations pour le développeur sur l'objet navigateur courant. |
+| Copier un fragment du journal dans le presse-papiers | `NVDA+contrôle+maj+f1` | Au premier appui, le point de départ pour le contenu du journal qui doit être capturé est défini. Au deuxième appui, le contenu du journal depuis le point de départ est copié dans votre presse-papiers. |
 
 <!-- KC:endInclude -->
 
@@ -3598,10 +3607,10 @@ Les modules globaux (globalPlugins) gèrent la manière dont NVDA interagit avec
 Les raccourcis clavier NVDA suivants peuvent également être utiles :
 <!-- KC:beginInclude -->
 
-| Nom |Touche |Description|
-|---|---|---|
-|Recharger les modules |`NVDA+contrôle+f3` |Recharger les modules globaux et applicatifs|
-|Annoncer le module applicatif chargé et l'exécutable |`NVDA+contrôle+f1` |Annoncer le nom du module applicatif, s'il y en a un, et le nom de l'exécutable associé à l'application qui a le focus clavier.|
+| Nom | Touche | Description |
+| --- | --- | --- |
+| Recharger les modules | `NVDA+contrôle+f3` | Recharger les modules globaux et applicatifs |
+| Annoncer le module applicatif chargé et l'exécutable | `NVDA+contrôle+f1` | Annoncer le nom du module applicatif, s'il y en a un, et le nom de l'exécutable associé à l'application qui a le focus clavier. |
 
 <!-- KC:endInclude -->
 
@@ -3706,67 +3715,67 @@ Voici les assignations de touches pour ces terminaux avec NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage braille |topRouting1 (première cellule de l'afficheur)|
-|Défilement avant de l'affichage braille |topRouting20/40/80 (dernière cellule de l'afficheur)|
-|Défilement arrière de l'affichage braille |barAvancerDeGauche|
-|Défilement avant de l'affichage braille |barAvancerDeDroite|
-|Basculer le suivi du braille |boutonGDFGauche+boutonGDFDroite|
-|Choix de la fonction de la roulette magique gauche |Appui sur la roulette magique gauche|
-|Retour arrière en utilisant la roulette magique gauche |roulette magique gauche vers le haut|
-|Avancer en utilisant la roulette magique gauche |roulette magique gauche vers le bas|
-|Choix de la fonction de la roulette magique droite |Appui sur la roulette magique droite|
-|Retour arrière en utilisant la roulette magique droite |roulette magique droite vers le haut|
-|Avancer en utilisant la roulette magique droite |roulette magique droite vers le bas|
-|Aller à la cellule braille |routage|
-|touche maj+tab |barreEspacebraille+point1+point2|
-|touche tab |barreEspacebraille+point4+point5|
-|touche flèche haut |barreEspacebraille+point1|
-|touche flèche bas |barreEspacebraille+point4|
-|touche contrôle+flèche gauche |barreEspacebraille+point2|
-|touche contrôle+flèche droite |barreEspacebraille+point5|
-|flèche gauche |barreEspacebraille+point3|
-|flèche droite |barreEspacebraille+point6|
-|touche origine |barreEspacebraille+point1+point3|
-|touche fin |barreEspacebraille+point4+point6|
-|touche contrôle+début |barreEspacebraille+point1+point2+point3|
-|touche contrôle+fin |barreEspacebraille+point4+point5+point6|
-|touche alt |barreEspacebraille+point1+point3+point4|
-|touche alt+tab |barreEspacebraille+point2+point3+point4+point5|
-|touche alt+maj+tab |BarreEspacebeBraille+point1+poin2+point5+point6|
-|touche windows+tab |barreEspaceBraille+point2+point3+point4|
-|touche échap |barreEspacebraille+point1+point5|
-|touche Windows |barreEspacebraille+point2+point4+point5+point6|
-|touche espace |barreEspacebraille|
-|Bascule touche contrôle |barreEspaceBraille+point3+point8|
-|Bascule touche alt |barreEspaceBraille+point6+point8|
-|Bascule touche Windows |barreEspaceBraille+point4+point8|
-|Bascule touche NVDA |barreEspaceBraille+point5+point8|
-|Bascule touche majuscule |barreEspaceBraille+point7+point8|
-|Bascule touches contrôle et majuscule |barreEspaceBraille+point3+point7+point8|
-|Bascule touche alt et majuscule |barreEspaceBraille+point6+point7+point8|
-|Bascule touches Windows et majuscule |barreEspaceBraille+point4+point7+point8|
-|Bascule touches NVDA et majuscule |barreEspaceBraille+point5+point7+point8|
-|Bascule touches contrôle et alt |barreEspaceBraille+point3+point6+point8|
-|bascule contrôle, alt et majuscule keys |barreEspaceBraille+point3+point6+point7+point8|
-|touche Windows+d (minimiser toutes les applications) |barreEspacebraille+point1+point2+point3+point4+point5+point6|
-|Rapporter la ligne courante |barreEspacebraille+point1+point4|
-|menu NVDA |barreEspacebraille+point1+point3+point4+point5|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage braille | topRouting1 (première cellule de l'afficheur) |
+| Défilement avant de l'affichage braille | topRouting20/40/80 (dernière cellule de l'afficheur) |
+| Défilement arrière de l'affichage braille | barAvancerDeGauche |
+| Défilement avant de l'affichage braille | barAvancerDeDroite |
+| Basculer le suivi du braille | boutonGDFGauche+boutonGDFDroite |
+| Choix de la fonction de la roulette magique gauche | Appui sur la roulette magique gauche |
+| Retour arrière en utilisant la roulette magique gauche | roulette magique gauche vers le haut |
+| Avancer en utilisant la roulette magique gauche | roulette magique gauche vers le bas |
+| Choix de la fonction de la roulette magique droite | Appui sur la roulette magique droite |
+| Retour arrière en utilisant la roulette magique droite | roulette magique droite vers le haut |
+| Avancer en utilisant la roulette magique droite | roulette magique droite vers le bas |
+| Aller à la cellule braille | routage |
+| touche maj+tab | barreEspacebraille+point1+point2 |
+| touche tab | barreEspacebraille+point4+point5 |
+| touche flèche haut | barreEspacebraille+point1 |
+| touche flèche bas | barreEspacebraille+point4 |
+| touche contrôle+flèche gauche | barreEspacebraille+point2 |
+| touche contrôle+flèche droite | barreEspacebraille+point5 |
+| flèche gauche | barreEspacebraille+point3 |
+| flèche droite | barreEspacebraille+point6 |
+| touche origine | barreEspacebraille+point1+point3 |
+| touche fin | barreEspacebraille+point4+point6 |
+| touche contrôle+début | barreEspacebraille+point1+point2+point3 |
+| touche contrôle+fin | barreEspacebraille+point4+point5+point6 |
+| touche alt | barreEspacebraille+point1+point3+point4 |
+| touche alt+tab | barreEspacebraille+point2+point3+point4+point5 |
+| touche alt+maj+tab | BarreEspacebeBraille+point1+poin2+point5+point6 |
+| touche windows+tab | barreEspaceBraille+point2+point3+point4 |
+| touche échap | barreEspacebraille+point1+point5 |
+| touche Windows | barreEspacebraille+point2+point4+point5+point6 |
+| touche espace | barreEspacebraille |
+| Bascule touche contrôle | barreEspaceBraille+point3+point8 |
+| Bascule touche alt | barreEspaceBraille+point6+point8 |
+| Bascule touche Windows | barreEspaceBraille+point4+point8 |
+| Bascule touche NVDA | barreEspaceBraille+point5+point8 |
+| Bascule touche majuscule | barreEspaceBraille+point7+point8 |
+| Bascule touches contrôle et majuscule | barreEspaceBraille+point3+point7+point8 |
+| Bascule touche alt et majuscule | barreEspaceBraille+point6+point7+point8 |
+| Bascule touches Windows et majuscule | barreEspaceBraille+point4+point7+point8 |
+| Bascule touches NVDA et majuscule | barreEspaceBraille+point5+point7+point8 |
+| Bascule touches contrôle et alt | barreEspaceBraille+point3+point6+point8 |
+| bascule contrôle, alt et majuscule keys | barreEspaceBraille+point3+point6+point7+point8 |
+| touche Windows+d (minimiser toutes les applications) | barreEspacebraille+point1+point2+point3+point4+point5+point6 |
+| Rapporter la ligne courante | barreEspacebraille+point1+point4 |
+| menu NVDA | barreEspacebraille+point1+point3+point4+point5 |
 
 Pour les nouveaux modèles de Focus qui ont des touches de bascule (focus 40, Focus 80 et Focus Blue) :
 
-| Nom |Touche|
-|---|---|
-|Déplacer l'affichage braille vers la ligne précédente |barreBasculeGaucheeHaut, barreBasculeDroiteHaut|
-|Déplacer l'affichage braille vers la ligne suivante |barreBasculeGaucheBas, barreBasculeDroiteBas|
+| Nom | Touche |
+| --- | --- |
+| Déplacer l'affichage braille vers la ligne précédente | barreBasculeGaucheeHaut, barreBasculeDroiteHaut |
+| Déplacer l'affichage braille vers la ligne suivante | barreBasculeGaucheBas, barreBasculeDroiteBas |
 
 Pour le Focus 80 seulement :
 
-| Nom |Touche|
-|---|---|
-|Défiler le braille vers l'arrière |barreBumperHaut, barreBumperHaut|
-|Défiler vers l'avant |barreBumperBas, barreBumperBas|
+| Nom | Touche |
+| --- | --- |
+| Défiler le braille vers l'arrière | barreBumperHaut, barreBumperHaut |
+| Défiler vers l'avant | barreBumperBas, barreBumperBas |
 
 <!-- KC:endInclude -->
 
@@ -3788,41 +3797,41 @@ Voici les assignations de touches pour ces terminaux avec NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage braille |t1, etouch1|
-|Amener l'affichage braille à la ligne précédente |t2|
-|Aller au focus courant |t3|
-|Amener l'affichage braille à la ligne suivante |t4|
-|Défilement avant de l'affichage braille |t5, etouch3|
-|Aller à la cellule braille |routage|
-|Annoncer la mise en forme du texte sous la cellule braille |routage secondaire|
-|Activer/désactiver la simulation de clavier HID |t1+spEnter|
-|Aller à la première ligne en mode revue |t1+t2|
-|Aller à la dernière ligne en mode revue |t4+t5|
-|Bascule du suivi braille |t1+t3|
-|Annonce du titre |etouch2|
-|Annonce de la barre d'état |etouch4|
-|Touche maj+tab |sp1|
-|Touche alt |sp2, alt|
-|Touche échap |sp3|
-|Touche tab |sp4|
-|Flèche haut |spUp|
-|Flèche bas |spDown|
-|Flèche gauche |spLeft|
-|Flèche droite |spRight|
-|Entrée |spEnter, enter|
-|date et heure |sp2+sp3|
-|Menu NVDA |sp1+sp3|
-|Touche Windows+d (Minimiser toutes les applications) |sp1+sp4|
-|Touche Windows+b (focus sur la zone de notification) |sp3+sp4|
-|Touche Windows |sp1+sp2, windows|
-|Touche alt+tab |sp2+sp4|
-|Touche contrôle+début |t3+spUp|
-|Touche contrôle+fin |t3+spDown|
-|Touche début |t3+spLeft|
-|Touche fin |t3+spRight|
-|touche contrôle |contrôle|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage braille | t1, etouch1 |
+| Amener l'affichage braille à la ligne précédente | t2 |
+| Aller au focus courant | t3 |
+| Amener l'affichage braille à la ligne suivante | t4 |
+| Défilement avant de l'affichage braille | t5, etouch3 |
+| Aller à la cellule braille | routage |
+| Annoncer la mise en forme du texte sous la cellule braille | routage secondaire |
+| Activer/désactiver la simulation de clavier HID | t1+spEnter |
+| Aller à la première ligne en mode revue | t1+t2 |
+| Aller à la dernière ligne en mode revue | t4+t5 |
+| Bascule du suivi braille | t1+t3 |
+| Annonce du titre | etouch2 |
+| Annonce de la barre d'état | etouch4 |
+| Touche maj+tab | sp1 |
+| Touche alt | sp2, alt |
+| Touche échap | sp3 |
+| Touche tab | sp4 |
+| Flèche haut | spUp |
+| Flèche bas | spDown |
+| Flèche gauche | spLeft |
+| Flèche droite | spRight |
+| Entrée | spEnter, enter |
+| date et heure | sp2+sp3 |
+| Menu NVDA | sp1+sp3 |
+| Touche Windows+d (Minimiser toutes les applications) | sp1+sp4 |
+| Touche Windows+b (focus sur la zone de notification) | sp3+sp4 |
+| Touche Windows | sp1+sp2, windows |
+| Touche alt+tab | sp2+sp4 |
+| Touche contrôle+début | t3+spUp |
+| Touche contrôle+fin | t3+spDown |
+| Touche début | t3+spLeft |
+| Touche fin | t3+spRight |
+| touche contrôle | contrôle |
 
 <!-- KC:endInclude -->
 
@@ -3841,27 +3850,27 @@ Voici les assignations de touches pour ces terminaux avec NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage braille |left, up, b3|
-|Défilement avant de l'affichage braille |right, down, b6|
-|Amener l'affichage braille à la ligne précédente |b4|
-|Amener l'affichage braille à la ligne suivante |b5|
-|Aller à la cellule braille |routage|
-|Touche maj+tab |esc, touche triple action gauche haut+bas|
-|Touche alt |b2+b4+b5|
-|Touche échap |b4+b6|
-|Touche tab |enter, touche triple action droite haut+bas|
-|Touche entrée |esc+enter, touche triple action gauche+droite haut+bas, JoystickAction|
-|Flèche haut |joystick haut|
-|Flèche bas |joystick bas|
-|Flèche gauche |joystick gauche|
-|Flèche droite |joystick droit|
-|Menu NVDA |b2+b4+b5+b6|
-|Bascule braille suit |b2|
-|Bascule du curseur braille |b1|
-|Bascule de présentation du contexte du focus |b7|
-|Bascule de la saisie braille |space+b1+b3+b4 (space+capital B)|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage braille | left, up, b3 |
+| Défilement avant de l'affichage braille | right, down, b6 |
+| Amener l'affichage braille à la ligne précédente | b4 |
+| Amener l'affichage braille à la ligne suivante | b5 |
+| Aller à la cellule braille | routage |
+| Touche maj+tab | esc, touche triple action gauche haut+bas |
+| Touche alt | b2+b4+b5 |
+| Touche échap | b4+b6 |
+| Touche tab | enter, touche triple action droite haut+bas |
+| Touche entrée | esc+enter, touche triple action gauche+droite haut+bas, JoystickAction |
+| Flèche haut | joystick haut |
+| Flèche bas | joystick bas |
+| Flèche gauche | joystick gauche |
+| Flèche droite | joystick droit |
+| Menu NVDA | b2+b4+b5+b6 |
+| Bascule braille suit | b2 |
+| Bascule du curseur braille | b1 |
+| Bascule de présentation du contexte du focus | b7 |
+| Bascule de la saisie braille | space+b1+b3+b4 (space+capital B) |
 
 <!-- KC:endInclude -->
 
@@ -3877,17 +3886,17 @@ Voici les assignations de touches pour ce terminal avec NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage braille |LF|
-|Défilement avant de l'affichage braille |RG|
-|Amener l'affichage braille à la ligne précédente |UP|
-|Amener l'affichage braille à la ligne suivante |DN|
-|Aller à la cellule braille |route|
-|Touche maj+tab |SLF|
-|Touche tab |SRG|
-|Touche alt+tab |SDN|
-|Touche alt+maj+tab |SUP|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage braille | LF |
+| Défilement avant de l'affichage braille | RG |
+| Amener l'affichage braille à la ligne précédente | UP |
+| Amener l'affichage braille à la ligne suivante | DN |
+| Aller à la cellule braille | route |
+| Touche maj+tab | SLF |
+| Touche tab | SRG |
+| Touche alt+tab | SDN |
+| Touche alt+maj+tab | SUP |
 
 <!-- KC:endInclude -->
 
@@ -3914,32 +3923,32 @@ Voici les assignations de touches pour ces terminaux avec NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière affichage braille |`d2`|
-|Défilement avant affichage braille |`d5`|
-|Amener l'affichage sur la ligne précédente |`d1`|
-|Amener l'affichage sur la ligne suivante |`d3`|
-|Aller à la cellule braille |`routage`|
-|touche `Maj+tab` |`espace+point1+point3`|
-|touche `tab` |`espace+point4+point6`|
-|touche `alt` |`espace+point1+point3+point4` (`espace+m`)|
-|touche `échap` |`espace+point1+point5` (`espace+e`)|
-|touche `windows` |`espace+point3+point4`|
-|touche `alt+tab` |`espace+point2+point3+point4+point5` (`espace+t`)|
-|Menu NVDA |`espace+point1+point3+point4+point5` (`espace+n`)|
-|touche `windows+d` (minimiser toutes les applications) |`espace+point1+point4+point5` (`espace+d`)|
-|Dire tout |`espace+point1+point2+point3+point4+point5+point6`|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière affichage braille | `d2` |
+| Défilement avant affichage braille | `d5` |
+| Amener l'affichage sur la ligne précédente | `d1` |
+| Amener l'affichage sur la ligne suivante | `d3` |
+| Aller à la cellule braille | `routage` |
+| touche `Maj+tab` | `espace+point1+point3` |
+| touche `tab` | `espace+point4+point6` |
+| touche `alt` | `espace+point1+point3+point4` (`espace+m`) |
+| touche `échap` | `espace+point1+point5` (`espace+e`) |
+| touche `windows` | `espace+point3+point4` |
+| touche `alt+tab` | `espace+point2+point3+point4+point5` (`espace+t`) |
+| Menu NVDA | `espace+point1+point3+point4+point5` (`espace+n`) |
+| touche `windows+d` (minimiser toutes les applications) | `espace+point1+point4+point5` (`espace+d`) |
+| Dire tout | `espace+point1+point2+point3+point4+point5+point6` |
 
 Pour les terminaux possédant un joystick:
 
-| Nom |Touche|
-|---|---|
-|Flèche haut |haut|
-|Flèche bas |bas|
-|Flèche gauche |gauche|
-|Flèche droite |droite|
-|Touche entrée |select|
+| Nom | Touche |
+| --- | --- |
+| Flèche haut | haut |
+| Flèche bas | bas |
+| Flèche gauche | gauche |
+| Flèche droite | droite |
+| Touche entrée | select |
 
 <!-- KC:endInclude -->
 
@@ -3954,15 +3963,15 @@ Voici les assignations de touches pour ce terminal sous NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage |K1|
-|Défilement avant de l'affichage |K3|
-|Ligne précédente |B2|
-|Ligne suivante |B5|
-|Aller à la cellule braille |routage|
-|Bascule braille suit |K2|
-|Dire tout |B6|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage | K1 |
+| Défilement avant de l'affichage | K3 |
+| Ligne précédente | B2 |
+| Ligne suivante | B5 |
+| Aller à la cellule braille | routage |
+| Bascule braille suit | K2 |
+| Dire tout | B6 |
 
 <!-- KC:endInclude -->
 
@@ -3977,15 +3986,15 @@ Voici les assignations de touches pour ce terminal sous NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage |K1|
-|Défilement avant de l'affichage |K3|
-|Ligne précédente |B2|
-|Ligne suivante |B5|
-|Aller à la cellule braille |routage|
-|Bascule braille suit |K2|
-|Dire tout |B6|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage | K1 |
+| Défilement avant de l'affichage | K3 |
+| Ligne précédente | B2 |
+| Ligne suivante | B5 |
+| Aller à la cellule braille | routage |
+| Bascule braille suit | K2 |
+| Dire tout | B6 |
 
 <!-- KC:endInclude -->
 
@@ -4009,28 +4018,28 @@ Veuillez consulter la documentation du terminal pour savoir où se situent ces t
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage |gauche|
-|Défilement avant de l'affichage |droite|
-|Ligne précédente |haut|
-|Ligne suivante |bas|
-|Aller à la cellule braille |routage|
-|Bascule d'attachement du braille |haut+bas|
-|Touche flèche haut |espace+point1|
-|Touche flèche bas |espace+point4|
-|Touche flèche gauche |espace+point3|
-|Touche flèche droite |espace+point6|
-|Touche maj+tab |espace+point1+point3|
-|Touche tab |espace+point4+point6|
-|Touche alt |espace+point1+point3+point4 (espace+m)|
-|Touche échap |espace+point1+point5 (espace+e)|
-|Touche entrée |point8|
-|Touche Windows |espace+point3+point4|
-|Touche alt+tab |Espace+point2+point3+point4+point5 (espace+t)|
-|Menu NVDA |c1+c3+c4+c5 (commande n)|
-|Touche Windows+d (minimiser toutes les applications) |c1+c4+c5 (commande d)|
-|Dire tout |c1+c2+c3+c4+c5+c6|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage | gauche |
+| Défilement avant de l'affichage | droite |
+| Ligne précédente | haut |
+| Ligne suivante | bas |
+| Aller à la cellule braille | routage |
+| Bascule d'attachement du braille | haut+bas |
+| Touche flèche haut | espace+point1 |
+| Touche flèche bas | espace+point4 |
+| Touche flèche gauche | espace+point3 |
+| Touche flèche droite | espace+point6 |
+| Touche maj+tab | espace+point1+point3 |
+| Touche tab | espace+point4+point6 |
+| Touche alt | espace+point1+point3+point4 (espace+m) |
+| Touche échap | espace+point1+point5 (espace+e) |
+| Touche entrée | point8 |
+| Touche Windows | espace+point3+point4 |
+| Touche alt+tab | Espace+point2+point3+point4+point5 (espace+t) |
+| Menu NVDA | c1+c3+c4+c5 (commande n) |
+| Touche Windows+d (minimiser toutes les applications) | c1+c4+c5 (commande d) |
+| Dire tout | c1+c2+c3+c4+c5+c6 |
 
 <!-- KC:endInclude -->
 
@@ -4038,11 +4047,11 @@ Veuillez consulter la documentation du terminal pour savoir où se situent ces t
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Menu NVDA |c1+c3+c4+c5 (commande n)|
-|Touche windows+d (minimiser toutes les applications) |c1+c4+c5 (commande d)|
-|Dire tout |c1+c2+c3+c4+c5+c6|
+| Nom | Touche |
+| --- | --- |
+| Menu NVDA | c1+c3+c4+c5 (commande n) |
+| Touche windows+d (minimiser toutes les applications) | c1+c4+c5 (commande d) |
+| Dire tout | c1+c2+c3+c4+c5+c6 |
 
 <!-- KC:endInclude -->
 
@@ -4050,13 +4059,13 @@ Veuillez consulter la documentation du terminal pour savoir où se situent ces t
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|touche flèche haut |joystick vers le haut|
-|touche flèche bas |joystick vers le bas|
-|touche flèche gauche |joystick vers la gauche|
-|touche flèche droit |joystick vers la droite|
-|touche entrée |joystick action|
+| Nom | Touche |
+| --- | --- |
+| touche flèche haut | joystick vers le haut |
+| touche flèche bas | joystick vers le bas |
+| touche flèche gauche | joystick vers la gauche |
+| touche flèche droit | joystick vers la droite |
+| touche entrée | joystick action |
 
 <!-- KC:endInclude -->
 
@@ -4069,69 +4078,69 @@ Voici les assignations de touches pour ce terminal sous NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Aller à la cellule braille |routage|
-|Défilement arrière de l'affichage braille |défilementHautDeGauche, défilementHautDeDroite, défilementDeGauche|
-|Défilement avant de l'affichage braille |défilementBasDeGauche, défilementBasDeDroite, défilementDeDroite|
-|Amener l'affichage à la ligne précédente |défilementHautDeGauche+défilementHautDeDroite|
-|Amener l'affichage à la ligne suivante |défilementBasDeGauche+défilementBasDeDroite|
-|Aller à la ligne précédente en revue |flècheHautDeDroite|
-|Aller à la ligne suivante en revue |flècheBasDeDroite|
-|Aller au caractère précédent en revue |flècheGaucheDeDroite|
-|Aller au caractère suivant en revue |flècheDroiteDeDroite|
-|Aller au focus courant |défilementHautDeGauche+défilementBasDeGauche, défilementHautDeDroite+défilementBasDeDroite, défilementDeGauche+défilementDeDroite|
-|Touche contrôle |smartbeetle:f1, brailleedge:f3|
-|Touche Windows |f7, smartbeetle:f2|
-|Touche alt |point1+point3+point4+espace, f2, smartbeetle:f3, brailleedge:f4|
-|Touche majuscule |f5|
-|Touche insertion |point2+point4+espace, f6|
-|Touche applications |point1+point2+point3+point4+espace, f8|
-|Verrouillage majuscule |point1+point3+point6+espace|
-|touche tabulation |point4+point5+espace, f3, brailleedge:f2|
-|maj+alt+tab |f2+f3+f1|
-|alt+tab |f2+f3|
-|maj+tab |point1+point2+espace|
-|Touche fin |point4+point6+espace|
-|contrôle+fin |point4+point5+point6+espace|
-|Touche début |point1+point3+espace, smartbeetle:f4|
-|contrôle+début |point1+point2+point3+espace|
-|alt+f4 |point1+point3+point5+point6+espace|
-|flèche gauche |point3+espace, flècheGaucheDeGauche|
-|contrôle+maj+flècheGauche |point2+point8+espace+f1|
-|contrôle+flècheGauche |point2+espace|
-|maj+alt+flècheGauche |point2+point7+f1|
-|`alt+flècheGauche` |`point2+point7+espace`|
-|flècheDroite |point6+espace, flècheDroiteDeGauche|
-|contrôle+maj+flècheDroite |point5+point8+espace+f1|
-|contrôle+flècheDroite |point5+espace|
-|maj+alt+flècheDroite |point5+point7+f1|
-|`alt+flècheDroite` |`point5+point7+espace`|
-|pagePrec |point1+point2+point6+espace|
-|contrôle+pagePrec |point1+point2+point6+point8+espace|
-|Touche flècheHaut |point1+espace, flècheHautDeGauche|
-|contrôle+maj+flècheHaut |point2+point3+point8+espace+f1|
-|contrôle+flècheHaut |point2+point3+espace|
-|maj+alt+flècheHaut |point2+point3+point7+f1|
-|`alt+flècheHaut` |`point2+point3+point7+espace`|
-|maj+flècheHaut |DéfilementBasDeGauche+espace|
-|pageSuiv |point3+point4+point5+espace|
-|contrôle+pageSuiv |point3+point4+point5+point8+espace|
-|Touche flècheBas |point4+espace, flècheBasDeGauche|
-|contrôle+maj+flècheBas |point5+point6+point8+espace+f1|
-|contrôle+flècheBas |point5+point6+espace|
-|maj+alt+flècheBas |point5+point6+point7+f1|
-|`alt+flècheBas` |`point5+point6+point7+espace`|
-|maj+flècheBas |espace+défilementBasDeDroite|
-|Touche échap |point1+point5+espace, f4, brailleedge:f1|
-|touche effacement |point1+point3+point5+espace, point1+point4+point5+espace|
-|touche f1 |point1+point2+point5+espace|
-|touche f3 |point1+point4+point8+espace|
-|touche f4 |point7+f3|
-|windows+b |point1+point2+f1|
-|windows+d |point1+point4+point5+f1|
-|contrôle+insert |smartbeetle:f1+défilementDeDroite|
-|alt+insert |smartbeetle:f3+défilementDeDroite|
+| Nom | Touche |
+| --- | --- |
+| Aller à la cellule braille | routage |
+| Défilement arrière de l'affichage braille | défilementHautDeGauche, défilementHautDeDroite, défilementDeGauche |
+| Défilement avant de l'affichage braille | défilementBasDeGauche, défilementBasDeDroite, défilementDeDroite |
+| Amener l'affichage à la ligne précédente | défilementHautDeGauche+défilementHautDeDroite |
+| Amener l'affichage à la ligne suivante | défilementBasDeGauche+défilementBasDeDroite |
+| Aller à la ligne précédente en revue | flècheHautDeDroite |
+| Aller à la ligne suivante en revue | flècheBasDeDroite |
+| Aller au caractère précédent en revue | flècheGaucheDeDroite |
+| Aller au caractère suivant en revue | flècheDroiteDeDroite |
+| Aller au focus courant | défilementHautDeGauche+défilementBasDeGauche, défilementHautDeDroite+défilementBasDeDroite, défilementDeGauche+défilementDeDroite |
+| Touche contrôle | smartbeetle:f1, brailleedge:f3 |
+| Touche Windows | f7, smartbeetle:f2 |
+| Touche alt | point1+point3+point4+espace, f2, smartbeetle:f3, brailleedge:f4 |
+| Touche majuscule | f5 |
+| Touche insertion | point2+point4+espace, f6 |
+| Touche applications | point1+point2+point3+point4+espace, f8 |
+| Verrouillage majuscule | point1+point3+point6+espace |
+| touche tabulation | point4+point5+espace, f3, brailleedge:f2 |
+| maj+alt+tab | f2+f3+f1 |
+| alt+tab | f2+f3 |
+| maj+tab | point1+point2+espace |
+| Touche fin | point4+point6+espace |
+| contrôle+fin | point4+point5+point6+espace |
+| Touche début | point1+point3+espace, smartbeetle:f4 |
+| contrôle+début | point1+point2+point3+espace |
+| alt+f4 | point1+point3+point5+point6+espace |
+| flèche gauche | point3+espace, flècheGaucheDeGauche |
+| contrôle+maj+flècheGauche | point2+point8+espace+f1 |
+| contrôle+flècheGauche | point2+espace |
+| maj+alt+flècheGauche | point2+point7+f1 |
+| `alt+flècheGauche` | `point2+point7+espace` |
+| flècheDroite | point6+espace, flècheDroiteDeGauche |
+| contrôle+maj+flècheDroite | point5+point8+espace+f1 |
+| contrôle+flècheDroite | point5+espace |
+| maj+alt+flècheDroite | point5+point7+f1 |
+| `alt+flècheDroite` | `point5+point7+espace` |
+| pagePrec | point1+point2+point6+espace |
+| contrôle+pagePrec | point1+point2+point6+point8+espace |
+| Touche flècheHaut | point1+espace, flècheHautDeGauche |
+| contrôle+maj+flècheHaut | point2+point3+point8+espace+f1 |
+| contrôle+flècheHaut | point2+point3+espace |
+| maj+alt+flècheHaut | point2+point3+point7+f1 |
+| `alt+flècheHaut` | `point2+point3+point7+espace` |
+| maj+flècheHaut | DéfilementBasDeGauche+espace |
+| pageSuiv | point3+point4+point5+espace |
+| contrôle+pageSuiv | point3+point4+point5+point8+espace |
+| Touche flècheBas | point4+espace, flècheBasDeGauche |
+| contrôle+maj+flècheBas | point5+point6+point8+espace+f1 |
+| contrôle+flècheBas | point5+point6+espace |
+| maj+alt+flècheBas | point5+point6+point7+f1 |
+| `alt+flècheBas` | `point5+point6+point7+espace` |
+| maj+flècheBas | espace+défilementBasDeDroite |
+| Touche échap | point1+point5+espace, f4, brailleedge:f1 |
+| touche effacement | point1+point3+point5+espace, point1+point4+point5+espace |
+| touche f1 | point1+point2+point5+espace |
+| touche f3 | point1+point4+point8+espace |
+| touche f4 | point7+f3 |
+| windows+b | point1+point2+f1 |
+| windows+d | point1+point4+point5+f1 |
+| contrôle+insert | smartbeetle:f1+défilementDeDroite |
+| alt+insert | smartbeetle:f3+défilementDeDroite |
 
 <!-- KC:endInclude -->
 
@@ -4155,19 +4164,19 @@ Voici les assignations de touches pour le terminal Seika Braille :
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage braille |gauche|
-|Défilement avant de l'affichage braille |droite|
-|Déplacer l'afficheur braille à la ligne précédente |B3|
-|Déplacer l'afficheur braille à la ligne suivante |b4|
-|Basculer le suivi braille |b5|
-|Dire tout |b6|
-|tab |b1|
-|maj+tab |b2|
-|alt+tab |b1+b2|
-|Menu NVDA |gauche+droite|
-|Aller à la cellule braille |route (amener le curseur au caractère)|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage braille | gauche |
+| Défilement avant de l'affichage braille | droite |
+| Déplacer l'afficheur braille à la ligne précédente | B3 |
+| Déplacer l'afficheur braille à la ligne suivante | b4 |
+| Basculer le suivi braille | b5 |
+| Dire tout | b6 |
+| tab | b1 |
+| maj+tab | b2 |
+| alt+tab | b1+b2 |
+| Menu NVDA | gauche+droite |
+| Aller à la cellule braille | route (amener le curseur au caractère) |
 
 <!-- KC:endInclude -->
 
@@ -4181,37 +4190,37 @@ Voici les assignation de touches pour le Seika Notetaker.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement braille vers la gauche |gauche|
-|Défilement braille vers la droite |droite|
-|Dire tout |espace+RetourArrière|
-|Menu NVDA |Gauche+Droite|
-|Amener l'afficheur braille à la ligne précédente |LJ haut|
-|Amener l'afficheur braille à la ligne suivante |LJ bas|
-|Basculer le suivi braille |LJ centre|
-|tab |LJ droite|
-|Maj+tab |LJ gauche|
-|FlècheHaut |RJ haut|
-|FlècheBas |RJ bas|
-|FlècheGauche |RJ gauche|
-|FlècheDroite |RJ droit|
-|Aller à la cellule braille |routage|
-|maj+flècheHaut |Espace+RJ haut, RetourArrière+RJ haut|
-|Maj+flècheBas |Espace+RJ bas, RetourArrière+RJ bas|
-|maj+flèchegauche |Espace+RJ gauche, RetourArrière+RJ gauche|
-|maj+flècheDroite |Espace+RJ droit, RetourArrière+RJ droit|
-|touche entrée |RJ centre, point8|
-|touche échap |Espace+RJ centre|
-|touche windows |RetourArrière+RJ centre|
-|touche espace |Espace, RetourArrière|
-|touche RetourArrière |point7|
-|touche pagePrec |Espace+LJ droit|
-|touche pageSuiv |Espace+LJ gauche|
-|touche début |espace+LJ haut|
-|touche fin |espace+LJ bas|
-|touche contrôle+début |retourArrière+LJ haut|
-|touche contrôle+fin |retourArrière+LJ bas|
+| Nom | Touche |
+| --- | --- |
+| Défilement braille vers la gauche | gauche |
+| Défilement braille vers la droite | droite |
+| Dire tout | espace+RetourArrière |
+| Menu NVDA | Gauche+Droite |
+| Amener l'afficheur braille à la ligne précédente | LJ haut |
+| Amener l'afficheur braille à la ligne suivante | LJ bas |
+| Basculer le suivi braille | LJ centre |
+| tab | LJ droite |
+| Maj+tab | LJ gauche |
+| FlècheHaut | RJ haut |
+| FlècheBas | RJ bas |
+| FlècheGauche | RJ gauche |
+| FlècheDroite | RJ droit |
+| Aller à la cellule braille | routage |
+| maj+flècheHaut | Espace+RJ haut, RetourArrière+RJ haut |
+| Maj+flècheBas | Espace+RJ bas, RetourArrière+RJ bas |
+| maj+flèchegauche | Espace+RJ gauche, RetourArrière+RJ gauche |
+| maj+flècheDroite | Espace+RJ droit, RetourArrière+RJ droit |
+| touche entrée | RJ centre, point8 |
+| touche échap | Espace+RJ centre |
+| touche windows | RetourArrière+RJ centre |
+| touche espace | Espace, RetourArrière |
+| touche RetourArrière | point7 |
+| touche pagePrec | Espace+LJ droit |
+| touche pageSuiv | Espace+LJ gauche |
+| touche début | espace+LJ haut |
+| touche fin | espace+LJ bas |
+| touche contrôle+début | retourArrière+LJ haut |
+| touche contrôle+fin | retourArrière+LJ bas |
 
 ### Nouveaux Modèles de Papenmeier brailleX {#Papenmeier}
 
@@ -4249,41 +4258,41 @@ Appuyer et garder les touches haute, basse, gauche et droite (ou EAB) répète l
 
 Généralement, les touches suivantes sont disponibles sur ces afficheurs braille :
 
-| Nom |touche|
-|---|---|
-|l1 |touche gauche devant|
-|l2 |touche gauche derrière|
-|r1 |touche droite devant|
-|r2 |touche droite derrière|
-|haut |Monter une fois vers le haut|
-|haut2 |Monter deux fois vers le haut|
-|gauche |un vers la gauche|
-|gauche2 |deux vers la gauche|
-|droite |un vers la droite|
-|droite2 |deux vers la droite|
-|dn |un vers le bas|
-|dn2 |deux vers le bas|
+| Nom | touche |
+| --- | --- |
+| l1 | touche gauche devant |
+| l2 | touche gauche derrière |
+| r1 | touche droite devant |
+| r2 | touche droite derrière |
+| haut | Monter une fois vers le haut |
+| haut2 | Monter deux fois vers le haut |
+| gauche | un vers la gauche |
+| gauche2 | deux vers la gauche |
+| droite | un vers la droite |
+| droite2 | deux vers la droite |
+| dn | un vers le bas |
+| dn2 | deux vers le bas |
 
 Voici les commandes assignées pour les afficheurs Papenmeier dans NVDA :
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'affichage braille |left|
-|Défilement avant de l'affichage braille |right|
-|Déplacer l'afficheur braille à la ligne précédente |up|
-|Déplacer le braille à la ligne suivante |dn|
-|Aller à la cellule braille |routage|
-|Lire le caractère sous le curseur de revue |l1|
-|Activer l'objet courant du navigateur |l2|
-|Bascule braille suit |r2|
-|Lire le titre |l1+up|
-|Lire la barre d'état |l2+down|
-|Aller à l'objet parent |up2|
-|Aller à l'objet enfant |dn2|
-|Aller à l'objet précédent |left2|
-|Aller à l'objet suivant |right2|
-|Annoncer l'information de mise en forme du texte sous la cellule braille |rangée de routines du haut|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'affichage braille | left |
+| Défilement avant de l'affichage braille | right |
+| Déplacer l'afficheur braille à la ligne précédente | up |
+| Déplacer le braille à la ligne suivante | dn |
+| Aller à la cellule braille | routage |
+| Lire le caractère sous le curseur de revue | l1 |
+| Activer l'objet courant du navigateur | l2 |
+| Bascule braille suit | r2 |
+| Lire le titre | l1+up |
+| Lire la barre d'état | l2+down |
+| Aller à l'objet parent | up2 |
+| Aller à l'objet enfant | dn2 |
+| Aller à l'objet précédent | left2 |
+| Aller à l'objet suivant | right2 |
+| Annoncer l'information de mise en forme du texte sous la cellule braille | rangée de routines du haut |
 
 <!-- KC:endInclude -->
 
@@ -4300,17 +4309,17 @@ Les touches intérieures font toutes les deux espace.
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|touche échap |espace avec point 7|
-|touche flèche haute |espace avec point 2|
-|touche flèche gauche |espace avec point 1|
-|touche flèche droite |espace avec point 4|
-|touche flèche basse |espace avec point 5|
-|touche contrôle |lt+point 2|
-|touche alt |lt+point 3|
-|touches contrôle+échap |espace avec les points 1 2 3 4 5 6|
-|touche tab |espace avec points 3 7|
+| Nom | Touche |
+| --- | --- |
+| touche échap | espace avec point 7 |
+| touche flèche haute | espace avec point 2 |
+| touche flèche gauche | espace avec point 1 |
+| touche flèche droite | espace avec point 4 |
+| touche flèche basse | espace avec point 5 |
+| touche contrôle | lt+point 2 |
+| touche alt | lt+point 3 |
+| touches contrôle+échap | espace avec les points 1 2 3 4 5 6 |
+| touche tab | espace avec points 3 7 |
 
 <!-- KC:endInclude -->
 
@@ -4332,78 +4341,78 @@ Les anciens modèles n'ont pas d'EAB ; les touches de façade sont utilisées �
 
 Globalement, les touches suivantes sont disponibles sur les afficheurs braille :
 
-| Nom |Touche|
-|---|---|
-|l1 |Touche avant gauche|
-|l2 |Touche arrière droite|
-|r1 |Touche avant droite|
-|r2 |Touche arrière droite|
-|up |1 appui vers le haut|
-|up2 |2 appuis vers le haut|
-|left |1 appui gauche|
-|left2 |2 appuis gauche|
-|right |1 appui à droite|
-|right2 |2 appuis à droite|
-|dn |1 appui en bas|
-|dn2 |2 appuis en bas|
+| Nom | Touche |
+| --- | --- |
+| l1 | Touche avant gauche |
+| l2 | Touche arrière droite |
+| r1 | Touche avant droite |
+| r2 | Touche arrière droite |
+| up | 1 appui vers le haut |
+| up2 | 2 appuis vers le haut |
+| left | 1 appui gauche |
+| left2 | 2 appuis gauche |
+| right | 1 appui à droite |
+| right2 | 2 appuis à droite |
+| dn | 1 appui en bas |
+| dn2 | 2 appuis en bas |
 
 Les commandes Papenmeier disponibles dans NVDA sont les suivantes :
 
 <!-- KC:beginInclude -->
 Périphériques avec EAB :
 
-| Nom |Touche|
-|---|---|
-|Défilement affichage braille arrière |left|
-|Défilement affichage braille avant |right|
-|Déplacer l'affichage braille vers la ligne précédente |up|
-|Déplacer l'affichage braille vers la ligne suivante |down|
-|Joindre à la cellule braille |routage|
-|Annoncer le caractère courant sous la revue |l1|
-|Activer l'objet courant du navigateur |l2|
-|Dire titre |l1up|
-|Lire barre d'état |l2down|
-|Aller à l'objet contenant |up2|
-|Aller au premier objet contenu |dn2|
-|Aller à l'objet suivant |right2|
-|Aller à l'objet précédant |left2|
-|Annoncer l'information de mise en forme du texte sous la cellule braille |rangée de routines du haut|
+| Nom | Touche |
+| --- | --- |
+| Défilement affichage braille arrière | left |
+| Défilement affichage braille avant | right |
+| Déplacer l'affichage braille vers la ligne précédente | up |
+| Déplacer l'affichage braille vers la ligne suivante | down |
+| Joindre à la cellule braille | routage |
+| Annoncer le caractère courant sous la revue | l1 |
+| Activer l'objet courant du navigateur | l2 |
+| Dire titre | l1up |
+| Lire barre d'état | l2down |
+| Aller à l'objet contenant | up2 |
+| Aller au premier objet contenu | dn2 |
+| Aller à l'objet suivant | right2 |
+| Aller à l'objet précédant | left2 |
+| Annoncer l'information de mise en forme du texte sous la cellule braille | rangée de routines du haut |
 
 BRAILLEX Tiny :
 
-| Nom |Touche|
-|---|---|
-|Annoncer le caractère sous le curseur de revue |l1|
-|Activer l'objet sous le navigateur |l2|
-|Défiler le braille vers l'arrière |left|
-|Défiler le braille vers l'avant |right|
-|Déplacer le braille à la ligne précédente |up|
-|Déplacer le braille à la ligne suivante |dn|
-|Basculer le suivi du braille |r2|
-|Aller à l'objet contenant |r1+up|
-|Aller au premier objet contenu |r1+dn|
-|Aller à l'objet précédent |r1+left|
-|Aller à l'objet suivant |r1+right|
-|Annoncer l'information de mise en forme du texte sous la cellule braille |rangée de routines du haut|
-|Annoncer le titre |l1+up|
-|Annoncer la barre d'état |l2+down|
+| Nom | Touche |
+| --- | --- |
+| Annoncer le caractère sous le curseur de revue | l1 |
+| Activer l'objet sous le navigateur | l2 |
+| Défiler le braille vers l'arrière | left |
+| Défiler le braille vers l'avant | right |
+| Déplacer le braille à la ligne précédente | up |
+| Déplacer le braille à la ligne suivante | dn |
+| Basculer le suivi du braille | r2 |
+| Aller à l'objet contenant | r1+up |
+| Aller au premier objet contenu | r1+dn |
+| Aller à l'objet précédent | r1+left |
+| Aller à l'objet suivant | r1+right |
+| Annoncer l'information de mise en forme du texte sous la cellule braille | rangée de routines du haut |
+| Annoncer le titre | l1+up |
+| Annoncer la barre d'état | l2+down |
 
 brailleX 2D Screen:
 
-| Nom |Touche|
-|---|---|
-|Annoncer le caractère sous le curseur de revue |l1|
-|Activer l'objet sous le navigateur |l2|
-|Basculer le suivi du braille |r2|
-|Annoncer l'information de mise en forme du texte sous la cellule braille |rangée de routines du haut|
-|Déplacer le braille à la ligne précédente |up|
-|Défiler le braille vers l'arrière |left|
-|Défiler le braille vers l'avant |right|
-|Déplacer le braille à la ligne suivante |dn|
-|Aller à l'objet suivant |left2|
-|Aller à l'objet contenant |up2|
-|Aller au premier objet contenu |dn2|
-|Aller à l'objet précédent |right2|
+| Nom | Touche |
+| --- | --- |
+| Annoncer le caractère sous le curseur de revue | l1 |
+| Activer l'objet sous le navigateur | l2 |
+| Basculer le suivi du braille | r2 |
+| Annoncer l'information de mise en forme du texte sous la cellule braille | rangée de routines du haut |
+| Déplacer le braille à la ligne précédente | up |
+| Défiler le braille vers l'arrière | left |
+| Défiler le braille vers l'avant | right |
+| Déplacer le braille à la ligne suivante | dn |
+| Aller à l'objet suivant | left2 |
+| Aller à l'objet contenant | up2 |
+| Aller au premier objet contenu | dn2 |
+| Aller à l'objet précédent | right2 |
 
 <!-- KC:endInclude -->
 
@@ -4440,68 +4449,68 @@ Consultez la documentation de votre BrailleNote pour savoir où se situent ces t
 
 <!-- KC:beginInclude -->
 
-| Nom |touche|
-|---|---|
-|Défilement affichage braille arrière |Arrière|
-|Défilement affichage braille avant |Avant|
-|Déplacer l'affichage braille vers la ligne précédente |Précédent|
-|Déplacer l'affichage braille vers la ligne suivante |Suivant|
-|Joindre à la cellule braille |routage|
-|menu NVDA |espace+point1+point3+point4+point5 (espace+n)|
-|Basculer le suivi de l'affichage braille |Précédent+Suivant|
-|Touche Flèche haute |Espace+Point 1|
-|Touche Flèche basse |Espace+Point 4|
-|Touche Flèche gauche |Espace+Point 3|
-|Touche Flèche droite |Espace+Point 6|
-|Touche page précédente |Espace+Point 1+Point 3|
-|Touche Page Suivante |Espace+Point4+Point6|
-|Touche Origine |Espace+Point1+Point2|
-|Touche fin |Espace+Point4+Point5|
-|Contrôle+Origine |Espace+Point1+Point2+Point3|
-|Touche Espace |Espace|
-|Contrôle+Fin |Espace+Point4+Point5+Point6|
-|Entrée |Espace+Point8|
-|Touche retour arrière |Espace+Point7|
-|Touche Tab |Espace+Point2+Point3+Point4+Point5 (Espace+t)|
-|Maj+Tab |Espace+Point1+Point2+Point5+Point6|
-|Touche Windows |Espace+Point2+Point4+Point5+Point6|
-|Touche alt |Espace+Point1+Point3+Point4 (Espace+m)|
-|Basculer aide à la saisie |Espace+Point2+Point3+Point6 (Espace+h en bas)|
+| Nom | touche |
+| --- | --- |
+| Défilement affichage braille arrière | Arrière |
+| Défilement affichage braille avant | Avant |
+| Déplacer l'affichage braille vers la ligne précédente | Précédent |
+| Déplacer l'affichage braille vers la ligne suivante | Suivant |
+| Joindre à la cellule braille | routage |
+| menu NVDA | espace+point1+point3+point4+point5 (espace+n) |
+| Basculer le suivi de l'affichage braille | Précédent+Suivant |
+| Touche Flèche haute | Espace+Point 1 |
+| Touche Flèche basse | Espace+Point 4 |
+| Touche Flèche gauche | Espace+Point 3 |
+| Touche Flèche droite | Espace+Point 6 |
+| Touche page précédente | Espace+Point 1+Point 3 |
+| Touche Page Suivante | Espace+Point4+Point6 |
+| Touche Origine | Espace+Point1+Point2 |
+| Touche fin | Espace+Point4+Point5 |
+| Contrôle+Origine | Espace+Point1+Point2+Point3 |
+| Touche Espace | Espace |
+| Contrôle+Fin | Espace+Point4+Point5+Point6 |
+| Entrée | Espace+Point8 |
+| Touche retour arrière | Espace+Point7 |
+| Touche Tab | Espace+Point2+Point3+Point4+Point5 (Espace+t) |
+| Maj+Tab | Espace+Point1+Point2+Point5+Point6 |
+| Touche Windows | Espace+Point2+Point4+Point5+Point6 |
+| Touche alt | Espace+Point1+Point3+Point4 (Espace+m) |
+| Basculer aide à la saisie | Espace+Point2+Point3+Point6 (Espace+h en bas) |
 
 Voici les commandes assignées au BrailleNote QT quand il n'est pas en mode saisie braille :
 
-| Nom |Touche|
-|---|---|
-|menu NvDA |lecture+n|
-|touche flèche haut |flècheHaut|
-|touche flèche bas |flècheBas|
-|touche flèche gauche |flècheGauche|
-|touche flèche droite |flècheDroite|
-|touche pagePrec |fonction+flècheHaut|
-|touche pageSuiv |fonction+flècheBas|
-|touche début |fonction+flècheGauche|
-|touche fin |fonction+flècheDroite|
-|touche contrôle+début |lecture+t|
-|touche contrôle+fin |lecture+b|
-|touche entrée |entrée|
-|touche retour arrière |retourArrière|
-|touche tab |tab|
-|touche maj+tab keys |maj+tab|
-|touche windows |lecture+w|
-|touche alt |lecture+m|
-|bascule de l'aide à la saisie |lecture+1|
+| Nom | Touche |
+| --- | --- |
+| menu NvDA | lecture+n |
+| touche flèche haut | flècheHaut |
+| touche flèche bas | flècheBas |
+| touche flèche gauche | flècheGauche |
+| touche flèche droite | flècheDroite |
+| touche pagePrec | fonction+flècheHaut |
+| touche pageSuiv | fonction+flècheBas |
+| touche début | fonction+flècheGauche |
+| touche fin | fonction+flècheDroite |
+| touche contrôle+début | lecture+t |
+| touche contrôle+fin | lecture+b |
+| touche entrée | entrée |
+| touche retour arrière | retourArrière |
+| touche tab | tab |
+| touche maj+tab keys | maj+tab |
+| touche windows | lecture+w |
+| touche alt | lecture+m |
+| bascule de l'aide à la saisie | lecture+1 |
 
 Voici les commandes assignées à la roue de défilement :
 
-| Nom |Touche|
-|---|---|
-|touche flècheHaut |flècheHaut|
-|touche flècheBas |flècheBas|
-|touche flècheGauche |flècheGauche|
-|touche flècheDroite |flècheDroite|
-|touche entrée |bouton central|
-|touche tab |tourner la roue dans le sens des aiguilles d'une montre|
-|touche maj+tab |tourner la roue dans le sens inverse des aiguilles d'une montre|
+| Nom | Touche |
+| --- | --- |
+| touche flècheHaut | flècheHaut |
+| touche flècheBas | flècheBas |
+| touche flècheGauche | flècheGauche |
+| touche flècheDroite | flècheDroite |
+| touche entrée | bouton central |
+| touche tab | tourner la roue dans le sens des aiguilles d'une montre |
+| touche maj+tab | tourner la roue dans le sens inverse des aiguilles d'une montre |
 
 <!-- KC:endInclude -->
 
@@ -4523,25 +4532,25 @@ Veuillez consulter [la documentation EcoBraille](ftp://ftp.once.es/pub/utt/bibli
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement braille arrière |T2|
-|Défilement braille avant |T4|
-|Amener l'afficheur braille à la ligne précédente |T1|
-|Amener l'afficheur braille à la ligne suivante |T5|
-|Aller à la cellule braille |Routage|
-|Activer l'objet navigateur courant |T3|
-|Passer au mode de revue suivant |F1|
-|Aller à l'objet contenant |F2|
-|Passer au mode de revue précédent |F3|
-|Aller à l'objet précédent |F4|
-|Annoncer l'objet courant |F5|
-|Aller à l'objet suivant |F6|
-|Aller à l'objet en focus |F7|
-|Aller au premier objet inclus |F8|
-|Amener le focus système ou le curseur à la position courante de revue |F9|
-|Annoncer la position du curseur de revue |F0|
-|Bascule du mode de suivi braille |A|
+| Nom | Touche |
+| --- | --- |
+| Défilement braille arrière | T2 |
+| Défilement braille avant | T4 |
+| Amener l'afficheur braille à la ligne précédente | T1 |
+| Amener l'afficheur braille à la ligne suivante | T5 |
+| Aller à la cellule braille | Routage |
+| Activer l'objet navigateur courant | T3 |
+| Passer au mode de revue suivant | F1 |
+| Aller à l'objet contenant | F2 |
+| Passer au mode de revue précédent | F3 |
+| Aller à l'objet précédent | F4 |
+| Annoncer l'objet courant | F5 |
+| Aller à l'objet suivant | F6 |
+| Aller à l'objet en focus | F7 |
+| Aller au premier objet inclus | F8 |
+| Amener le focus système ou le curseur à la position courante de revue | F9 |
+| Annoncer la position du curseur de revue | F0 |
+| Bascule du mode de suivi braille | A |
 
 <!-- KC:endInclude -->
 
@@ -4552,10 +4561,10 @@ Comme le SuperBraille n'a ni clavier physique ni bouton de défilement, toutes l
 Pour cette raison, et pour maintenir la compatibilité avec d'autres revues d'écran à Taiwan, deux raccourcis clavier pour le défilement de l'affichage ont été définis :
 <!-- KC:beginInclude -->
 
-| Nom |touche|
-|---|---|
-|Défilement braille arrière |pavnumMoins|
-|Défilement braille avant |pavnumPlus|
+| Nom | touche |
+| --- | --- |
+| Défilement braille arrière | pavnumMoins |
+| Défilement braille avant | pavnumPlus |
 
 <!-- KC:endInclude -->
 
@@ -4574,66 +4583,66 @@ Les fonctions du clavier braille décrites directement ci-dessous sont lorsque l
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Effacer la dernière cellule ou le dernier caractère braille saisi |`retourArrière`|
-|Traduire n'importe quelle entrée en braille et appuyer sur la touche Entrée |`RetourArrière+espace`|
-|Basculer la touche `NVDA` |`point3+point5+espace`|
-|touche `insert` |`point1+point3+point5+espace`, `point3+point4+point5+espace`|
-|touche `supprimer` |`point3+point6+espace`|
-|touche `début` |`point1+point2+point3+espace`|
-|touche `fin` |`point4+point5+point6+espace`|
-|Touche `flècheGauche` |`point2+espace`|
-|Touche `flècheDroite` |`point5+espace`|
-|Touche `flècheHaute` |`point1+espace`|
-|Touche `flècheBas` |`point6+espace`|
-|Touche `pagePrec` |`point1+point3+espace`|
-|Touche `pageSuiv` |`point4+point6+espace`|
-|touche `pavnum1` |`point1+point6+retourArrière`|
-|touche `pavnum2` |`point1+point2+point6+retourArrière`|
-|touche `pavnum3` |`point1+point4+point6+retourArrière`|
-|touche `pavnum4` |`point1+point4+point5+point6+retourArrière`|
-|touche `pavnum5` |`point1+point5+point6+retourArrière`|
-|touche `pavnum6` |`point1+point2+point4+point6+retourArrière`|
-|touche `pavnum7` |`point1+point2+point4+point5+point6+retourArrière`|
-|touche `pavnum8` |`point1+point2+point5+point6+retourArrière`|
-|touche `pavnum9` |`point2+point4+point6+retourArrière`|
-|Touche `pavnumInser` |`point3+point4+point5+point6+retourArrière`|
-|Touche `PavnumDécimal` |`point2+retourArrière`|
-|touche `PavnumDiviser` |`point3+point4+retourArrière`|
-|Touche `pavnumMultiplier` |`point3+point5+retourArrière`|
-|Touche `pavnumMoins` |`point3+point6+retourArrière`|
-|touche `PavnumPlus` |`point2+point3+point5+retourArrière`|
-|Touche `pavnumEntrée` |`point3+point4+point5+retourArrière`|
-|touche `échappement` |`point1+point2+point4+point5+espace`, `l2`|
-|touche `tabulation` |`point2+point5+point6+espace`, `l3`|
-|touches `maj+tab` |`point2+point3+point5+espace`|
-|Touche `impressionÉcran` |`point1+point3+point4+point6+espace`|
-|touche `pause` |`point1+point4+espace`|
-|touche `applications` |`point5+point6+retourArrière`|
-|touche `f1` |`point1+retourArrière`|
-|touche `f2` |`point1+point2+retourArrière`|
-|touche `f3` |`point1+point4+retourArrière`|
-|touche `f4` |`point1+point4+point5+retourArrière`|
-|touche `f5` |`point1+point5+retourArrière`|
-|touche `f6` |`point1+point2+point4+retourArrière`|
-|touche `f7` |`point1+point2+point4+point5+retourArrière`|
-|touche `f8` |`point1+point2+point5+retourArrière`|
-|touche `f9` |`point2+point4+retourArrière`|
-|touche `f10` |`point2+point4+point5+retourArrière`|
-|touche `f11` |`point1+point3+retourArrière`|
-|touche `f12` |`point1+point2+point3+retourArrière`|
-|touche `windows` |`point1+point2+point4+point5+point6+espace`|
-|Basculer la touche `windows` |`point1+point2+point3+point4+retourArrière`, `point2+point4+point5+point6+espace`|
-|touche `VerMaj` |`point7+retourArrière`, `point8+retourArrière`|
-|Touche `VerNum` |`point3+retourArrière`, `point6+retourArrière`|
-|touche `maj` |`point7+espace`|
-|Basculer la touche `maj` |`point1+point7+espace`, `point4+point7+espace`|
-|touche `contrôle` |`point7+point8+espace`|
-|Basculer la touche `contrôle` |`point1+point7+point8+espace`, `point4+point7+point8+espace`|
-|touche `alt` |`point8+espace`|
-|Basculer la touche `alt` |`point1+point8+espace`, `point4+point8+espace`|
-|Basculer la simulation du clavier HID |`switch1Gauche+joystick1Bas`, `switch1Droit+joystick1Bas`|
+| Nom | Touche |
+| --- | --- |
+| Effacer la dernière cellule ou le dernier caractère braille saisi | `retourArrière` |
+| Traduire n'importe quelle entrée en braille et appuyer sur la touche Entrée | `RetourArrière+espace` |
+| Basculer la touche `NVDA` | `point3+point5+espace` |
+| touche `insert` | `point1+point3+point5+espace`, `point3+point4+point5+espace` |
+| touche `supprimer` | `point3+point6+espace` |
+| touche `début` | `point1+point2+point3+espace` |
+| touche `fin` | `point4+point5+point6+espace` |
+| Touche `flècheGauche` | `point2+espace` |
+| Touche `flècheDroite` | `point5+espace` |
+| Touche `flècheHaute` | `point1+espace` |
+| Touche `flècheBas` | `point6+espace` |
+| Touche `pagePrec` | `point1+point3+espace` |
+| Touche `pageSuiv` | `point4+point6+espace` |
+| touche `pavnum1` | `point1+point6+retourArrière` |
+| touche `pavnum2` | `point1+point2+point6+retourArrière` |
+| touche `pavnum3` | `point1+point4+point6+retourArrière` |
+| touche `pavnum4` | `point1+point4+point5+point6+retourArrière` |
+| touche `pavnum5` | `point1+point5+point6+retourArrière` |
+| touche `pavnum6` | `point1+point2+point4+point6+retourArrière` |
+| touche `pavnum7` | `point1+point2+point4+point5+point6+retourArrière` |
+| touche `pavnum8` | `point1+point2+point5+point6+retourArrière` |
+| touche `pavnum9` | `point2+point4+point6+retourArrière` |
+| Touche `pavnumInser` | `point3+point4+point5+point6+retourArrière` |
+| Touche `PavnumDécimal` | `point2+retourArrière` |
+| touche `PavnumDiviser` | `point3+point4+retourArrière` |
+| Touche `pavnumMultiplier` | `point3+point5+retourArrière` |
+| Touche `pavnumMoins` | `point3+point6+retourArrière` |
+| touche `PavnumPlus` | `point2+point3+point5+retourArrière` |
+| Touche `pavnumEntrée` | `point3+point4+point5+retourArrière` |
+| touche `échappement` | `point1+point2+point4+point5+espace`, `l2` |
+| touche `tabulation` | `point2+point5+point6+espace`, `l3` |
+| touches `maj+tab` | `point2+point3+point5+espace` |
+| Touche `impressionÉcran` | `point1+point3+point4+point6+espace` |
+| touche `pause` | `point1+point4+espace` |
+| touche `applications` | `point5+point6+retourArrière` |
+| touche `f1` | `point1+retourArrière` |
+| touche `f2` | `point1+point2+retourArrière` |
+| touche `f3` | `point1+point4+retourArrière` |
+| touche `f4` | `point1+point4+point5+retourArrière` |
+| touche `f5` | `point1+point5+retourArrière` |
+| touche `f6` | `point1+point2+point4+retourArrière` |
+| touche `f7` | `point1+point2+point4+point5+retourArrière` |
+| touche `f8` | `point1+point2+point5+retourArrière` |
+| touche `f9` | `point2+point4+retourArrière` |
+| touche `f10` | `point2+point4+point5+retourArrière` |
+| touche `f11` | `point1+point3+retourArrière` |
+| touche `f12` | `point1+point2+point3+retourArrière` |
+| touche `windows` | `point1+point2+point4+point5+point6+espace` |
+| Basculer la touche `windows` | `point1+point2+point3+point4+retourArrière`, `point2+point4+point5+point6+espace` |
+| touche `VerMaj` | `point7+retourArrière`, `point8+retourArrière` |
+| Touche `VerNum` | `point3+retourArrière`, `point6+retourArrière` |
+| touche `maj` | `point7+espace` |
+| Basculer la touche `maj` | `point1+point7+espace`, `point4+point7+espace` |
+| touche `contrôle` | `point7+point8+espace` |
+| Basculer la touche `contrôle` | `point1+point7+point8+espace`, `point4+point7+point8+espace` |
+| touche `alt` | `point8+espace` |
+| Basculer la touche `alt` | `point1+point8+espace`, `point4+point8+espace` |
+| Basculer la simulation du clavier HID | `switch1Gauche+joystick1Bas`, `switch1Droit+joystick1Bas` |
 
 <!-- KC:endInclude -->
 
@@ -4641,25 +4650,25 @@ Les fonctions du clavier braille décrites directement ci-dessous sont lorsque l
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Faire défiler l'affichage braille vers l'arrière |`en arrière`|
-|Faire défiler l'affichage braille vers l'avant |`en avant`|
-|Déplacer vers le focus actuel |`arrière+avant`|
-|Route vers cellule braille |`routage`|
-|Touche `flècheGauche` |`joystick2gauche`|
-|Touche `flècheDroite` |`joystick2Right`|
-|Touche `flècheHaut` |`joystick2Haut`|
-|Touche `flècheBas` |`joystick2Bas`|
-|touche `entrée` |`joystick2Centre`|
-|touche `échappement` |`c1`|
-|touche `tabulation` |`c2`|
-|Basculer la touche `maj` |`c3`|
-|Basculer la touche `contrôle` |`c4`|
-|Basculer la touche `alt` |`c5`|
-|Basculer la touche `NVDA` |`c6`|
-|Touche `contrôle+Début` |`c1+c2+c3`|
-|Touche `contrôle+Fin` |`c4+c5+c6`|
+| Nom | Touche |
+| --- | --- |
+| Faire défiler l'affichage braille vers l'arrière | `en arrière` |
+| Faire défiler l'affichage braille vers l'avant | `en avant` |
+| Déplacer vers le focus actuel | `arrière+avant` |
+| Route vers cellule braille | `routage` |
+| Touche `flècheGauche` | `joystick2gauche` |
+| Touche `flècheDroite` | `joystick2Right` |
+| Touche `flècheHaut` | `joystick2Haut` |
+| Touche `flècheBas` | `joystick2Bas` |
+| touche `entrée` | `joystick2Centre` |
+| touche `échappement` | `c1` |
+| touche `tabulation` | `c2` |
+| Basculer la touche `maj` | `c3` |
+| Basculer la touche `contrôle` | `c4` |
+| Basculer la touche `alt` | `c5` |
+| Basculer la touche `NVDA` | `c6` |
+| Touche `contrôle+Début` | `c1+c2+c3` |
+| Touche `contrôle+Fin` | `c4+c5+c6` |
 
 <!-- KC:endInclude -->
 
@@ -4667,21 +4676,21 @@ Les fonctions du clavier braille décrites directement ci-dessous sont lorsque l
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Faire défiler l'affichage braille vers l'arrière |`clavierGaucheGauche`|
-|Faire défiler l'affichage braille vers l'avant |`clavierGaucheDroit`|
-|Route vers cellule braille |`routage`|
-|Signaler la mise en forme du texte sous la cellule braille |`doubleRouting`|
-|Passer à la ligne suivante dans la révision |`clavierGaucheBas`|
-|Passer au mode de révision précédent |`ClavierGaucheGauche+ClavierGaucheHaut`|
-|Passer au mode de révision suivant |`clavierGaucheDroit+clavierGaucheBas`|
-|Touche `flèchegauche` |`ClavierDroitGauche`|
-|Touche `flèchedroite` |`clavierDroitDroite`|
-|Touche `flècheHaut` |`clavierDroitHaut`|
-|Touche `flècheBas` |`clavierDroitBas`|
-|Touche `contrôle+Début` |`clavierDroitGauche+clavierDroitHaut`|
-|Touche `contrôle+fin` |`clavierDroitGauche+clavierDroitHaut`|
+| Nom | Touche |
+| --- | --- |
+| Faire défiler l'affichage braille vers l'arrière | `clavierGaucheGauche` |
+| Faire défiler l'affichage braille vers l'avant | `clavierGaucheDroit` |
+| Route vers cellule braille | `routage` |
+| Signaler la mise en forme du texte sous la cellule braille | `doubleRouting` |
+| Passer à la ligne suivante dans la révision | `clavierGaucheBas` |
+| Passer au mode de révision précédent | `ClavierGaucheGauche+ClavierGaucheHaut` |
+| Passer au mode de révision suivant | `clavierGaucheDroit+clavierGaucheBas` |
+| Touche `flèchegauche` | `ClavierDroitGauche` |
+| Touche `flèchedroite` | `clavierDroitDroite` |
+| Touche `flècheHaut` | `clavierDroitHaut` |
+| Touche `flècheBas` | `clavierDroitBas` |
+| Touche `contrôle+Début` | `clavierDroitGauche+clavierDroitHaut` |
+| Touche `contrôle+fin` | `clavierDroitGauche+clavierDroitHaut` |
 
 <!-- KC:endInclude -->
 
@@ -4689,22 +4698,22 @@ Les fonctions du clavier braille décrites directement ci-dessous sont lorsque l
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Faire défiler l'affichage braille vers l'arrière |`switch1Gauche`|
-|Faire défiler l'affichage braille vers l'avant |`switch1Droite`|
-|Déplacer vers le focus actuel |`switch1Centre`|
-|Route vers cellule braille |`routage`|
-|Signaler la mise en forme du texte sous la cellule braille |`doubleRouting`|
-|Aller à la ligne précédente en révision |`joystick1Haut`|
-|Passer à la ligne suivante dans la révision |`joystick1bas`|
-|Passer au caractère précédent en revue |`joystick1gauche`|
-|Passer au caractère suivant en revue |`joystick1Droite`|
-|Touche `flècheGauche` |`joystick2gauche`|
-|Touche `flècheDroite` |`joystick2Droite`|
-|Touche `flècheHaut` |`joystick2Haut`|
-|Touche `glècheBas` |`joystick2Bas`|
-|touche `entrée` |`joystick2Centre`|
+| Nom | Touche |
+| --- | --- |
+| Faire défiler l'affichage braille vers l'arrière | `switch1Gauche` |
+| Faire défiler l'affichage braille vers l'avant | `switch1Droite` |
+| Déplacer vers le focus actuel | `switch1Centre` |
+| Route vers cellule braille | `routage` |
+| Signaler la mise en forme du texte sous la cellule braille | `doubleRouting` |
+| Aller à la ligne précédente en révision | `joystick1Haut` |
+| Passer à la ligne suivante dans la révision | `joystick1bas` |
+| Passer au caractère précédent en revue | `joystick1gauche` |
+| Passer au caractère suivant en revue | `joystick1Droite` |
+| Touche `flècheGauche` | `joystick2gauche` |
+| Touche `flècheDroite` | `joystick2Droite` |
+| Touche `flècheHaut` | `joystick2Haut` |
+| Touche `glècheBas` | `joystick2Bas` |
+| touche `entrée` | `joystick2Centre` |
 
 <!-- KC:endInclude -->
 
@@ -4712,31 +4721,31 @@ Les fonctions du clavier braille décrites directement ci-dessous sont lorsque l
 
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Faire défiler l'affichage braille vers l'arrière |`l1`|
-|Faire défiler l'affichage braille vers l'avant |`l8`|
-|Déplacer vers le focus actuel |`l1+l8`|
-|Route vers cellule braille |`routage`|
-|Signaler la mise en forme du texte sous la cellule braille |`doubleRouting`|
-|Aller à la ligne précédente en révision |`joystick1Haut`|
-|Passer à la ligne suivante dans la révision |`joystick1bas`|
-|Passer au caractère précédent en revue |`joystick1gauche`|
-|Passer au caractère suivant en revue |`joystick1Droite`|
-|Touche `flèchegauche` |`joystick2gauche`|
-|Touche `flèchedroite` |`joystick2Droite`|
-|Touche `flècheHaut` |`joystick2Haut`|
-|Touche `flècheBas` |`joystick2Bas`|
-|touche `entrée` |`joystick2Centre`|
-|touche `échappement` |`l2`|
-|touche `tabulation` |`l3`|
-|Basculer la touche `Maj` |`l4`|
-|Basculer la touche `contrôle` |`l5`|
-|Basculer la touche `alt` |`l6`|
-|Basculer la touche `NVDA` |`l7`|
-|Touche `contrôle+début` |`l1+l2+l3`, `l2+l3+l4`|
-|Touche `contrôle+fin` |`l6+l7+l8`, `l5+l6+l7`|
-|Basculer la simulation du clavier HID |`l1+joystick1Bas`, `l8+joystick1Bas`|
+| Nom | Touche |
+| --- | --- |
+| Faire défiler l'affichage braille vers l'arrière | `l1` |
+| Faire défiler l'affichage braille vers l'avant | `l8` |
+| Déplacer vers le focus actuel | `l1+l8` |
+| Route vers cellule braille | `routage` |
+| Signaler la mise en forme du texte sous la cellule braille | `doubleRouting` |
+| Aller à la ligne précédente en révision | `joystick1Haut` |
+| Passer à la ligne suivante dans la révision | `joystick1bas` |
+| Passer au caractère précédent en revue | `joystick1gauche` |
+| Passer au caractère suivant en revue | `joystick1Droite` |
+| Touche `flèchegauche` | `joystick2gauche` |
+| Touche `flèchedroite` | `joystick2Droite` |
+| Touche `flècheHaut` | `joystick2Haut` |
+| Touche `flècheBas` | `joystick2Bas` |
+| touche `entrée` | `joystick2Centre` |
+| touche `échappement` | `l2` |
+| touche `tabulation` | `l3` |
+| Basculer la touche `Maj` | `l4` |
+| Basculer la touche `contrôle` | `l5` |
+| Basculer la touche `alt` | `l6` |
+| Basculer la touche `NVDA` | `l7` |
+| Touche `contrôle+début` | `l1+l2+l3`, `l2+l3+l4` |
+| Touche `contrôle+fin` | `l6+l7+l8`, `l5+l6+l7` |
+| Basculer la simulation du clavier HID | `l1+joystick1Bas`, `l8+joystick1Bas` |
 
 <!-- KC:endInclude -->
 
@@ -4750,13 +4759,13 @@ Voici les assignations de touches pour les afficheurs Nattiq Technologies sous N
 Veuillez consulter la documentation de l'afficheur pour connaître la position de ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière |haut|
-|Défilement avant |bas|
-|Amener l'afficheur à la ligne précédente |gauche|
-|amener l'afficheur à la ligne suivante |droit|
-|Aller à la cellule braille |routage|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière | haut |
+| Défilement avant | bas |
+| Amener l'afficheur à la ligne précédente | gauche |
+| amener l'afficheur à la ligne suivante | droit |
+| Aller à la cellule braille | routage |
 
 <!-- KC:endInclude -->
 
@@ -4776,20 +4785,20 @@ Voici les assignations de commandes BRLTTY pour NVDA.
 Veuillez consulter les [listes des assignations des touches de BRLTTY](https://brltty.app/doc/KeyBindings/) pour des informations sur la manière dont BRLTTY lie ses commandes aux touches sur les terminaux braille.
 <!-- KC:beginInclude -->
 
-| Nom |commande BRLTTY|
-|---|---|
-|Défilement arrière de l'affichage braille |`fwinlt` (se déplacer à gauche d'une fenêtre)|
-|Défilement avant de l'affichage braille |`fwinrt` (se déplacer à droite d'une fenêtre)|
-|Amener l'affichage à la ligne précédente |`lnup` (monter d'une ligne)|
-|Amener l'affichage à la ligne suivante |`lndn` (descendre d'une ligne)|
-|Aller à la cellule braille |`route` (amener le curseur au caractère)|
-|Basculer l'aide à la saisie |`learn` (entrer/sortir du mode d'apprentissage des commandes)|
-|Ouvrir le menu NVDA |`prefmenu` (ouvrir/quitter le menu des préférences)|
-|Rétablir la configuration |`prefload` (restaurer les préférences à partir du disque)|
-|Enregistrer la configuration |`prefsave` (enregistrer les préférences sur le disque)|
-|Afficher l'heure |`hour` (afficher la date et l'heure actuelles)|
-|Prononcer la ligne où se trouve le curseur de révision |`say_line` (prononcer la ligne actuelle)|
-|Dire tout en utilisant le curseur de revue |`say_below` (Lire depuis la ligne actuelle jusqu'au bas de l'écran)|
+| Nom | commande BRLTTY |
+| --- | --- |
+| Défilement arrière de l'affichage braille | `fwinlt` (se déplacer à gauche d'une fenêtre) |
+| Défilement avant de l'affichage braille | `fwinrt` (se déplacer à droite d'une fenêtre) |
+| Amener l'affichage à la ligne précédente | `lnup` (monter d'une ligne) |
+| Amener l'affichage à la ligne suivante | `lndn` (descendre d'une ligne) |
+| Aller à la cellule braille | `route` (amener le curseur au caractère) |
+| Basculer l'aide à la saisie | `learn` (entrer/sortir du mode d'apprentissage des commandes) |
+| Ouvrir le menu NVDA | `prefmenu` (ouvrir/quitter le menu des préférences) |
+| Rétablir la configuration | `prefload` (restaurer les préférences à partir du disque) |
+| Enregistrer la configuration | `prefsave` (enregistrer les préférences sur le disque) |
+| Afficher l'heure | `hour` (afficher la date et l'heure actuelles) |
+| Prononcer la ligne où se trouve le curseur de révision | `say_line` (prononcer la ligne actuelle) |
+| Dire tout en utilisant le curseur de revue | `say_below` (Lire depuis la ligne actuelle jusqu'au bas de l'écran) |
 
 <!-- KC:endInclude -->
 
@@ -4809,55 +4818,55 @@ Voici les affectations de touches pour ces afficheurs avec NVDA.
 Veuillez consulter la documentation de l'afficheur pour savoir où trouver ces touches.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Aller à la première ligne en mode revue |`home1`, `home2`|
-|Aller à la dernière ligne en mode revue |`end1`, `end2`|
-|Amener l'objet navigateur au focus courant |`eCursor1`, `eCursor2`|
-|Aller au focus courant |`cursor1`, `cursor2`|
-|Amener le pointeur souris à l'objet navigateur courant |`home1+home2`|
-|Amener l'objet navigateur à l'objet sous le pointeur souris et l'annoncer |`end1+end2`|
-|Amener le focus à l'objet navigateur courant |`eCursor1+eCursor2`|
-|Basculer le suivi braille |`cursor1+cursor2`|
-|Amener l'affichage braille à la ligne précédente |`up1`, `up2`, `up3`|
-|Amener l'affichage braille à la ligne suivante |`down1`, `down2`, `down3`|
-|Faire défiler l'affichage braille en arrière |`left`, `lWheelLeft`, `rWheelLeft`|
-|Faire défiler l'affichage braille en avant |`right`, `lWheelRight`, `rWheelRight`|
-|Aller à la cellule braille |`routing`|
-|Annoncer la mise en forme du texte sous la cellule braille |`secondary routing`|
-|Choisir la manière dont l'information contextuelle est présentée en braille |`attribute1+attribute3`|
-|Faire défiler les modes de parole |`attribute2+attribute4`|
-|Passer au mode de revue précédent (ex : objet, document ou écran) |`f1`|
-|Passer au mode de revue suivant (ex : objet, document ou écran) |`f2`|
-|Amener l'objet navigateur à l'objet le contenant |`f3`|
-|Amener l'objet navigateur au premier objet qu'il contient |`f4`|
-|Amener l'objet navigateur à l'objet précédent |`f5`|
-|Amener l'objet navigateur à l'objet suivant |`f6`|
-|Annoncer l'objet navigateur courant |`f7`|
-|Annoncer l'information de position du texte ou de l'objet sous le curseur de revue |`f8`|
-|Afficher les paramètres braille |`f1+home1`, `f9+home2`|
-|Lire la barre d'état et y amener l'objet navigateur |`f1+end1`, `f9+end2`|
-|Basculer le curseur braille |`f1+cursor1`, `f9+cursor2`|
-|Faire défiler les formes de curseur braille |`f1+eCursor1`, `f9+eCursor2`|
-|Faire défiler le mode d'affichage des messages en braille |`f1+f2`, `f9+f10`|
-|Faire défiler le mode d'affichage de la sélection braille |`f1+f5`, `f9+f14`|
-|Faire défiler les modes  pour l'option braille "Déplacer le curseur système lors du routage du curseur de revue" |`f1+f3`, `f9+f11`|
-|Exécuter l'action par défaut sur l'objet navigateur courant |`f7+f8`|
-|Annoncer date/heure |`f9`|
-|Annoncer le niveau de batterie et le temps restant si l'alimentation n'est pas branchée |`f10`|
-|Annoncer le titre |`f11`|
-|Annoncer la barre d'état |`f12`|
-|Annoncer la ligne courante sous le curseur d'application |`f13`|
-|Dire tout |`f14`|
-|Annoncer le caractère courant sous le curseur de revue |`f15`|
-|Annoncer la ligne de l'objet navigateur courant où se situe le curseur de revue |`f16`|
-|Dir le mot de l'objet navigateur courant où se situe le curseur de revue |`f15+f16`|
-|Amener le curseur de revue à la ligne précédente de l'objet navigateur courant et l'annoncer |`lWheelUp`, `rWheelUp`|
-|Amener le curseur de revue à la ligne suivante de l'objet navigateur courant et l'annoncer |`lWheelDown`, `rWheelDown`|
-|Touche `Windows+d` (minimiser toutes les applications) |`attribute1`|
-|Touche `Windows+e` (Ce PC) |`attribute2`|
-|Touche `Windows+b` (focus dans la barre d'état) |`attribute3`|
-|Touche `Windows+i` (Paramètres Windows) |`attribute4`|
+| Nom | Touche |
+| --- | --- |
+| Aller à la première ligne en mode revue | `home1`, `home2` |
+| Aller à la dernière ligne en mode revue | `end1`, `end2` |
+| Amener l'objet navigateur au focus courant | `eCursor1`, `eCursor2` |
+| Aller au focus courant | `cursor1`, `cursor2` |
+| Amener le pointeur souris à l'objet navigateur courant | `home1+home2` |
+| Amener l'objet navigateur à l'objet sous le pointeur souris et l'annoncer | `end1+end2` |
+| Amener le focus à l'objet navigateur courant | `eCursor1+eCursor2` |
+| Basculer le suivi braille | `cursor1+cursor2` |
+| Amener l'affichage braille à la ligne précédente | `up1`, `up2`, `up3` |
+| Amener l'affichage braille à la ligne suivante | `down1`, `down2`, `down3` |
+| Faire défiler l'affichage braille en arrière | `left`, `lWheelLeft`, `rWheelLeft` |
+| Faire défiler l'affichage braille en avant | `right`, `lWheelRight`, `rWheelRight` |
+| Aller à la cellule braille | `routing` |
+| Annoncer la mise en forme du texte sous la cellule braille | `secondary routing` |
+| Choisir la manière dont l'information contextuelle est présentée en braille | `attribute1+attribute3` |
+| Faire défiler les modes de parole | `attribute2+attribute4` |
+| Passer au mode de revue précédent (ex : objet, document ou écran) | `f1` |
+| Passer au mode de revue suivant (ex : objet, document ou écran) | `f2` |
+| Amener l'objet navigateur à l'objet le contenant | `f3` |
+| Amener l'objet navigateur au premier objet qu'il contient | `f4` |
+| Amener l'objet navigateur à l'objet précédent | `f5` |
+| Amener l'objet navigateur à l'objet suivant | `f6` |
+| Annoncer l'objet navigateur courant | `f7` |
+| Annoncer l'information de position du texte ou de l'objet sous le curseur de revue | `f8` |
+| Afficher les paramètres braille | `f1+home1`, `f9+home2` |
+| Lire la barre d'état et y amener l'objet navigateur | `f1+end1`, `f9+end2` |
+| Basculer le curseur braille | `f1+cursor1`, `f9+cursor2` |
+| Faire défiler les formes de curseur braille | `f1+eCursor1`, `f9+eCursor2` |
+| Faire défiler le mode d'affichage des messages en braille | `f1+f2`, `f9+f10` |
+| Faire défiler le mode d'affichage de la sélection braille | `f1+f5`, `f9+f14` |
+| Faire défiler les modes  pour l'option braille "Déplacer le curseur système lors du routage du curseur de revue" | `f1+f3`, `f9+f11` |
+| Exécuter l'action par défaut sur l'objet navigateur courant | `f7+f8` |
+| Annoncer date/heure | `f9` |
+| Annoncer le niveau de batterie et le temps restant si l'alimentation n'est pas branchée | `f10` |
+| Annoncer le titre | `f11` |
+| Annoncer la barre d'état | `f12` |
+| Annoncer la ligne courante sous le curseur d'application | `f13` |
+| Dire tout | `f14` |
+| Annoncer le caractère courant sous le curseur de revue | `f15` |
+| Annoncer la ligne de l'objet navigateur courant où se situe le curseur de revue | `f16` |
+| Dir le mot de l'objet navigateur courant où se situe le curseur de revue | `f15+f16` |
+| Amener le curseur de revue à la ligne précédente de l'objet navigateur courant et l'annoncer | `lWheelUp`, `rWheelUp` |
+| Amener le curseur de revue à la ligne suivante de l'objet navigateur courant et l'annoncer | `lWheelDown`, `rWheelDown` |
+| Touche `Windows+d` (minimiser toutes les applications) | `attribute1` |
+| Touche `Windows+e` (Ce PC) | `attribute2` |
+| Touche `Windows+b` (focus dans la barre d'état) | `attribute3` |
+| Touche `Windows+i` (Paramètres Windows) | `attribute4` |
 
 <!-- KC:endInclude -->
 
@@ -4871,30 +4880,31 @@ La détection automatique de l'affichage braille de NVDA reconnaîtra également
 Voici les affectations de touches actuelles pour ces affichages.
 <!-- KC:beginInclude -->
 
-| Nom |Touche|
-|---|---|
-|Défilement arrière de l'afficheur braille |panoramique à gauche ou rocker vers le haut|
-|Défilement avant de l'afficheur braille |panoramique à droite ou rocker vers le bas|
-|Aller à la cellule braille |ensemble de routage 1|
-|Basculer braille suit to |haut+bas|
-|touche flècheHaut |joystick vers le haut, dpad ver le haut ou espace+point1|
-|touche flècheBas |joystick vers le bas, dpad ver le bas ou espace+point4|
-|touche flècheGauche |espace+point3, joystick vers la gauche ou dpad ver la gauche|
-|touche flècheDroite |espace+point6, joystick vers la droite ou dpad ver la droite|
-|Touche maj+tab |espace+point1+point3|
-|Touche tab |espace+point4+point6|
-|Touche alt |espace+point1+point3+point4 (espace+m)|
-|Touche échap |espace+point1+poin5 (espace+e)|
-|touche entrée |poin8, joystick centre ou dpad centre|
-|Touche Windows |espace+point3+point4|
-|Touche alt+tab |espace+point2+point3+point4+point5 (espace+t)|
-|Menu NVDA |espace+point1+point3+point4+point5 (espace+n)|
-|Touche windows+d (minimiser toutes les applications) |espace+point1+point4+point5 (espace+d)|
-|Dire tout |espace+point1+point2+point3+point4+point5+point6|
+| Nom | Touche |
+| --- | --- |
+| Défilement arrière de l'afficheur braille | panoramique à gauche ou rocker vers le haut |
+| Défilement avant de l'afficheur braille | panoramique à droite ou rocker vers le bas |
+| Aller à la cellule braille | ensemble de routage 1 |
+| Basculer braille suit to | haut+bas |
+| touche flècheHaut | joystick vers le haut, dpad ver le haut ou espace+point1 |
+| touche flècheBas | joystick vers le bas, dpad ver le bas ou espace+point4 |
+| touche flècheGauche | espace+point3, joystick vers la gauche ou dpad ver la gauche |
+| touche flècheDroite | espace+point6, joystick vers la droite ou dpad ver la droite |
+| Touche maj+tab | espace+point1+point3 |
+| Touche tab | espace+point4+point6 |
+| Touche alt | espace+point1+point3+point4 (espace+m) |
+| Touche échap | espace+point1+poin5 (espace+e) |
+| touche entrée | poin8, joystick centre ou dpad centre |
+| Touche Windows | espace+point3+point4 |
+| Touche alt+tab | espace+point2+point3+point4+point5 (espace+t) |
+| Menu NVDA | espace+point1+point3+point4+point5 (espace+n) |
+| Touche windows+d (minimiser toutes les applications) | espace+point1+point4+point5 (espace+d) |
+| Dire tout | espace+point1+point2+point3+point4+point5+point6 |
 
 <!-- KC:endInclude -->
 
 ## Fonctions Avancées {#AdvancedTopics}
+
 ### Mode Sécurisé {#SecureMode}
 
 Les administrateurs système peuvent souhaiter configurer NVDA pour restreindre les accès non autorisés au système.
@@ -4960,44 +4970,44 @@ Par exemple, vous pouvez quitter la copie en cours de NVDA en entrant ce qui sui
 Certaines options de ligne de commande ont une version courte et une version longue, tandis que d'autres n'ont qu'une version longue.
 Pour celles qui ont une version courte, vous pouvez les combiner ainsi :
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|`nvda -mc CONFIGPATH` |Ceci démarrera NVDA avec le son et le message de démarrage  désactivé, et la configuration spécifiée.|
-|`nvda -mc CONFIGPATH --disable-addons` |Même chose, mais avec les extensions désactivées|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| `nvda -mc CONFIGPATH` | Ceci démarrera NVDA avec le son et le message de démarrage  désactivé, et la configuration spécifiée. |
+| `nvda -mc CONFIGPATH --disable-addons` | Même chose, mais avec les extensions désactivées |
 
 Certaines options de ligne de commande acceptent des paramètres additionnels ; ex : le niveau de détail du journal ou le chemin du répertoire de configuration utilisateur.
 Ces paramètres doivent être placés après l'option, séparés de l'option par un espace quand il s'agit d'une option en version courte ou par un signe égal (`=`) quand il s'agit d'une option en version longue; ex :
 
-| . {.hideHeaderRow} |.|
-|---|---|
-|`nvda -l 10` |Dit à NVDA de démarrer avec le niveau de journalisation sur débogage|
-|`nvda --log-file=c:\nvda.log` |Dit à NVDA d'écrire le fichier journal dans `c:\nvda.log`|
-|`nvda --log-level=20 -f c:\nvda.log` |Dit à NVDA de démarrer avec le niveau de journalisation sur info et d'écrire son journal dans `c:\nvda.log`|
+| . {.hideHeaderRow} | . |
+| --- | --- |
+| `nvda -l 10` | Dit à NVDA de démarrer avec le niveau de journalisation sur débogage |
+| `nvda --log-file=c:\nvda.log` | Dit à NVDA d'écrire le fichier journal dans `c:\nvda.log` |
+| `nvda --log-level=20 -f c:\nvda.log` | Dit à NVDA de démarrer avec le niveau de journalisation sur info et d'écrire son journal dans `c:\nvda.log` |
 
 Voici les options de ligne de commande de NVDA :
 
-| Courte |Longue |Description|
-|---|---|---|
-|`-h` |`--help` |affiche l'aide de la ligne de commande et s'arrête|
-|`-q` |`--quit` |Quitte la copie en cours d'exécution de NVDA|
-|`-k` |`--check-running` |Indique si NVDA est en cours d'exécution via le code retour; 0 si oui, 1 si non|
-|`-f NOMDUFICHIERJOURNAL` |`--log-file=NOMDUFICHIERJOURNAL` |Le fichier où les messages du journal doivent être écrits. La journalisation est toujours désactivée si le mode sécurisé est activé.|
-|`-l NIVEAUDEJOURNALISATION` |`--log-level=NIVEAUDEJOURNALISATION` |Le niveau minimal de messages journalisés (débogage 10, entrées/sorties 12, avertissements de débogage 15, info 20, désactivé 100). La journalisation est toujours désactivée si le mode sécurisé est activé.|
-|`-c CHEMINDECONFIG` |`--config-path=CHEMINDECONFIG` |Le chemin vers lequel tous les paramètres de NVDA sont stockés. La valeur par défaut est forcée si le mode sécurisé est activé.|
-|Aucun |`--lang=LANGUAGE` |Remplacer la langue NVDA configurée. Choisissez "Windows" pour la langue en cours par défaut, "en" pour Anglais, etc.|
-|`-m` |`--minimal` |Pas de sons, pas d'interface, pas de message de démarrage etc.|
-|`-s` |`--secure` |Démarre NVDA en [Mode Sécurisé](#SecureMode)|
-|Aucune |`--disable-addons` |Les extensions n'auront pas d'effet|
-|Aucune |`--no-logging` |Désactive complètement la journalisation durant l'utilisation de NVDA. Ce paramètre peut être ignoré si un niveau de journalisation (`--loglevel`, `-l`) est spécifié dans la ligne de commande ou si la journalisation de débogage est activée.|
-|Aucune |`--debug-logging` |Active le niveau de journalisation débogage seulement pour cette session. Ce paramètre remplacera tout autre niveau de journalisation (`--loglevel`, `-l`) argument donné, incluant l'option pas de journalisation.|
-|Aucune |`--no-sr-flag` |Ne change pas l'indicateur système global de revue d'écran|
-|Aucune |`--install` |Installe NVDA (en démarrant la copie nouvellement installée)|
-|Aucune |`--install-silent` |Installe NVDA silencieusement (sans démarrer la copie nouvellement installée)|
-|Aucune |`--enable-start-on-logon=True|False` |Durant l'installation, active le [démarrage sur l'écran de connexion](#StartAtWindowsLogon) de NVDA|
-|Aucune |`--copy-portable-config` |À l'installation, copie la configuration portable depuis le chemin indiqué (`--config-path`, `-c`) vers le compte utilisateur courant|
-|Aucune |`--create-portable` |Crée une copie portable de NVDA (puis démarre la copie nouvellement créée). `--portable-path` doit être spécifié|
-|Aucune |`--create-portable-silent` |Crée une copie portable de NVDA (sans démarrer la copie nouvellement créée). `--portable-path` doit être spécifié|
-|Aucune |`--portable-path=PORTABLEPATH` |L'emplacement où la copie portable sera créée|
+| Courte | Longue | Description |
+| --- | --- | --- |
+| `-h` | `--help` | affiche l'aide de la ligne de commande et s'arrête |
+| `-q` | `--quit` | Quitte la copie en cours d'exécution de NVDA |
+| `-k` | `--check-running` | Indique si NVDA est en cours d'exécution via le code retour; 0 si oui, 1 si non |
+| `-f NOMDUFICHIERJOURNAL` | `--log-file=NOMDUFICHIERJOURNAL` | Le fichier où les messages du journal doivent être écrits. La journalisation est toujours désactivée si le mode sécurisé est activé. |
+| `-l NIVEAUDEJOURNALISATION` | `--log-level=NIVEAUDEJOURNALISATION` | Le niveau minimal de messages journalisés (débogage 10, entrées/sorties 12, avertissements de débogage 15, info 20, désactivé 100). La journalisation est toujours désactivée si le mode sécurisé est activé. |
+| `-c CHEMINDECONFIG` | `--config-path=CHEMINDECONFIG` | Le chemin vers lequel tous les paramètres de NVDA sont stockés. La valeur par défaut est forcée si le mode sécurisé est activé. |
+| Aucun | `--lang=LANGUAGE` | Remplacer la langue NVDA configurée. Choisissez "Windows" pour la langue en cours par défaut, "en" pour Anglais, etc. |
+| `-m` | `--minimal` | Pas de sons, pas d'interface, pas de message de démarrage etc. |
+| `-s` | `--secure` | Démarre NVDA en [Mode Sécurisé](#SecureMode) |
+| Aucune | `--disable-addons` | Les extensions n'auront pas d'effet |
+| Aucune | `--no-logging` | Désactive complètement la journalisation durant l'utilisation de NVDA. Ce paramètre peut être ignoré si un niveau de journalisation (`--loglevel`, `-l`) est spécifié dans la ligne de commande ou si la journalisation de débogage est activée. |
+| Aucune | `--debug-logging` | Active le niveau de journalisation débogage seulement pour cette session. Ce paramètre remplacera tout autre niveau de journalisation (`--loglevel`, `-l`) argument donné, incluant l'option pas de journalisation. |
+| Aucune | `--no-sr-flag` | Ne change pas l'indicateur système global de revue d'écran |
+| Aucune | `--install` | Installe NVDA (en démarrant la copie nouvellement installée) |
+| Aucune | `--install-silent` | Installe NVDA silencieusement (sans démarrer la copie nouvellement installée) |
+| Aucune | `--enable-start-on-logon=True | False` | Durant l'installation, active le [démarrage sur l'écran de connexion](#StartAtWindowsLogon) de NVDA |
+| Aucune | `--copy-portable-config` | À l'installation, copie la configuration portable depuis le chemin indiqué (`--config-path`, `-c`) vers le compte utilisateur courant |
+| Aucune | `--create-portable` | Crée une copie portable de NVDA (puis démarre la copie nouvellement créée). `--portable-path` doit être spécifié |
+| Aucune | `--create-portable-silent` | Crée une copie portable de NVDA (sans démarrer la copie nouvellement créée). `--portable-path` doit être spécifié |
+| Aucune | `--portable-path=PORTABLEPATH` | L'emplacement où la copie portable sera créée |
 
 ### Paramètres Système {#SystemWideParameters}
 
@@ -5009,11 +5019,11 @@ Ces valeurs sont stockées dans la base de registres sous l'une des clés suivan
 
 Les valeurs suivantes peuvent être définies dans ces clés de registre :
 
-| Nom |Type |valeurs Possibles |Description|
-|---|---|---|---|
-|`configInLocalAppData` |DWORD |0 (par défaut) pour désactiver, 1 pour activer |Si activé, stocke la configuration de l'utilisateur NVDA dans les données d'application locales au lieu des données d'application itinérantes|
-|`serviceDebug` |DWORD |0 (par défaut) pour désactiver, 1 pour activer |S'il est activé, désactive [Secure Mode](#SecureMode) sur [secure screens](#SecureScreens). En raison de plusieurs implications majeures en matière de sécurité, l'utilisation de cette option est fortement déconseillée|
-|`forceSecureMode` |DWORD |0 (par défaut) pour désactiver, 1 pour activer |Si activé, force [le mode sécurisé](#SecureMode) à être activé lors de l'exécution de NVDA.|
+| Nom | Type | valeurs Possibles | Description |
+| --- | --- | --- | --- |
+| `configInLocalAppData` | DWORD | 0 (par défaut) pour désactiver, 1 pour activer | Si activé, stocke la configuration de l'utilisateur NVDA dans les données d'application locales au lieu des données d'application itinérantes |
+| `serviceDebug` | DWORD | 0 (par défaut) pour désactiver, 1 pour activer | S'il est activé, désactive [Secure Mode](#SecureMode) sur [secure screens](#SecureScreens). En raison de plusieurs implications majeures en matière de sécurité, l'utilisation de cette option est fortement déconseillée |
+| `forceSecureMode` | DWORD | 0 (par défaut) pour désactiver, 1 pour activer | Si activé, force [le mode sécurisé](#SecureMode) à être activé lors de l'exécution de NVDA. |
 
 ## Informations Complémentaires {#FurtherInformation}
 
