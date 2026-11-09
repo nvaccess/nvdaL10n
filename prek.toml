@@ -147,6 +147,7 @@ hooks = [
   {
     id = "markdownlint-cli2",
     name = "Lint markdown files",
+    exclude = "^tests/markdownTranslate/",
     groups = ["autofix"],
     args = ["--fix"]
   }
