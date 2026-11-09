@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools~=84.0.0", "wheel"]
+requires = ["setuptools>=84.0,<84.2", "wheel"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "nvdaL10n"
