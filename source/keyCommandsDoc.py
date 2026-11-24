@@ -1,5 +1,5 @@
 # A part of NonVisual Desktop Access (NVDA)
-# Copyright (C) 2010-2024 NV Access Limited, Mesar Hameed, Takuya Nishimoto
+# Copyright (C) 2010-2026 NV Access Limited, Mesar Hameed, Takuya Nishimoto
 # This file may be used under the terms of the GNU General Public License, version 2 or later, as modified by the NVDA license.
 # For full terms and any additional permissions, see the NVDA license file: https://github.com/nvaccess/nvda/blob/master/copying.txt
 
@@ -9,7 +9,7 @@ Works as a Python Markdown Extension:
 https://python-markdown.github.io/extensions/
 
 Refer to user guide standards for more information on syntax rules:
-https://github.com/nvaccess/nvda/blob/master/projectDocs/dev/userGuideStandards.md
+https://github.com/nvaccess/nvda/blob/master/projectDocs/dev/documentation/userGuideStandards.md
 """
 
 import re
